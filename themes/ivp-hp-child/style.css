@@ -1,0 +1,15 @@
+﻿@charset "utf-8";
+/*
+Template: ivp-hp
+Theme Name: IVP-HP-CHILD
+Theme URI: 
+Author: IVP CREATIVE Team
+Author URI: 
+Description: 
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: 
+*/
+@import url("../ivp-hp/style.css");  /* こちらで親テーマのstyleを継承 */
+
+/* 独自cssを追加する場合はこのファイルに記述 */
