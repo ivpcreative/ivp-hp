@@ -21,6 +21,7 @@
 	<?php wp_head(); ?>
 	<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri()?>/css/index.css"/>
+
 <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri()?>/font-awesome.min.css"/>
 <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri()?>/css/jquery.bxslider.css"/>
 <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri()?>/css/meanmenu.css"/>
@@ -61,4 +62,3 @@
         </ul>
     </div>
     <!--　smart phone menu end -->
-	
