@@ -194,8 +194,12 @@ Accordion.hdlClick($(this));
 });
 </script>
 <script type="text/javascript">
+var header = $('#fixed');
+$(document).ready(function () {
+  header.removeClass('scroll');
+   });
 $(function(){
-var header = $('#fixed')
+
 header_offset = header.offset();
 header_height = header.height();
 $(window).scroll(function () {
