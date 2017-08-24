@@ -168,8 +168,6 @@ ga('require', 'displayfeatures');
 ga('send', 'pageview');
 
 </script><!-- sitecatlyst end -->
-</body>
-</html>
 
 <?php wp_footer(); ?>
 </body>
