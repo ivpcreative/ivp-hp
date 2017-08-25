@@ -133,6 +133,9 @@ get_header(); ?>
                     <a href="quest/index.html"><span>お問い合せフォーム</span><img src="<?php echo get_stylesheet_directory_uri()?>/images/arrow_white.png" width="16" height="7" alt="arrow"/></a>
                 </div>
             </div>
+            <div class="facebook2">
+                <div class="fb-page" data-href="https://www.facebook.com/ivpcojp/" data-tabs="timeline" data-width="500" data-height="375" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/ivpcojp/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/ivpcojp/">株式会社アイブイピー</a></blockquote></div>
+            </div>
             <div class="pertner_bnr">
                 <img src="<?php echo get_stylesheet_directory_uri()?>/images/pertner_bnr01.png" width="62" height="99" alt="secom"/>
                 <img src="<?php echo get_stylesheet_directory_uri()?>/images/pertner_bnr02.png" width="181" height="99" alt="paypal"/>
