@@ -1413,6 +1413,15 @@
 	color:#272727;	
 	margin-bottom:14px;
 }
+.quest_title2{
+	font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	font-size:22px;
+	letter-spacing:2px;
+	font-weight:normal;
+	color:#272727;	
+	margin-bottom:14px;
+	text-align: center;
+}
 .quest{
 	background:#efefef;
 	padding:35px;
@@ -1468,7 +1477,7 @@
 	font-size:15px;
 	color:#272727;
 }
-.quest input[type="text"] ,.quest input[type="email"] ,.quest input[type="tel"] ,.quest textarea{
+.quest input[type="text"] , .quest textarea{
 	width:96%;
 	padding:6px 2%;
 	color:#272727;
@@ -1476,11 +1485,6 @@
 	background:#fff;
 	font-size:14px;
 }
-
-.quest [disabled]{
-	opacity: .45;
-}
-
 .quest .msg{
 	color:#b90101;
 	font-size:14px;
@@ -1513,6 +1517,9 @@
 	line-height:190%;
 	margin-bottom:15px;
 }
+.quest .form_btn span{
+	margin: 0 5px;
+}
 .quest input[type="submit"]{
     color: #fff;
     font-size: 13px;
@@ -1520,6 +1527,10 @@
     padding: 12px 90px;
     background: #d60725;
     border: 1px solid #d60725;
+}
+.quest span.btn1 input[type="submit"]{
+    background: #ccc;
+    border: 1px solid #ccc;
 }
 .quest input[type="submit"]:hover{
 	opacity:0.75;
@@ -1613,7 +1624,7 @@
 	.cf dd ul li:last-child{
 		margin-bottom:0px;
 	}
-	.quest input[type="text"] , .quest textarea{
+	.quest input[type="text"] ,.quest input[type="email"] ,.quest input[type="tel"] ,.quest textarea{
 		width:96%;
 		padding:6px 2%;
 		color:#272727;
@@ -1621,6 +1632,7 @@
 		background:#fff;
 		font-size:13px;
 	}
+
 	.quest .msg{
 		font-size:12px;
 	}
