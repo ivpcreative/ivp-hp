@@ -8,7 +8,7 @@
  */
 ?>
 <div class="slide_left">
-  <h1><a href=""><img src="<?php echo get_stylesheet_directory_uri()?>/images/logo.png" width="181" height="43" alt="IVP Internet Value Provider　IVP Co. Ltd." title="IVP Internet Value Provider　IVP Co. Ltd." /></a></h1>
+  <h1><a href="/"><img src="<?php echo get_stylesheet_directory_uri()?>/images/logo.png" width="181" height="43" alt="IVP Internet Value Provider　IVP Co. Ltd." title="IVP Internet Value Provider　IVP Co. Ltd." /></a></h1>
 
   <ul class="sf-menu">
     <li class="first"><a href="/">HOME</a><img src="<?php echo get_stylesheet_directory_uri()?>/images/menu_line.png" width="112" height="1" alt="menu_line"/></li>
