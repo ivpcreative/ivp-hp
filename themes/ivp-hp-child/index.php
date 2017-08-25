@@ -43,9 +43,9 @@ get_header(); ?>
                         <h2>システム開発/スクラッチ開発</h2>
                     </div>
                     <div class="ser_sp2">
-                        <h3><a href="ec/index.html"><span>ECシステム開発</span><img src="<?php echo get_stylesheet_directory_uri()?>/images/arrow.png" width="16" height="7" alt="arrow"/></a></h3>
-                        <h3><a href="iot/index.html"><span>loTサービス開発</span><img src="<?php echo get_stylesheet_directory_uri()?>/images/arrow.png" width="16" height="7" alt="arrow"/></a></h3>
-                        <h3><a href="web/index.html"><span>WEBシステム開発</span><img src="<?php echo get_stylesheet_directory_uri()?>/images/arrow.png" width="16" height="7" alt="arrow"/></a></h3>
+                        <h3><a href="/ec/"><span>ECシステム開発</span><img src="<?php echo get_stylesheet_directory_uri()?>/images/arrow.png" width="16" height="7" alt="arrow"/></a></h3>
+                        <h3><a href="/iot/"><span>loTサービス開発</span><img src="<?php echo get_stylesheet_directory_uri()?>/images/arrow.png" width="16" height="7" alt="arrow"/></a></h3>
+                        <h3><a href="/web/"><span>WEBシステム開発</span><img src="<?php echo get_stylesheet_directory_uri()?>/images/arrow.png" width="16" height="7" alt="arrow"/></a></h3>
                     </div>
                 </div>
                 <div class="ser_base">
@@ -54,8 +54,8 @@ get_header(); ?>
                         <h2>セキュリティ/運用保守</h2>
                     </div>
                     <div class="ser_sp2">
-                        <h3><a href="maint/index.html"><span>24×365運用保守</span><img src="<?php echo get_stylesheet_directory_uri()?>/images/arrow.png" width="16" height="7" alt="arrow"/></a></h3>
-                        <h3><a href="offshore/index.html"><span>オフシェア開発</span><img src="<?php echo get_stylesheet_directory_uri()?>/images/arrow.png" width="16" height="7" alt="arrow"/></a></h3>
+                        <h3><a href="/maint/"><span>24×365運用保守</span><img src="<?php echo get_stylesheet_directory_uri()?>/images/arrow.png" width="16" height="7" alt="arrow"/></a></h3>
+                        <h3><a href="/offshore/"><span>オフシェア開発</span><img src="<?php echo get_stylesheet_directory_uri()?>/images/arrow.png" width="16" height="7" alt="arrow"/></a></h3>
                         <h3 class="nonlink">セキュリティ</h3>
                     </div>
                 </div>
@@ -89,8 +89,8 @@ get_header(); ?>
                 <div>
                     <h3><span>SUPPORT COMPANY</span>ＩｏＴビジネスに参入しませんか?</h3>
                     <p>IoT開発案件やWEBシステム開発案件にパートナーとして携わって頂ける企業を募集しています。</p>
-                    <a href="partner/index.html"><span>ビジネスパートナー企業募集</span><img src="<?php echo get_stylesheet_directory_uri()?>/images/arrow_white.png" width="16" height="7" alt="arrow"/></a>
-                    <a href="partner/index.html#partner1"><span>フリーランスエンジニア募集</span><img src="<?php echo get_stylesheet_directory_uri()?>/images/arrow_white.png" width="16" height="7" alt="arrow"/></a>
+                    <a href="/partner/"><span>ビジネスパートナー企業募集</span><img src="<?php echo get_stylesheet_directory_uri()?>/images/arrow_white.png" width="16" height="7" alt="arrow"/></a>
+                    <a href="/partner/#partner1"><span>フリーランスエンジニア募集</span><img src="<?php echo get_stylesheet_directory_uri()?>/images/arrow_white.png" width="16" height="7" alt="arrow"/></a>
                 </div>
             </div>
             <h2 class="inh2 inTitle03">会社情報</h2>
@@ -106,7 +106,7 @@ get_header(); ?>
                 </dl>
                 <dl class="clearfix">
                     <dt>本社</dt>
-                    <dd>〒150-0002 東京都渋谷区渋谷2-12-19 東建インターナショナルビル別館8F<a href="access/index.html#acc01">MAP</a></dd>
+                    <dd>〒150-0002 東京都渋谷区渋谷2-12-19 東建インターナショナルビル別館8F<a href="/access/#acc01">MAP</a></dd>
                 </dl>
                 <dl class="clearfix">
                     <dt>TEL</dt>
@@ -114,11 +114,11 @@ get_header(); ?>
                 </dl>
                 <dl class="clearfix">
                     <dt>国内支社</dt>
-                    <dd>■神戸支社<a href="access/index.html#acc02">MAP</a></dd>
+                    <dd>■神戸支社<a href="/access/#acc02">MAP</a></dd>
                 </dl>
                 <dl class="clearfix">
                     <dt>海外支社</dt>
-                    <dd>■IVP Global Philippines, Inc.（IVP100%出資子会社 拠点：Manila）<a href="access/index.html#acc03">MAP</a><br />■香港オフィス（中華人民共和国特別行政区）<a href="access/index.html#acc04">MAP</a></dd>
+                    <dd>■IVP Global Philippines, Inc.（IVP100%出資子会社 拠点：Manila）<a href="/access/#acc03">MAP</a><br />■香港オフィス（中華人民共和国特別行政区）<a href="/access/#acc04">MAP</a></dd>
                 </dl>
                 <dl class="clearfix">
                     <dt>資本金</dt>
@@ -129,8 +129,8 @@ get_header(); ?>
                     <dd>180名（2017年8月現在 100%子会社従業員含む)</dd>
                 </dl>
                 <div class="heightLineParent clearfix">
-                    <a href="company/index.html"><span>MORE</span><img src="<?php echo get_stylesheet_directory_uri()?>/images/arrow_white.png" width="16" height="7" alt="arrow"/></a>
-                    <a href="quest/index.html"><span>お問い合せフォーム</span><img src="<?php echo get_stylesheet_directory_uri()?>/images/arrow_white.png" width="16" height="7" alt="arrow"/></a>
+                    <a href="/company/"><span>MORE</span><img src="<?php echo get_stylesheet_directory_uri()?>/images/arrow_white.png" width="16" height="7" alt="arrow"/></a>
+                    <a href="/quest/"><span>お問い合せフォーム</span><img src="<?php echo get_stylesheet_directory_uri()?>/images/arrow_white.png" width="16" height="7" alt="arrow"/></a>
                 </div>
             </div>
             <div class="facebook2">
