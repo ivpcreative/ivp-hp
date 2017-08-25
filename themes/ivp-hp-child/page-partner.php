@@ -1,7 +1,7 @@
 <?php
 /**
  * The template for displaying pages
-  *Template Name:page-ec
+  *Template Name:page-partner
  *
  * @package WordPress
  * @subpackage ivp-hp

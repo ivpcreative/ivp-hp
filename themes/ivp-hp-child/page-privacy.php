@@ -1,7 +1,7 @@
 <?php
 /**
  * The template for displaying pages
-  *Template Name:page-ec
+  *Template Name:page-privacy
  *
  * @package WordPress
  * @subpackage ivp-hp

@@ -18,13 +18,7 @@ get_header(); ?>
 <?php get_template_part( 'template-parts/content', 'slider_left' ); ?>
 <div class="slide_left_after2"></div>
 
-<?php
-// Start the loop.
-while ( have_posts() ) : the_post();
-the_content();
-endwhile;
-?>
-
+<?php echo do_shortcode('[contact-form-7 id="242" title="お問い合わせ"]'); ?>
 
 <script type="text/javascript"  src="<?php echo get_stylesheet_directory_uri()?>/js/jquery.js"></script>
 <script type="text/javascript"  src="<?php echo get_stylesheet_directory_uri()?>/js/smoothScroll.js"></script>

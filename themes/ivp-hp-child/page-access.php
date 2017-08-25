@@ -1,8 +1,7 @@
 <?php
 /**
  * The template for displaying pages
-  *Template Name:page-ec
- *
+  *Template Name:page-access
  * @package WordPress
  * @subpackage ivp-hp
  * @since ivp-hp 1.0
