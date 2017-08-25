@@ -1468,7 +1468,7 @@
 	font-size:15px;
 	color:#272727;
 }
-.quest input[type="text"] , .quest textarea{
+.quest input[type="text"] ,.quest input[type="email"] ,.quest input[type="tel"] ,.quest textarea{
 	width:96%;
 	padding:6px 2%;
 	color:#272727;
@@ -1476,6 +1476,11 @@
 	background:#fff;
 	font-size:14px;
 }
+
+.quest [disabled]{
+	opacity: .45;
+}
+
 .quest .msg{
 	color:#b90101;
 	font-size:14px;
