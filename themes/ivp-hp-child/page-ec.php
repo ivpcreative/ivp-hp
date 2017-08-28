@@ -238,22 +238,13 @@ get_header(); ?>
 </div>
 <!-- モーダル専用エリア end -->
 
+  <?php // get_sidebar(); ?>
+  <?php get_footer(); ?>
+  
+</div>
+</div>
 
-<!-- PAGE SCRIPT START -->
-<script type="text/javascript"  src="<?php echo get_stylesheet_directory_uri()?>/js/jquery.js"></script>
-<script type="text/javascript"  src="<?php echo get_stylesheet_directory_uri()?>/js/smoothScroll.js"></script>
-<script type="text/javascript"  src="<?php echo get_stylesheet_directory_uri()?>/js/css_browser_selector.js"></script>
-<script type="text/javascript"  src="<?php echo get_stylesheet_directory_uri()?>/js/jquery.easing.1.3.js"></script>
-<script type="text/javascript"  src="<?php echo get_stylesheet_directory_uri()?>/js/jquery.bxslider.min.js"></script>
-<script type="text/javascript"  src="<?php echo get_stylesheet_directory_uri()?>/js/superfish.js"></script>
-<script type="text/javascript"  src="<?php echo get_stylesheet_directory_uri()?>/js/heightLine.js"></script>
-<script type="text/javascript"  src="<?php echo get_stylesheet_directory_uri()?>/js/jquery.meanmenu.js"></script>
-<script type="text/javascript"  src="<?php echo get_stylesheet_directory_uri()?>/js/iziModal.js"></script>
-<script type="text/javascript">$(document).ready(function(){$('#slider').bxSlider({mode: 'fade',auto: true,pause:60000000,speed: 0,pager: false});});</script>
-<script type="text/javascript"> $(document).ready(function(){ $("ul.sf-menu").superfish({  animation: {height:'show'}, delay: 1200 }); });</script>
-<script type="text/javascript">jQuery(document).ready(function () { jQuery('#snavi').meanmenu();	});</script>
-<script type="text/javascript">$(function(){	$(".accordionbox dt").on("click", function() {$(this).next().slideToggle();	if ($(this).children(".accordion_icon").hasClass('active')) {	$(this).children(".accordion_icon").removeClass('active');	}else {	$(this).children(".accordion_icon").addClass('active');}});});</script>
-
+<!-- PAGE SCRIPT -->
 <script>
 //01
 $(document).on('click', '.open-options1', function(event) {
@@ -358,5 +349,4 @@ $(document).ready(function(){
 
 
 
-<?php // get_sidebar(); ?>
-<?php get_footer(); ?>
+

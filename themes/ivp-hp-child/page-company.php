@@ -403,32 +403,19 @@ get_header(); ?>
                     </div>       
                 </dd>
             </dl>
-        </div>
-        
-
+        </div>        
         
         <div class="second_contact">
         	<a href="https://reg31.smp.ne.jp/regist/is?SMPFORM=qck-silcp-d23ee8f7d2f6fb629a9cd2f0ca70d828" target="_blank" onclick="ga('send', 'event', 'company', 'click', 'quest', 1, {'nonInteraction': 1});">お問い合せフォームはこちら</a>
         </div>
+
+        <?php // get_sidebar(); ?>
+        <?php get_footer(); ?>
+
     </div>
  </div>
 
  <!-- page script-->
-
-
-<script type="text/javascript"  src="<?php echo get_stylesheet_directory_uri()?>/js/jquery.js"></script>
-<script type="text/javascript"  src="<?php echo get_stylesheet_directory_uri()?>/js/smoothScroll.js"></script>
-<script type="text/javascript"  src="<?php echo get_stylesheet_directory_uri()?>/js/css_browser_selector.js"></script>
-<script type="text/javascript"  src="<?php echo get_stylesheet_directory_uri()?>/js/jquery.easing.1.3.js"></script>
-<script type="text/javascript"  src="<?php echo get_stylesheet_directory_uri()?>/js/jquery.bxslider.min.js"></script>
-<script type="text/javascript"  src="<?php echo get_stylesheet_directory_uri()?>/js/superfish.js"></script>
-<script type="text/javascript"  src="<?php echo get_stylesheet_directory_uri()?>/js/heightLine.js"></script>
-<script type="text/javascript"  src="<?php echo get_stylesheet_directory_uri()?>/js/jquery.meanmenu.js"></script>
-<script type="text/javascript"  src="<?php echo get_stylesheet_directory_uri()?>/js/iziModal.js"></script>
-<script type="text/javascript">$(document).ready(function(){$('#slider').bxSlider({mode: 'fade',auto: true,pause:60000000,speed: 0,pager: false});});</script>
-<script type="text/javascript"> $(document).ready(function(){ $("ul.sf-menu").superfish({  animation: {height:'show'}, delay: 1200 }); });</script>
-<script type="text/javascript">jQuery(document).ready(function () { jQuery('#snavi').meanmenu();	});</script>
-<script type="text/javascript">$(function(){	$(".accordionbox dt").on("click", function() {$(this).next().slideToggle();	if ($(this).children(".accordion_icon").hasClass('active')) {	$(this).children(".accordion_icon").removeClass('active');	}else {	$(this).children(".accordion_icon").addClass('active');}});});</script>
 <script type="text/javascript">$(function(){	$(".accordionbox2 dt").on("click", function() {$(this).next().slideToggle();if ($(this).children(".accordion_icon2").hasClass('active')) {	$(this).children(".accordion_icon2").removeClass('active');}else {$(this).children(".accordion_icon2").addClass('active');	}});});</script>
 <script type="text/javascript">
 $(document).ready(function(){
@@ -442,5 +429,4 @@ $(document).ready(function(){
 	});
 });
 </script>
-<?php // get_sidebar(); ?>
-<?php get_footer(); ?>
+

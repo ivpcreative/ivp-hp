@@ -48,8 +48,23 @@ get_header(); ?>
         <div class="ggmap"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3688.881282375226!2d113.96922036495629!3d22.395832485274028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3403fb3b556d9ce5%3A0xd2c35c3783555fea!2z5b6z5qCE5bel5qWt5aSn5buIIDMgVHN1biBXZW4gUmQsIFR1ZW4gTXVuLCDpppnmuK8!5e0!3m2!1sja!2sjp!4v1502873276334" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe></div>
 		<div class="link_map pb40"><a href="https://goo.gl/maps/pcPu4BMhQMK2" target="_blank"><span>大きな地図で見る</span><img src="<?php echo get_stylesheet_directory_uri()?>/images/arrow_white.png" width="16" height="7" alt="arrow"/></a>
 		</div>
-	</div>
+
+        <?php // get_sidebar(); ?>
+        <?php get_footer(); ?>
+
+    </div>
 </div>
 
-<?php // get_sidebar(); ?>
-<?php get_footer(); ?>
+<!--PAGE SCRIPT-->
+<script type="text/javascript">
+$(document).ready(function(){
+    $('.sf-menu h4 a').each(function(){
+        var $href = $(this).attr('href');
+        if(location.href.match($href)) {
+            $(this).addClass('active');     
+        } else {
+            $(this).removeClass('active');
+        }
+    });
+});
+</script>

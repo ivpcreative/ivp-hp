@@ -59,9 +59,9 @@ get_header(); ?>
             <img src="<?php echo get_stylesheet_directory_uri()?>/images/pertner_bnr04.png" width="181" height="99" alt="isms"/>
             <img src="<?php echo get_stylesheet_directory_uri()?>/images/pertner_bnr05.png" width="181" height="99" alt="gms"/>
         </div>
+
+        <?php // get_sidebar(); ?>
+        <?php get_footer(); ?>
+
     </div>
 </div>
-
-
-<?php // get_sidebar(); ?>
-<?php get_footer(); ?>
