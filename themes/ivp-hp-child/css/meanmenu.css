@@ -84,7 +84,6 @@ a.meanmenu-reveal {
 	border-bottom: 1px solid rgba(255,255,255,0.2);
 	text-decoration: none;
 	font-size:13px;
-	text-transform: uppercase;
 	letter-spacing:1px;
 }
 
@@ -94,6 +93,7 @@ a.meanmenu-reveal {
 	text-shadow: none !important;
 	visibility: visible;
 	border: none;
+	font-family: 'Poppins','Noto Sans', "Helvetica Neue", Helvetica, "Avenir Next", "游ゴシック体", YuGothic, "游ゴシック Medium", "YuGothic M",  'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', "メイリオ", Meiryo, sans-serif !important;
 }
 .mean-container .mean-nav ul li li a span {
 	vertical-align:middle;
