@@ -38,8 +38,9 @@ get_header(); ?>
             今後ともご愛顧賜りますようよろしくお願い申し上げます。</p>
             </div>
         </div>
+
+        <?php // get_sidebar(); ?>
+        <?php get_footer(); ?>
+
     </div>
 </div>
-
-<?php // get_sidebar(); ?>
-<?php get_footer(); ?>

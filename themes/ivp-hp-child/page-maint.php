@@ -69,9 +69,25 @@ get_header(); ?>
         <div class="second_contact">
         	<a href="https://reg31.smp.ne.jp/regist/is?SMPFORM=qck-silcp-d23ee8f7d2f6fb629a9cd2f0ca70d828" target="_blank" onclick="ga('send', 'event', '24365', 'click', 'quest', 1, {'nonInteraction': 1});">お問い合せフォームはこちら</a>
         </div>
+
+        <?php // get_sidebar(); ?>
+        <?php get_footer(); ?>
+
     </div>
 </div>
+<!--page script-->
+<script type="text/javascript">
+$(function(){
+$('.sf-menu ul li a').each(function(){
+var $href = $(this).attr('href');
+if(location.href.match($href)) {
+$(this).addClass('active');
+} else {
+$(this).removeClass('active');
+}
+});
+});
+</script>
 
 
-<?php // get_sidebar(); ?>
-<?php get_footer(); ?>
+
