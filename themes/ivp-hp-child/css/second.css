@@ -1,4 +1,4 @@
-/* ec */
+﻿/* ec */
 .mean-bar{
 	margin-top:-58px;
 }
@@ -1554,6 +1554,12 @@
 	font-weight:bold;
 	vertical-align:middle;
 }
+
+/* 2017/08/28 追加:checkbox margin*/
+.wpcf7-acceptance{
+	margin-right:15px;
+}
+
 
 
 @media (max-width: 1125px) {
