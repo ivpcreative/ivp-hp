@@ -19,15 +19,15 @@ get_header(); ?>
 
 <div class="container clearfix">
     <div class="main_contents second">
-    
+
     	<h2>２４時間３６５日のシステム＆サーバ監視により、<br />ＷＥＢシステムの安定稼働をサポートします。</h2>
-        
+
         <p class="iot01"><strong>1次切り分け、クライアントさまへのメール＆電話報告</strong><br />
         定期監視プログラムがサーバの異常を検出すると、サーバ技術担当者がサーバ状況確認を行います。<br />
         サーバへの接続ができないなど、障害の発生が判明した際は、直ちに復旧作業を行います。<br />
         障害検知から15分以内に解消できないと判断した場合は、お客様にメールにて障害発生を通知いたします。<br />
         ※重度障害の場合は、緊急連絡網にてお客様の携帯電話にて連絡致します。</p>
-                
+
         <h3 class="inh2 title_2436501">障害発生時の対応</h3>
         <div class="clearfix lines"><img src="<?php echo get_stylesheet_directory_uri()?>/images/diagonal_line.png" width="160" height="auto" alt="diagonal line"/></div>
 		<div class="detail24365">
@@ -42,11 +42,11 @@ get_header(); ?>
             <h4>・障害対応サービス</h4>
             <p>障害対応のカスタムメード対応<br />a
             リモート接続によるリブート対応やあらかじめお客様にご用意いただいた手順書に基づく復旧作業などカスタマイズにより、お客様のビジネススキームへ柔軟に対応するためのオプションサービスをご用意しております。</p>
-        </div>        
-        
+        </div>
+
         <h3 class="inh2 title_2436502">サービスの特徴</h3>
 		<div class="clearfix lines"><img src="<?php echo get_stylesheet_directory_uri()?>/images/diagonal_line.png" width="160" height="auto" alt="diagonal line"/></div>
-		<div class="func clearfix">
+		<div class="func01 clearfix">
             <table>
                 <tr>
                     <td>24/365有人監視 </td>
@@ -59,8 +59,8 @@ get_header(); ?>
                     <td>TEL報告</td>
                 </tr>
             </table>
-        </div>        
-        
+        </div>
+
         <div class="second_contact">
         	<a href="https://reg31.smp.ne.jp/regist/is?SMPFORM=qck-silcp-d23ee8f7d2f6fb629a9cd2f0ca70d828" target="_blank" onclick="ga('send', 'event', '24365', 'click', 'quest', 1, {'nonInteraction': 1});">お問い合せフォームはこちら</a>
         </div>
@@ -83,6 +83,3 @@ $(this).removeClass('active');
 });
 });
 </script>
-
-
-
