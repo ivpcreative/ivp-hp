@@ -1547,12 +1547,12 @@
 	height:20px;
 	vertical-align:middle;
 }
-.doui span{
-	font-size:18px;
-	margin-left:15px;
-	color:#b90101;
-	font-weight:bold;
-	vertical-align:middle;
+.doui span {
+    font-size: 18px;
+    /* margin-left: 15px; */
+    color: #b90101;
+    font-weight: bold;
+    /* vertical-align: middle; */
 }
 
 /* 2017/08/28 追加:checkbox margin*/
