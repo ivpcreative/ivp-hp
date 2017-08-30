@@ -12,7 +12,7 @@ get_header(); ?>
 <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri()?>/css/second.css"/>
 
 <ul id="slider2">
-    <li style="background:url(<?php echo get_stylesheet_directory_uri()?>/images/slide7.jpg) center bottom no-repeat; background-size:cover;"><h2><img src="<?php echo get_stylesheet_directory_uri()?>/images/slide7.jpg" width="auto" height="200" alt="セキュリティ/運用保守 オフショア開発"/></h2></li>
+    <li style="background:url(<?php echo get_stylesheet_directory_uri()?>/images/slide7.jpg) center bottom no-repeat; background-size:cover;"><h2><img src="<?php echo get_stylesheet_directory_uri()?>/images/second_title_off.png" width="auto" height="200" alt="セキュリティ/運用保守 オフショア開発"/></h2></li>
 </ul>
 
 <?php get_template_part( 'template-parts/content', 'slider_left' ); ?>
@@ -62,7 +62,11 @@ get_header(); ?>
         </div>
 
         <div class="second_contact">
-        	<a href="https://reg31.smp.ne.jp/regist/is?SMPFORM=qck-silcp-d23ee8f7d2f6fb629a9cd2f0ca70d828" target="_blank" onclick="ga('send', 'event', 'offshore', 'click', 'quest', 1, {'nonInteraction': 1});">お問い合せフォームはこちら</a>
+            <?php
+              set_query_var( 'btnkind', 'contents');
+              set_query_var( 'page', 'offshore');
+              get_template_part( 'template-parts/content', 'btn_quest' );?>
+
         </div>
 
         <?php // get_sidebar(); ?>

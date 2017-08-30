@@ -20,7 +20,7 @@ get_header(); ?>
 <div class="container clearfix">
     <div class="main_contents second">
     
-        <a href="https://reg31.smp.ne.jp/regist/is?SMPFORM=qck-silcp-d23ee8f7d2f6fb629a9cd2f0ca70d828" target="_blank" onclick="ga('send', 'event', 'partnar', 'click', 'quest', 1, {'nonInteraction': 1});" class="partner01 clearfix">
+        <a href="https://reg31.smp.ne.jp/regist/is?SMPFORM=qck-silcp-d23ee8f7d2f6fb629a9cd2f0ca70d828" target="_blank" onclick="ga('send', 'event', 'partner', 'click', 'quest', 1, {'nonInteraction': 1});" class="partner01 clearfix">
             <h3>ビジネスパートナー企業・募集</h3>
             <p>アイブイピーではお客さまの多様なニーズにお応えするために、<br />
             IoTサービス開発や、WEBシステム開発にご協力頂ける<br />

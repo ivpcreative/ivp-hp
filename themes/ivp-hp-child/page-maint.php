@@ -63,7 +63,11 @@ get_header(); ?>
         </div>
 
         <div class="second_contact">
-        	<a href="https://reg31.smp.ne.jp/regist/is?SMPFORM=qck-silcp-d23ee8f7d2f6fb629a9cd2f0ca70d828" target="_blank" onclick="ga('send', 'event', '24365', 'click', 'quest', 1, {'nonInteraction': 1});">お問い合せフォームはこちら</a>
+        <?php
+              set_query_var( 'btnkind', 'contents');
+              set_query_var( 'page', '24365');
+              get_template_part( 'template-parts/content', 'btn_quest' );?>
+
         </div>
 
         <?php // get_sidebar(); ?>

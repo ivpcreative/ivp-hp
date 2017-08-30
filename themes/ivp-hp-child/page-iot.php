@@ -56,7 +56,10 @@ get_header(); ?>
         </div>
         
         <div class="second_contact">
-        	<a href="https://reg31.smp.ne.jp/regist/is?SMPFORM=qck-silcp-d23ee8f7d2f6fb629a9cd2f0ca70d828" target="_blank" onclick="ga('send', 'event', 'iot', 'click', 'quest', 1, {'nonInteraction': 1});">お問い合せフォームはこちら</a>
+          <?php
+              set_query_var( 'btnkind', 'contents');
+              set_query_var( 'page', 'iot');
+              get_template_part( 'template-parts/content', 'btn_quest' );?>
         </div>
 
 
@@ -90,10 +93,12 @@ get_header(); ?>
             	<h4>ユーザーの位置情報を記録</h4>
             </div>
         </div>
-        <a href="https://reg31.smp.ne.jp/regist/is?SMPFORM=qck-silcp-d23ee8f7d2f6fb629a9cd2f0ca70d828" target="_blank" onclick="ga('send', 'event', 'iot', 'click', 'quest', 1, {'nonInteraction': 1});" class="links"><span>お問い合せフォーム</span><img src="<?php echo get_stylesheet_directory_uri()?>/images/arrow_white.png" width="16" height="7" alt="arrow"/></a>
-      
-  </div
-></div>
+        <?php
+          set_query_var( 'btnkind', 'modal');
+          set_query_var( 'page', 'iot');
+          get_template_part( 'template-parts/content', 'btn_quest' );?>      
+  </div>
+</div>
 <div id="modal-options2" data-izimodal-group="group1" data-izimodal-loop="" data-izimodal-title="商業施設・イベント向けＩｏＴサービス ">
 	<div class="modal-base">
     	<img src="<?php echo get_stylesheet_directory_uri()?>/images/iot_modal_photo01.jpg" width="100%" height="auto" alt="商業施設・イベント向け" class="mb20"/>
@@ -125,8 +130,10 @@ get_header(); ?>
             	<h4>広告・デジタルサイネージ</h4>
             </div>
         </div>
-        <a href="https://reg31.smp.ne.jp/regist/is?SMPFORM=qck-silcp-d23ee8f7d2f6fb629a9cd2f0ca70d828" target="_blank" onclick="ga('send', 'event', 'iot', 'click', 'quest', 1, {'nonInteraction': 1});" class="links"><span>お問い合せフォーム</span><img src="<?php echo get_stylesheet_directory_uri()?>/images/arrow_white.png" width="16" height="7" alt="arrow"/></a>
-      
+        <?php
+          set_query_var( 'btnkind', 'modal');
+          set_query_var( 'page', 'iot');
+          get_template_part( 'template-parts/content', 'btn_quest' );?>     
   </div>
 </div>
 
@@ -153,7 +160,10 @@ get_header(); ?>
                 <td>スピーディー</td>
             </tr>
         </table>
-        <a href="https://reg31.smp.ne.jp/regist/is?SMPFORM=qck-silcp-d23ee8f7d2f6fb629a9cd2f0ca70d828" target="_blank" onclick="ga('send', 'event', 'iot', 'click', 'quest', 1, {'nonInteraction': 1});" class="links"><span>お問い合せフォーム</span><img src="<?php echo get_stylesheet_directory_uri()?>/images/arrow_white.png" width="16" height="7" alt="arrow"/></a>
+        <?php
+          set_query_var( 'btnkind', 'modal');
+          set_query_var( 'page', 'iot');
+          get_template_part( 'template-parts/content', 'btn_quest' );?>
   </div>
 </div>
 

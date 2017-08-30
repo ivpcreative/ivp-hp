@@ -112,9 +112,9 @@ get_header(); ?>
         <li>クレジットカード決済、コンビニ決済、後払い決済、キャリア決済など、多種多様な決済方法に対応可能</li>
       </ul>
       <?php
-       set_query_var( 'btnkind', 'modal');
-       get_template_part( 'template-parts/content', 'btn_quest' );
-       ?>
+        set_query_var( 'btnkind', 'modal');
+        set_query_var( 'page', 'ec');
+        get_template_part( 'template-parts/content', 'btn_quest' );?>
   </div>
 </div>
 <div id="modal-options2" data-izimodal-group="group1" data-izimodal-loop="" data-izimodal-title="越境ECサイトを立ち上げたい">
@@ -165,9 +165,9 @@ get_header(); ?>
             </tr>
         </table>
         <?php
-         set_query_var( 'btnkind', 'modal');
-         get_template_part( 'template-parts/content', 'btn_quest' );
-         ?>
+        set_query_var( 'btnkind', 'modal');
+        set_query_var( 'page', 'ec');
+        get_template_part( 'template-parts/content', 'btn_quest' );?>
   </div>
 </div>
 <div id="modal-options3" data-izimodal-group="group1" data-izimodal-loop="" data-izimodal-title="マルチブランド対応のECサイトを立ち上げたい">
@@ -176,9 +176,9 @@ get_header(); ?>
         <img src="<?php echo get_stylesheet_directory_uri()?>/images/modal_ec_img3.png" width="400" height="auto" alt="イメージ図" class="modal_ec_img1"/>
         <p>ブランド別ドメインが分かれていても管理画面は顧客データ、受注データ、商品データなど各データーベースの一元管理が可能。</p>
         <?php
-         set_query_var( 'btnkind', 'modal');
-         get_template_part( 'template-parts/content', 'btn_quest' );
-         ?>
+        set_query_var( 'btnkind', 'modal');
+        set_query_var( 'page', 'ec');
+        get_template_part( 'template-parts/content', 'btn_quest' );?>
   </div>
 </div>
 <div id="modal-options4" data-izimodal-group="group1" data-izimodal-loop="" data-izimodal-title="ＢｔｏＢ向けＥＣサイトを立ち上げたい">
@@ -209,9 +209,9 @@ get_header(); ?>
         </table>
     	<p align="center" class="mt30">その他の機能をカスタマイズ対応  </p>
       <?php
-       set_query_var( 'btnkind', 'modal');
-       get_template_part( 'template-parts/content', 'btn_quest' );
-       ?>
+        set_query_var( 'btnkind', 'modal');
+        set_query_var( 'page', 'ec');
+        get_template_part( 'template-parts/content', 'btn_quest' );?>
   </div>
 </div>
 <div id="modal-options5" data-izimodal-group="group1" data-izimodal-loop="" data-izimodal-title="基幹システムや他のソリューションと連携したい">
@@ -243,9 +243,9 @@ get_header(); ?>
         </div>
 
         <?php
-         set_query_var( 'btnkind', 'modal');
-         get_template_part( 'template-parts/content', 'btn_quest' );
-         ?>
+        set_query_var( 'btnkind', 'modal');
+        set_query_var( 'page', 'ec');
+        get_template_part( 'template-parts/content', 'btn_quest' );?>
   </div>
 </div>
 <!-- モーダル専用エリア end -->
