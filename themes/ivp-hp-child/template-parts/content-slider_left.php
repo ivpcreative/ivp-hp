@@ -33,7 +33,9 @@
 
   <div class="sf-bottom">
     <p id="fixed" class="scroll">代表電話(東京本社)<strong>03-5469-8601</strong><span>営業時間:10:00-19:00（平日)</span></p>
-    <a href="https://reg31.smp.ne.jp/regist/is?SMPFORM=qck-silcp-d23ee8f7d2f6fb629a9cd2f0ca70d828" target="_blank" onclick="ga('send', 'event', 'leftnavi', 'click', 'quest', 1, {'nonInteraction': 1});"><i class="fa fa-envelope" aria-hidden="true"></i>お問い合せ</a>
+    <?php
+        set_query_var( 'btnkind', 'slider_left');
+        get_template_part( 'template-parts/content', 'btn_quest' );?> 
     <a href="https://ww2.ivp.co.jp/english/" target="_blank"><i class="fa fa-globe" aria-hidden="true"></i>English</a>
   </div>
 </div>

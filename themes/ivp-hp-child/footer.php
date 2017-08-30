@@ -89,7 +89,9 @@
 						<a href="https://ww2.ivp.co.jp/recruit/" target="_blank">採用情報</a>
 						<a href="partner/">協力会社募集</a>
 
-						<a href="https://reg31.smp.ne.jp/regist/is?SMPFORM=qck-silcp-d23ee8f7d2f6fb629a9cd2f0ca70d828" target="_blank" onclick="ga('send', 'event', 'leftnavi', 'click', 'quest', 1, {'nonInteraction': 1});">お問い合せ</a>
+						<?php
+              				set_query_var( 'btnkind', 'footer-sp');
+              				get_template_part( 'template-parts/content', 'btn_quest' );?>
 						<a href="https://ww2.ivp.co.jp/english/" target="_blank">English</a>
 				</div>
 				<p class="copyright">Copyright(C)2017 IVP Co., Ltd. All rights reserved.</p>
