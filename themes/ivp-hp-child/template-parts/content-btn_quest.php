@@ -15,10 +15,9 @@ if($btnkind == 'header'){ //ヘッダー用?>
 <a href="<?php echo $link ?>" target="_blank" onclick="ga('send', 'event', 'leftnavi', 'click', 'quest', 1, {'nonInteraction': 1});">
   <i class="fa fa-envelope" aria-hidden="true"></i>お問い合せ</a>
 
-<?php }elseif(($btnkind == 'slider_left')){ //フッター用?>
+<?php }elseif(($btnkind == 'slider_left')){ //スライダー用?>
 <a href="<?php echo $link ?>" target="_blank" onclick="ga('send', 'event', 'leftnavi', 'click', 'quest', 1, {'nonInteraction': 1});">
   <i class="fa fa-envelope" aria-hidden="true"></i>お問い合せ</a>
-
 
 <?php }elseif(($btnkind == 'footer')){ //フッター用?>
 <a href="<?php echo $link ?>" target="_blank" onclick="ga('send', 'event', 'leftnavi', 'click', 'quest', 1, {'nonInteraction': 1});">
@@ -28,7 +27,7 @@ if($btnkind == 'header'){ //ヘッダー用?>
 <?php }elseif(($btnkind == 'footer-sp')){ //フッタースマホ用?>
 	<a href="<?php echo $link ?>" target="_blank" onclick="ga('send', 'event', 'leftnavi', 'click', 'quest', 1, {'nonInteraction': 1});">お問い合せ</a>
 
-<?php }elseif(($btnkind == 'contents')){ //モーダル用?>
+<?php }elseif(($btnkind == 'contents')){ //内容用?>
 	<a href="<?php echo $link ?>" target="_blank" onclick="ga('send', 'event', '<?php echo $page ?>', 'click', 'quest', 1, {'nonInteraction': 1});">お問い合せフォームはこちら</a>
 
 <?php }elseif(($btnkind == 'modal')){ //モーダル用?>
