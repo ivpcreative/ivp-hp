@@ -19,15 +19,15 @@ get_header(); ?>
 
 <div class="container clearfix">
     <div class="main_contents second">
-    
+
     	<h2>アイブイピーのＥＣソリューションとは？</h2>
-        
+
         <div class="ec01 heightLineParent clearfix">
         	<p>創業20年の経験に<br />基づくノウハウ</p>
         	<p>24/365の<br />安心サポート</p>
         	<p>導入実績450サイト以上の<br />パッケージシステム</p>
         </div>
-        
+
         <h3 class="inh2 title_ec01">このような企業さまのご要望にお応えします。</h3>
         <div class="clearfix lines"><img src="<?php echo get_stylesheet_directory_uri()?>/images/diagonal_line.png" width="160" height="auto" alt="diagonal line"/></div>
 		<div class="ec02 clearfix heightLineParent">
@@ -37,7 +37,7 @@ get_header(); ?>
         	<div class="open-options4"><h3>4</h3><p>BtoB向けECサイトを<br />立ち上げたい</p><a href="" class="open-options4 ina">OPEN</a></div>
         	<div class="open-options5"><h3>5</h3><p>基幹システムや他のソリューション<br />と連携したい</p><a href="" class="open-options5 ina">OPEN</a></div>
         </div>
-        
+
         <h3 class="inh2 title_ec02">当社オリジナルＥＣソリューションシステム「ＥＲＳ」とは？</h3>
         <div class="clearfix lines"><img src="<?php echo get_stylesheet_directory_uri()?>/images/diagonal_line.png" width="160" height="auto" alt="diagonal line"/></div>
 		<div class="ec03 clearfix">
@@ -47,7 +47,7 @@ get_header(); ?>
         	<img src="<?php echo get_stylesheet_directory_uri()?>/images/ec_icon04.png" width="19%" height="auto" alt="モール管理システム連携可能"/>
         	<img src="<?php echo get_stylesheet_directory_uri()?>/images/ec_icon05.png" width="19%" height="auto" alt="24/365インフラ保守運用"/>
         </div>
-        
+
         <h3 class="inh2 title_ec03">ＥＲＳの主な機能</h3>
         <div class="clearfix lines"><img src="<?php echo get_stylesheet_directory_uri()?>/images/diagonal_line.png" width="160" height="auto" alt="diagonal line"/></div>
 		<div class="func01 clearfix">
@@ -111,7 +111,10 @@ get_header(); ?>
         <li>フロントデザインにシステムしばりがないので、自由に編集が可能</li>
         <li>クレジットカード決済、コンビニ決済、後払い決済、キャリア決済など、多種多様な決済方法に対応可能</li>
       </ul>
-      <a href="https://reg31.smp.ne.jp/regist/is?SMPFORM=qck-silcp-d23ee8f7d2f6fb629a9cd2f0ca70d828" target="_blank" onclick="ga('send', 'event', 'ec', 'click', 'quest', 1, {'nonInteraction': 1});" class="links"><span>お問い合せフォーム</span><img src="<?php echo get_stylesheet_directory_uri()?>/images/arrow_white.png" width="16" height="7" alt="arrow"/></a>
+      <?php
+       set_query_var( 'btnkind', 'modal');
+       get_template_part( 'template-parts/content', 'btn_quest' );
+       ?>
   </div>
 </div>
 <div id="modal-options2" data-izimodal-group="group1" data-izimodal-loop="" data-izimodal-title="越境ECサイトを立ち上げたい">
@@ -127,7 +130,7 @@ get_header(); ?>
             	<h3>導入実績450以上のECシステム「ERS」</h3>
                 <p>ERSとは、450サイト以上の開発実績のある、アイブイピーのオリジナルECパッケージシステムです。<br />特に、基幹システムとの連携をしたい、自社の運用に合わせてカスタマイズをしたい、など、お客さまの要望の合わせたオリジナルECサイトを立ち上げることができるECパッケージシステムです。</p>
             </div>
-         </div>        
+         </div>
         <h3 class="modalh3">越境ＥＣシステムの５つの要素</h3>
         <table class="modal_block2">
             <tr>
@@ -161,7 +164,10 @@ get_header(); ?>
                 <td>スマートフォン対応</td>
             </tr>
         </table>
-      <a href="https://reg31.smp.ne.jp/regist/is?SMPFORM=qck-silcp-d23ee8f7d2f6fb629a9cd2f0ca70d828" target="_blank" onclick="ga('send', 'event', 'ec', 'click', 'quest', 1, {'nonInteraction': 1});" class="links"><span>お問い合せフォーム</span><img src="<?php echo get_stylesheet_directory_uri()?>/images/arrow_white.png" width="16" height="7" alt="arrow"/></a>
+        <?php
+         set_query_var( 'btnkind', 'modal');
+         get_template_part( 'template-parts/content', 'btn_quest' );
+         ?>
   </div>
 </div>
 <div id="modal-options3" data-izimodal-group="group1" data-izimodal-loop="" data-izimodal-title="マルチブランド対応のECサイトを立ち上げたい">
@@ -169,7 +175,10 @@ get_header(); ?>
     	<h3 class="modalh3b">データベースや管理画面を一元管理して<br />マルチブランドのECサイト運用が可能</h3>
         <img src="<?php echo get_stylesheet_directory_uri()?>/images/modal_ec_img3.png" width="400" height="auto" alt="イメージ図" class="modal_ec_img1"/>
         <p>ブランド別ドメインが分かれていても管理画面は顧客データ、受注データ、商品データなど各データーベースの一元管理が可能。</p>
-      <a href="https://reg31.smp.ne.jp/regist/is?SMPFORM=qck-silcp-d23ee8f7d2f6fb629a9cd2f0ca70d828" target="_blank" onclick="ga('send', 'event', 'ec', 'click', 'quest', 1, {'nonInteraction': 1});" class="links"><span>お問い合せフォーム</span><img src="<?php echo get_stylesheet_directory_uri()?>/images/arrow_white.png" width="16" height="7" alt="arrow"/></a>
+        <?php
+         set_query_var( 'btnkind', 'modal');
+         get_template_part( 'template-parts/content', 'btn_quest' );
+         ?>
   </div>
 </div>
 <div id="modal-options4" data-izimodal-group="group1" data-izimodal-loop="" data-izimodal-title="ＢｔｏＢ向けＥＣサイトを立ち上げたい">
@@ -199,13 +208,16 @@ get_header(); ?>
             </tr>
         </table>
     	<p align="center" class="mt30">その他の機能をカスタマイズ対応  </p>
-      <a href="https://reg31.smp.ne.jp/regist/is?SMPFORM=qck-silcp-d23ee8f7d2f6fb629a9cd2f0ca70d828" target="_blank" onclick="ga('send', 'event', 'ec', 'click', 'quest', 1, {'nonInteraction': 1});" class="links"><span>お問い合せフォーム</span><img src="<?php echo get_stylesheet_directory_uri()?>/images/arrow_white.png" width="16" height="7" alt="arrow"/></a>
+      <?php
+       set_query_var( 'btnkind', 'modal');
+       get_template_part( 'template-parts/content', 'btn_quest' );
+       ?>
   </div>
 </div>
 <div id="modal-options5" data-izimodal-group="group1" data-izimodal-loop="" data-izimodal-title="基幹システムや他のソリューションと連携したい">
 	<div class="modal-base">
     	<p align="center">パッケージシステムやカスタマイズで対応しきれない機能は他社ソリューションシステムと連携可能</p>
-        
+
     	<h3 align="center" class="modalh3 cblue">他社ソリューションシステム連携事例</h3>
         <table class="modal_block5">
             <tr>
@@ -229,14 +241,18 @@ get_header(); ?>
         <div class="modal_block2_img">
             <img src="<?php echo get_stylesheet_directory_uri()?>/images/modal_ec_iconB01.png" width="auto" height="85" alt="SAP"/><img src="<?php echo get_stylesheet_directory_uri()?>/images/modal_ec_iconB02.png" width="auto" height="85" alt="NetSuite"/><img src="<?php echo get_stylesheet_directory_uri()?>/images/modal_ec_iconB03.png" width="auto" height="85" alt="GRANDIT"/><img src="<?php echo get_stylesheet_directory_uri()?>/images/modal_ec_iconB04.png" width="auto" height="85" alt="Salesforce"/><img src="<?php echo get_stylesheet_directory_uri()?>/images/modal_ec_iconB05.png" width="auto" height="85" alt="Microsoft Dynamics  CRM"/>
         </div>
-      <a href="https://reg31.smp.ne.jp/regist/is?SMPFORM=qck-silcp-d23ee8f7d2f6fb629a9cd2f0ca70d828" target="_blank" onclick="ga('send', 'event', 'ec', 'click', 'quest', 1, {'nonInteraction': 1});" class="links"><span>お問い合せフォーム</span><img src="<?php echo get_stylesheet_directory_uri()?>/images/arrow_white.png" width="16" height="7" alt="arrow"/></a>
+
+        <?php
+         set_query_var( 'btnkind', 'modal');
+         get_template_part( 'template-parts/content', 'btn_quest' );
+         ?>
   </div>
 </div>
 <!-- モーダル専用エリア end -->
 
   <?php // get_sidebar(); ?>
   <?php get_footer(); ?>
-  
+
 </div>
 </div>
 
@@ -342,7 +358,3 @@ $(document).ready(function(){
 	});
 });
 </script>
-
-
-
-

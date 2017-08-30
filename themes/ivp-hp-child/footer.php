@@ -45,7 +45,12 @@
 								</dl>
 								<dl class="mt30">
 										<dt>お問い合わせ</dt>
-										<dd><a href="https://reg31.smp.ne.jp/regist/is?SMPFORM=qck-silcp-d23ee8f7d2f6fb629a9cd2f0ca70d828" target="_blank" onclick="ga('send', 'event', 'leftnavi', 'click', 'quest', 1, {'nonInteraction': 1});"><img src="<?php echo get_stylesheet_directory_uri()?>/images/arrow_white.png" width="16" height="7" alt="arrow"/><span>お問い合わせフォーム</span></a></dd>
+										<dd>
+											<?php
+											 set_query_var( 'btnkind', 'footer');
+											 get_template_part( 'template-parts/content', 'btn_quest' );
+											 ?>
+											</dd>
 								</dl>
 						</div>
 				</div>
