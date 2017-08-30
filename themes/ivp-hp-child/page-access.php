@@ -8,6 +8,7 @@
  */
 
 get_header(); ?>
+<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri()?>/css/second.css"/>
 
 <ul id="slider2">
     <li style="background:url(<?php echo get_stylesheet_directory_uri()?>/images/slide1.jpg) center bottom no-repeat; background-size:cover;"><h2><img src="<?php echo get_stylesheet_directory_uri()?>/images/second_title_access.png" width="auto" height="200" alt="アクセスマップ"/></h2></li>
