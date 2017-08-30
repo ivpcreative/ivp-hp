@@ -144,18 +144,13 @@ get_header(); ?>
                 <img src="<?php echo get_stylesheet_directory_uri()?>/images/pertner_bnr05.png" width="181" height="99" alt="gms"/>
             </div>
 
-<!-- pege script-->
-<script type="text/javascript"  src="<?php echo get_stylesheet_directory_uri()?>/js/jquery.js"></script>
-<script type="text/javascript"  src="<?php echo get_stylesheet_directory_uri()?>/js/smoothScroll.js"></script>
-<script type="text/javascript"  src="<?php echo get_stylesheet_directory_uri()?>/js/css_browser_selector.js"></script>
-<script type="text/javascript"  src="<?php echo get_stylesheet_directory_uri()?>/js/jquery.easing.1.3.js"></script>
-<script type="text/javascript"  src="<?php echo get_stylesheet_directory_uri()?>/js/jquery.bxslider.min.js"></script>
-<script type="text/javascript"  src="<?php echo get_stylesheet_directory_uri()?>/js/superfish.js"></script>
-<script type="text/javascript"  src="<?php echo get_stylesheet_directory_uri()?>/js/jquery.meanmenu.js"></script>
+
+<?php get_footer(); ?>
+</div>
+</div>
+
+<!-- psge script-->
 <script type="text/javascript">$(document).ready(function(){$('#slider').bxSlider({mode: 'fade',auto: true,pause:6000,speed: 2000,pager: true});});</script>
-<script type="text/javascript"> $(document).ready(function(){ $("ul.sf-menu").superfish({  animation: {height:'show'}, delay: 1200 }); });</script>
-<script type="text/javascript">jQuery(document).ready(function () { jQuery('#snavi').meanmenu();	});</script>
-<script type="text/javascript">$(function(){	$(".accordionbox dt").on("click", function() {$(this).next().slideToggle();	if ($(this).children(".accordion_icon").hasClass('active')) {	$(this).children(".accordion_icon").removeClass('active');	}else {	$(this).children(".accordion_icon").addClass('active');}});});</script>
 <script type="text/javascript">
 $(function(){
 var accordionOffset = [];
@@ -215,6 +210,5 @@ header.removeClass('scroll');
 });
 </script>
 <script type="text/javascript"  src="<?php echo get_stylesheet_directory_uri()?>/js/heightLine.js"></script>
-<!-- //page script-->
+<!-- page script-->
 
-<?php get_footer(); ?>
