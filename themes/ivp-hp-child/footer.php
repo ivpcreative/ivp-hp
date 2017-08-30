@@ -60,6 +60,7 @@
 						<a href="" class="first_logo"><img src="<?php echo get_stylesheet_directory_uri()?>/images/logo2.png" width="170" height="auto" alt="IVP Internet Value Provider　IVP Co. Ltd." title="IVP Internet Value Provider　IVP Co. Ltd." /></a>
 						<a href="/company/">会社情報</a>
 						<a href="/access/">アクセスマップ</a>
+						<a href="/privacy/">プライバシーポリシー</a>
 						<dl class="accordionlist">
 								<dt class="clearfix">
 										<div class="title">
@@ -87,6 +88,7 @@
 						</dl>
 						<a href="https://ww2.ivp.co.jp/recruit/" target="_blank">採用情報</a>
 						<a href="partner/">協力会社募集</a>
+
 						<a href="https://reg31.smp.ne.jp/regist/is?SMPFORM=qck-silcp-d23ee8f7d2f6fb629a9cd2f0ca70d828" target="_blank" onclick="ga('send', 'event', 'leftnavi', 'click', 'quest', 1, {'nonInteraction': 1});">お問い合せ</a>
 						<a href="https://ww2.ivp.co.jp/english/" target="_blank">English</a>
 				</div>
