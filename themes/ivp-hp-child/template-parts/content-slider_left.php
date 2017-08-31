@@ -1,7 +1,7 @@
 <?php
 /**
  * The template used for displaying page content
- *PC用サイドバー共通メニュー
+ *
  * @package WordPress
  * @subpackage ivp-hp-child
  * @since
@@ -35,7 +35,7 @@
     <p id="fixed" class="scroll">代表電話(東京本社)<strong>03-5469-8601</strong><span>営業時間:10:00-19:00（平日)</span></p>
     <?php
         set_query_var( 'btnkind', 'slider_left');
-        get_template_part( 'template-parts/content', 'btn_quest' );?>
+        get_template_part( 'template-parts/content', 'btn_quest' );?> 
     <a href="https://ww2.ivp.co.jp/english/" target="_blank"><i class="fa fa-globe" aria-hidden="true"></i>English</a>
   </div>
 </div>

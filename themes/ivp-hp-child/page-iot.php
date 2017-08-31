@@ -21,32 +21,32 @@ get_header(); ?>
 
 <div class="container clearfix">
     <div class="main_contents second">
-
+    
     	<h2>お客様のＩｏＴサービスの企画・システム設計・運用保守までサポート</h2>
-
+        
         <p class="iot01">今、世界的に注目を浴びているIoT(Internet of Things)。今後、IoTが本格的に普及して、2020年には世界中で500億台以上の機器にインターネットがつながるとも予想されています。<br />しかし、日本のビジネスシーンにおいて、本格的な導入・普及は、まだこれからです。当社は、お客さまのご要望や課題を伺いながら、最適なソリューションを導き出し、事業拡大に向けIoTコンサルティングから運用・保守までトータルでサポート致します。</p>
-
+        
         <h3 class="inh2 title_iot01">ビーコン×ＩｏＴサービス</h3>
         <div class="clearfix lines"><img src="<?php echo get_stylesheet_directory_uri()?>/images/diagonal_line.png" width="160" height="auto" alt="diagonal line"/></div>
 		<div class="iot02 clearfix heightLineParent">
         	<div class="open-options1"><img src="<?php echo get_stylesheet_directory_uri()?>/images/iot_img01.png" width="100%" height="auto" alt="lineビーコン" class="iot02_img"/><p>LINEビーコンを活用した<br />IoTサービス</p><a href="" class="open-options1 ina"><span>OPEN</span></a></div>
         	<div class="open-options2"><img src="<?php echo get_stylesheet_directory_uri()?>/images/iot_img02.png" width="100%" height="auto" alt="商業施設・イベント向け" class="iot02_img"/><p>商業施設・イベント向け<br />IoTサービス</p><a href="" class="open-options2 ina"><span>OPEN</span></a></div>
         </div>
-
+        
         <h3 class="inh2 title_iot02">アジャイル開発×ＩｏＴサービス</h3>
         <div class="clearfix lines"><img src="<?php echo get_stylesheet_directory_uri()?>/images/diagonal_line.png" width="160" height="auto" alt="diagonal line"/></div>
 		<div class="iot03 open-options3">
         	<h4>IoTプロト開発</h4>
             <a href="" class="open-options3 ina"><span>OPEN</span></a>
-        </div>
-
+        </div>        
+        
         <h3 class="inh2 title_iot03">ＩｏＴサービス開発の流れ</h3>
 		<div class="clearfix lines"><img src="<?php echo get_stylesheet_directory_uri()?>/images/diagonal_line.png" width="160" height="auto" alt="diagonal line"/></div>
         <div class="iot04">
             <img src="<?php echo get_stylesheet_directory_uri()?>/images/iot_img03.png" width="100%" height="auto" alt="IoTサービス開発の流れ " class="pc"/>
             <img src="<?php echo get_stylesheet_directory_uri()?>/images/iot_img03_sp.png" width="100%" height="auto" alt="IoTサービス開発の流れ " class="sp"/>
         </div>
-
+        
         <h3 class="inh2 title_iot04">アイブイピーの強み</h3>
 		<div class="clearfix lines"><img src="<?php echo get_stylesheet_directory_uri()?>/images/diagonal_line.png" width="160" height="auto" alt="diagonal line"/></div>
 		<div class="iot05">
@@ -54,13 +54,12 @@ get_header(); ?>
         	<img src="<?php echo get_stylesheet_directory_uri()?>/images/iot_icon02.png" width="170" height="auto" alt="品質テック体制"/>
         	<img src="<?php echo get_stylesheet_directory_uri()?>/images/iot_icon03.png" width="170" height="auto" alt="24/365インフラ保守セキュリティ"/>
         </div>
-
+        
         <div class="second_contact">
           <?php
               set_query_var( 'btnkind', 'contents');
               set_query_var( 'page', 'iot');
-              get_template_part( 'template-parts/content', 'btn_quest' );
-              ?>
+              get_template_part( 'template-parts/content', 'btn_quest' );?>
         </div>
 
 
@@ -97,7 +96,7 @@ get_header(); ?>
         <?php
           set_query_var( 'btnkind', 'modal');
           set_query_var( 'page', 'iot');
-          get_template_part( 'template-parts/content', 'btn_quest' );?>
+          get_template_part( 'template-parts/content', 'btn_quest' );?>      
   </div>
 </div>
 <div id="modal-options2" data-izimodal-group="group1" data-izimodal-loop="" data-izimodal-title="商業施設・イベント向けＩｏＴサービス ">
@@ -134,7 +133,7 @@ get_header(); ?>
         <?php
           set_query_var( 'btnkind', 'modal');
           set_query_var( 'page', 'iot');
-          get_template_part( 'template-parts/content', 'btn_quest' );?>
+          get_template_part( 'template-parts/content', 'btn_quest' );?>     
   </div>
 </div>
 
