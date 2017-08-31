@@ -19,24 +19,34 @@ get_header(); ?>
 
 <div class="container clearfix">
     <div class="main_contents second">
-    
-        <a href="https://reg31.smp.ne.jp/regist/is?SMPFORM=qck-silcp-d23ee8f7d2f6fb629a9cd2f0ca70d828" target="_blank" onclick="ga('send', 'event', 'partner', 'click', 'quest', 1, {'nonInteraction': 1});" class="partner01 clearfix">
-            <h3>ビジネスパートナー企業・募集</h3>
-            <p>アイブイピーではお客さまの多様なニーズにお応えするために、<br />
-            IoTサービス開発や、WEBシステム開発にご協力頂ける<br />
-            ビジネスパートナー企業さまを幅広く募集しています。</p>
-            <strong class="clink"><span>お問い合わせフォーム</span><img src="<?php echo get_stylesheet_directory_uri()?>/images/arrow_white.png" width="16" height="7" alt="arrow"/></strong>
-        </a>
-        <div id="partner1"></div>
-        <a href="https://reg31.smp.ne.jp/regist/is?SMPFORM=qck-silcp-d23ee8f7d2f6fb629a9cd2f0ca70d828" target="_blank" onclick="ga('send', 'event', 'engineer', 'click', 'quest', 1, {'nonInteraction': 1});" class="partner02 clearfix">
-            <h3>フリーランスエンジニア募集 </h3>
-            <p>フリーランスとして定期的にアイブイピーの開発案件にご協力頂ける<br />プロジェクトマネージャーさま、ディレクターさま、エンジニアさま<br />など幅広く募集しています。</p>
-            <strong class="clink"><span>お問い合わせフォーム</span><img src="<?php echo get_stylesheet_directory_uri()?>/images/arrow_white.png" width="16" height="7" alt="arrow"/></strong>
-        </a>
+      
+<?php
+//画像ボタン(ビジネスパートナー)
+$text = <<<EOT
+<h3>ビジネスパートナー企業・募集</h3>
+<p>アイブイピーではお客さまの多様なニーズにお応えするために、<br />
+IoTサービス開発や、WEBシステム開発にご協力頂ける<br />
+ビジネスパートナー企業さまを幅広く募集しています。</p>
+EOT;
+set_query_var( 'btnkind', 'partner');
+set_query_var( 'text', $text);
+get_template_part( 'template-parts/content', 'btn_quest' );
+?>
 
-        <?php // get_sidebar(); ?>
-        <?php get_footer(); ?>
+<div id="partner1"></div>
 
+<?php
+//画像ボタン(フリーランスエンジニア)
+$text = <<<EOT
+<h3>フリーランスエンジニア募集 </h3>
+<p>フリーランスとして定期的にアイブイピーの開発案件にご協力頂ける<br />プロジェクトマネージャーさま、ディレクターさま、エンジニアさま<br />など幅広く募集しています。</p>
+EOT;
+set_query_var( 'btnkind', 'engineer');
+set_query_var( 'text', $text);
+get_template_part( 'template-parts/content', 'btn_quest' );
+?>
+
+<?php get_footer(); ?>
     </div>
 </div>
 
@@ -46,7 +56,7 @@ $(document).ready(function(){
     $('.sf-menu h4 a').each(function(){
         var $href = $(this).attr('href');
         if(location.href.match($href)) {
-            $(this).addClass('active');     
+            $(this).addClass('active');
         } else {
             $(this).removeClass('active');
         }
