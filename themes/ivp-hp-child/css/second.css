@@ -8,14 +8,14 @@
 	letter-spacing:3px;
 	text-align:center;
 	margin:20px auto 40px auto;
-	color:#00718e;	
+	color:#00718e;
 }
 .ec01{
-	margin:0 50px;	
+	margin:0 50px;
 }
 .ec01 p{
 	width:26%;
-	float:left;	
+	float:left;
 	margin-right:5%;
 	padding:46px 2%;
 	background:#00718e;
@@ -116,10 +116,10 @@
 	z-index:-1;
 }
 .ec03 img:last-child{
-	margin-right:0%;	
+	margin-right:0%;
 }
 .func01{
-	margin-bottom:50px;	
+	margin-bottom:50px;
 }
 .func02{
 	margin-bottom:90px;
@@ -174,7 +174,7 @@
 	.ec01 p{
 		font-size:15px;
 		letter-spacing:2px;
-	}	
+	}
 }
 @media (max-width: 992px) {
 	.ec01 p:last-child br{
@@ -211,10 +211,10 @@
 		letter-spacing:2px;
 		margin:-20px auto 30px auto;
 		padding:0 10px;
-	}	
+	}
 	.ec01 p{
 		width:96%;
-		float:none;	
+		float:none;
 		margin-right:0%;
 		padding:26px 2%;
 		margin-bottom:10px;
@@ -236,7 +236,7 @@
 		margin-left:0;
 	}
 	.ec03{
-		text-align:center;		
+		text-align:center;
 	}
 	.ec03 img{
 		width:27%;
@@ -246,7 +246,7 @@
 		padding:0 12px;
 	}
 	.func01 table{
-		margin:-20px 0 0 0;		
+		margin:-20px 0 0 0;
 	}
 	.func01 table td {
 		padding: 6px 2px;
@@ -256,7 +256,7 @@
 		padding:0 12px;
 	}
 	.func02 table{
-		margin:-20px 0 0 0;		
+		margin:-20px 0 0 0;
 	}
 	.func02 table td {
 		padding: 6px 2px;
@@ -269,13 +269,13 @@
 	.inTitle01{
 		background:url(../images/index_title_service.png) 0 0 no-repeat;
 		background-size:46% auto;
-	}	
+	}
 	.ec01 p{
 		font-size:14px;
 	}
 	.ec01 p br{
 		display:block;
-	}	
+	}
 	.func01 table td {
 		padding: 6px 2px;
 		font-size:12px;
@@ -297,7 +297,7 @@
 	margin:20px 160px 20px 160px;
 	font-size:14px;
 	color:#272727;
-	line-height:200%;	
+	line-height:200%;
 }
 .iot01 strong{
 	margin:0px auto 2px auto;
@@ -567,7 +567,7 @@
 	}
 	.iot01{
 		margin:20px 0px 20px 0px;
-		font-size:14px;	
+		font-size:14px;
 	}
 	.iot03{
 		height:180px;
@@ -614,14 +614,14 @@
 	}
 	.iot04 img{
 		width:90%;
-		margin:20px auto 40px auto;		
+		margin:20px auto 40px auto;
 	}
 	.iot05{
-		margin:20px auto 40px auto;		
+		margin:20px auto 40px auto;
 	}
 	.iot05 img{
 		width:140px;
-		height:auto;	
+		height:auto;
 	}
 	.second_contact a{
 		padding:18px 40px;
@@ -650,7 +650,7 @@
 	}
 	.iot05 {
 		margin-left:10px;
-		margin-right:10px;		
+		margin-right:10px;
 	}
 	.iot05 img{
 		width:30%;
@@ -682,7 +682,7 @@
 	width:27%;
 	margin-right:3%;
 	float:left;
-	padding:10px 2%;	
+	padding:10px 2%;
 	border:1px solid #434343;
 	margin-bottom:10px;
 	text-align:center;
@@ -707,7 +707,7 @@
 .web03{
 	position:relative;
 	z-index:-2;
-	
+
 }
 
 
@@ -740,7 +740,7 @@
 		width:90%;
 		margin:0 auto 10px auto !important;
 		float:none;
-		padding:10px 2%;	
+		padding:10px 2%;
 		border:1px solid #434343;
 		font-size:14px;
 	}
@@ -766,7 +766,7 @@
 		margin:0 12px 30px 12px;
 	}
 	.title_web_after{
-		margin-bottom:-10px;		
+		margin-bottom:-10px;
 	}
 }
 
@@ -796,7 +796,7 @@
 }
 .detail24365{
 	position:relative;
-	z-index:-2;	
+	z-index:-2;
 }
 .detail24365 p{
 	color:#272727;
@@ -867,7 +867,7 @@
 	margin:24px 0 45px 0;
 }
 .offfeat br{
-	display:block !important;	
+	display:block !important;
 }
 
 @media (max-width: 992px) {
@@ -876,7 +876,7 @@
 		padding-bottom:15px;
 	}
 	.offfeat br{
-		display:block !important;	
+		display:block !important;
 	}
 }
 @media (max-width: 768px) {
@@ -884,14 +884,14 @@
 		background-size:60% auto;
 	}
 	.off01{
-		margin-bottom:30px;		
+		margin-bottom:30px;
 	}
 	.off02{
 		font-size:14px;
 		margin:24px 12px 45px 12px;
 	}
 	.offfeat br{
-		display:none !important;	
+		display:none !important;
 	}
 }
 
@@ -1050,7 +1050,7 @@
 
 @media (max-width: 768px) {
 	.accordionbox2{
-		margin:0 12px;		
+		margin:0 12px;
 	}
 	.com01 div:first-child{
 		width:28%;
@@ -1072,7 +1072,7 @@
 		font-size:15px !important;
 	}
 	.accordionbox2{
-		margin:0 12px;		
+		margin:0 12px;
 	}
 	.com01 div:first-child{
 		width:96%;
@@ -1185,7 +1185,7 @@
 @media (max-width: 768px) {
 	 .access01{
 		 font-size:13px;
-		 margin:0 12px;		 
+		 margin:0 12px;
 	 }
 	.title_access01{
 		background-size:37% auto;
@@ -1237,7 +1237,7 @@
 	color:#272727;
 	border-bottom:1px solid #D7D7D7;
 	padding-bottom:10px;
-	margin:40px 0 12px 0;	
+	margin:40px 0 12px 0;
 }
 .privacy p{
 	font-size:14px;
@@ -1246,7 +1246,7 @@
 }
 @media (max-width: 768px) {
 	.privacy{
-		margin:0 12px;		
+		margin:0 12px;
 	}
 	.privacy h3{
 		font-size:15px;
@@ -1410,7 +1410,7 @@
 	font-size:22px;
 	letter-spacing:2px;
 	font-weight:normal;
-	color:#272727;	
+	color:#272727;
 	margin-bottom:14px;
 }
 .quest_title2{
@@ -1418,7 +1418,7 @@
 	font-size:22px;
 	letter-spacing:2px;
 	font-weight:normal;
-	color:#272727;	
+	color:#272727;
 	margin-bottom:14px;
 	text-align: center;
 }
@@ -1483,7 +1483,7 @@
 	color:#272727;
 	border:none;
 	background:#fff;
-	font-size:16px;
+	font-size:18px;
 }
 .quest .msg{
 	color:#b90101;
@@ -1494,14 +1494,14 @@
 .quest h5{
 	font-size:17px;
 	margin:60px 0 10px 0;
-	color:#272727;	
+	color:#272727;
 }
 .quest p{
 	font-size:14px;
-	color:#272727;	
+	color:#272727;
 }
 .quest .accordionbox2{
-	margin-top:20px;	
+	margin-top:20px;
 }
 .quest .accordionbox2 .title p{
 	color:#fff;
@@ -1536,11 +1536,11 @@
 	opacity:0.75;
 }
 .quest h5{
-	font-weight:normal;	
+	font-weight:normal;
 }
 .doui{
 	margin:30px auto;
-	text-align:center;	
+	text-align:center;
 }
 .doui input{
 	width:20px;
@@ -1636,7 +1636,7 @@
 		color:#272727;
 		border:none;
 		background:#fff;
-		font-size:13px;
+		font-size:18px;
 	}
 	.quest .msg{
 		font-size:12px;
@@ -1648,7 +1648,7 @@
 		font-size:13px;
 	}
 	.quest .accordionbox2{
-		margin:20px 0 0 0;		
+		margin:20px 0 0 0;
 	}
 	.quest .accordionbox2 .title p{
 		font-size:15px;
@@ -1679,5 +1679,3 @@
 		padding-bottom:0px;
 	}
 }
-
-
