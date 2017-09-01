@@ -23,25 +23,25 @@
 						<div>
 								<dl>
 										<dt>システム開発/スクラッチ開発</dt>
-										<dd><a href="/ec/"><img src="<?php echo get_stylesheet_directory_uri()?>/images/arrow_white.png" width="16" height="7" alt="arrow"/><span>ECシステム開発</span></a></dd>
-										<dd><a href="/iot/"><img src="<?php echo get_stylesheet_directory_uri()?>/images/arrow_white.png" width="16" height="7" alt="arrow"/><span>IoTサービス開発</span></a></dd>
-										<dd><a href="/web/"><img src="<?php echo get_stylesheet_directory_uri()?>/images/arrow_white.png" width="16" height="7" alt="arrow"/><span>WEBシステム開発</span></a></dd>
+										<dd><a href="/ec/"><img src="/wp-content/uploads/images/arrow_white.png" width="16" height="7" alt="arrow"/><span>ECシステム開発</span></a></dd>
+										<dd><a href="/iot/"><img src="/wp-content/uploads/images/arrow_white.png" width="16" height="7" alt="arrow"/><span>IoTサービス開発</span></a></dd>
+										<dd><a href="/web/"><img src="/wp-content/uploads/images/arrow_white.png" width="16" height="7" alt="arrow"/><span>WEBシステム開発</span></a></dd>
 								</dl>
 								<dl class="mt30">
 										<dt>セキュリティ/運用保守</dt>
-										<dd><a href="/maint/"><img src="<?php echo get_stylesheet_directory_uri()?>/images/arrow_white.png" width="16" height="7" alt="arrow"/><span>24×365運用保守</span></a></dd>
-										<dd><a href="/offshore/"><img src="<?php echo get_stylesheet_directory_uri()?>/images/arrow_white.png" width="16" height="7" alt="arrow"/><span>オフショア開発</span></a></dd>
+										<dd><a href="/maint/"><img src="/wp-content/uploads/images/arrow_white.png" width="16" height="7" alt="arrow"/><span>24×365運用保守</span></a></dd>
+										<dd><a href="/offshore/"><img src="/wp-content/uploads/images/arrow_white.png" width="16" height="7" alt="arrow"/><span>オフショア開発</span></a></dd>
 								</dl>
 						</div>
 						<div>
 								<dl>
 										<dt>採用情報</dt>
-										<dd><a href="https://ww2.ivp.co.jp/recruit/" target="_blank"><img src="<?php echo get_stylesheet_directory_uri()?>/images/arrow_white.png" width="16" height="7" alt="arrow"/><span>募集要項・応募フォーム</span></a></dd>
+										<dd><a href="https://ww2.ivp.co.jp/recruit/" target="_blank"><img src="/wp-content/uploads/images/arrow_white.png" width="16" height="7" alt="arrow"/><span>募集要項・応募フォーム</span></a></dd>
 								</dl>
 								<dl class="mt30">
 										<dt>外注協力会社募集</dt>
-										<dd><a href="/partner/"><img src="<?php echo get_stylesheet_directory_uri()?>/images/arrow_white.png" width="16" height="7" alt="arrow"/><span>ビジネスパートナー企業募集</span></a></dd>
-										<dd><a href="/partner/#partner1"><img src="<?php echo get_stylesheet_directory_uri()?>/images/arrow_white.png" width="16" height="7" alt="arrow"/><span>フリーランスエンジニア募集</span></a></dd>
+										<dd><a href="/partner/"><img src="/wp-content/uploads/images/arrow_white.png" width="16" height="7" alt="arrow"/><span>ビジネスパートナー企業募集</span></a></dd>
+										<dd><a href="/partner/#partner1"><img src="/wp-content/uploads/images/arrow_white.png" width="16" height="7" alt="arrow"/><span>フリーランスエンジニア募集</span></a></dd>
 								</dl>
 								<dl class="mt30">
 										<dt>お問い合わせ</dt>
@@ -57,7 +57,7 @@
 
 				<!--　smart phone footer start -->
 				<div id="accordion1" class="accordionbox">
-						<a href="" class="first_logo"><img src="<?php echo get_stylesheet_directory_uri()?>/images/logo2.png" width="170" height="auto" alt="IVP Internet Value Provider　IVP Co. Ltd." title="IVP Internet Value Provider　IVP Co. Ltd." /></a>
+						<a href="" class="first_logo"><img src="/wp-content/uploads/images/logo2.png" width="170" height="auto" alt="IVP Internet Value Provider　IVP Co. Ltd." title="IVP Internet Value Provider　IVP Co. Ltd." /></a>
 						<a href="/company/">会社情報</a>
 						<a href="/access/">アクセスマップ</a>
 						<a href="/privacy/">プライバシーポリシー</a>
@@ -69,9 +69,9 @@
 										<p class="accordion_icon"><span></span><span></span></p>
 								</dt>
 								<dd>
-										<a href="ec/"><img src="<?php echo get_stylesheet_directory_uri()?>/images/arrow_white.png" width="16" height="7" alt="arrow"/><span>ECシステム開発</span></a>
-										<a href="iot/"><img src="<?php echo get_stylesheet_directory_uri()?>/images/arrow_white.png" width="16" height="7" alt="arrow"/><span>loTサービス開発</span></a>
-										<a href="web/"><img src="<?php echo get_stylesheet_directory_uri()?>/images/arrow_white.png" width="16" height="7" alt="arrow"/><span>WEBシステム開発</span></a>
+										<a href="ec/"><img src="/wp-content/uploads/images/arrow_white.png" width="16" height="7" alt="arrow"/><span>ECシステム開発</span></a>
+										<a href="iot/"><img src="/wp-content/uploads/images/arrow_white.png" width="16" height="7" alt="arrow"/><span>loTサービス開発</span></a>
+										<a href="web/"><img src="/wp-content/uploads/images/arrow_white.png" width="16" height="7" alt="arrow"/><span>WEBシステム開発</span></a>
 								</dd>
 						</dl>
 						<dl class="accordionlist">
@@ -82,8 +82,8 @@
 										<p class="accordion_icon"><span></span><span></span></p>
 								</dt>
 								<dd>
-										<a href="/maint/"><img src="<?php echo get_stylesheet_directory_uri()?>/images/arrow_white.png" width="16" height="7" alt="arrow"/><span>24×365運用保守</span></a>
-										<a href="/offshore/"><img src="<?php echo get_stylesheet_directory_uri()?>/images/arrow_white.png" width="16" height="7" alt="arrow"/><span>オフショア開発</span></a>
+										<a href="/maint/"><img src="/wp-content/uploads/images/arrow_white.png" width="16" height="7" alt="arrow"/><span>24×365運用保守</span></a>
+										<a href="/offshore/"><img src="/wp-content/uploads/images/arrow_white.png" width="16" height="7" alt="arrow"/><span>オフショア開発</span></a>
 								</dd>
 						</dl>
 						<a href="https://ww2.ivp.co.jp/recruit/" target="_blank">採用情報</a>
