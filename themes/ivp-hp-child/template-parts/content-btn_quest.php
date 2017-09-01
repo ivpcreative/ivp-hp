@@ -7,9 +7,9 @@
  * @since
  */
 
-$link = 'https://reg31.smp.ne.jp/regist/is?SMPFORM=qck-silcp-d23ee8f7d2f6fb629a9cd2f0ca70d828';
-//$link = '/quest/';
-$target = '_blank';
+//$link = 'https://reg31.smp.ne.jp/regist/is?SMPFORM=qck-silcp-d23ee8f7d2f6fb629a9cd2f0ca70d828';
+$link = '/quest/';
+$target = '';
 
 $btnkind = get_query_var('btnkind');
 $text = get_query_var('text');
@@ -46,14 +46,14 @@ if($btnkind == 'header'){ //ヘッダー?>
 
 <?php }elseif(($btnkind == 'partner')){ //画像ボタン：ビジネスパートナー?>
 
-    <a href="<?php echo $link ?>"  target="<?php echo $target ?>" onclick="ga('send', 'event', 'partner', 'click', 'quest', 1, {'nonInteraction': 1});" class="partner01 clearfix">
+    <a href="<?php echo $link ?>?1"  target="<?php echo $target ?>" onclick="ga('send', 'event', 'partner', 'click', 'quest', 1, {'nonInteraction': 1});" class="partner01 clearfix">
         <?php echo $text ?>
         <strong class="clink"><span>お問い合わせフォーム</span><img src="<?php echo get_stylesheet_directory_uri()?>/images/arrow_white.png" width="16" height="7" alt="arrow"/></strong>
     </a>
 
 <?php }elseif(($btnkind == 'engineer')){ //画像ボタン：フリーランスエンジニア募集 ?>
 
-      <a href="<?php echo $link ?>" target="<?php echo $target ?>" onclick="ga('send', 'event', 'engineer', 'click', 'quest', 1, {'nonInteraction': 1});" class="partner02 clearfix">
+      <a href="<?php echo $link ?>?1" target="<?php echo $target ?>" onclick="ga('send', 'event', 'engineer', 'click', 'quest', 1, {'nonInteraction': 1});" class="partner02 clearfix">
           <?php echo $text ?>
           <strong class="clink"><span>お問い合わせフォーム</span><img src="<?php echo get_stylesheet_directory_uri()?>/images/arrow_white.png" width="16" height="7" alt="arrow"/></strong>
       </a>
