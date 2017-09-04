@@ -5,22 +5,22 @@ sub-common-js.js
 
 /*load時にKICK*/
 jQuery(function () {
-        
+
    jQuery('.animation2').css('visibility', 'hidden'); //スクロールアニメーションのパーツを非表示
     CommonSubObj = new CommonSubJs();
       CommonSubObj.PageTop();
-    
+
     /*
     var spMode = true;
     spMode = subJsObj.getBlnSp();
   */
-    
+
      //行の高さをそろえるClass名を記載(jquery-fixHeightSimple.js)
    // jQuery(".home-bottom-text").fixHeightSimple();
-    jQuery(".team-ex-text-skin").fixHeightSimple();
+  //  jQuery(".team-ex-text-skin").fixHeightSimple();
 
     //レスポンシブにてイメージマップのリンクずれを自動修正する
-    jQuery('img[usemap]').rwdImageMaps();
+    //jQuery('img[usemap]').rwdImageMaps();
 
 });
 /*end.load時にkick*/
@@ -53,14 +53,14 @@ $win.on('scroll ', function () {
 
 
 
-            
+
 
 
 /* CommonSubJsオブジェクト生成コンストラクタ */
 var CommonSubJs = function () {
         //■page topボタン
         /* 以下のHTML をフッターの一番下に追加。別途CSSは sub-common-style.css に記載済
-        <p id="pageTop"><a href="#"><i class="fa fa-chevron-up"></i></a></p> 
+        <p id="pageTop"><a href="#"><i class="fa fa-chevron-up"></i></a></p>
         */
         this.PageTop = function () {
                 var topBtn = jQuery('#pageTop');
