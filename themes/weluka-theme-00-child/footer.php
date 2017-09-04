@@ -108,7 +108,7 @@
 <script type="text/javascript"  src="<?php echo get_stylesheet_directory_uri()?>/js/heightLine.js"></script>
 <script type="text/javascript"  src="<?php echo get_stylesheet_directory_uri()?>/js/jquery.meanmenu.js"></script>
 <script type="text/javascript"  src="<?php echo get_stylesheet_directory_uri()?>/js/iziModal.js"></script>
-
+<script type="text/javascript"  src="<?php echo get_stylesheet_directory_uri()?>/js/front.js"></script>
 <script type="text/javascript">$(document).ready(function(){$('#slider').bxSlider({mode: 'fade',auto: true,pause:60000000,speed: 0,pager: false});});</script>
 <script type="text/javascript"> $(document).ready(function(){ $("ul.sf-menu").superfish({  animation: {height:'show'}, delay: 1200 }); });</script>
 <script type="text/javascript">jQuery(document).ready(function () { jQuery('#snavi').meanmenu();    });</script>

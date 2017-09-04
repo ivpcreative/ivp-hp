@@ -10,6 +10,7 @@ get_header();
 
 global $weluka_themename;
 ?>
+<div class="top_contents"></div>
 <div class="container clearfix">
 		<div class="main_contents indexs">
 			<?php
