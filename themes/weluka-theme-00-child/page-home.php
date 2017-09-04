@@ -12,18 +12,18 @@ global $weluka_themename;
 ?>
 <div class="container clearfix">
 		<div class="main_contents indexs">
-	<?php
-if ( have_posts() ) :
-	get_template_part( 'content', get_post_format() );
-else:
-	get_template_part( 'content', 'none' );
+			<?php
+				if ( have_posts() ) :
+					get_template_part( 'content', get_post_format() );
+				else:
+					get_template_part( 'content', 'none' );
+				endif;
 
-endif;
-get_footer();
-?>
+				get_footer();
+			?>
 	</div>
 </div>
-<!-- psge script-->
+<!-- page script-->
 <script type="text/javascript">$(document).ready(function(){$('#slider').bxSlider({mode: 'fade',auto: true,pause:6000,speed: 2000,pager: true});});</script>
 <script type="text/javascript">
 $(function(){

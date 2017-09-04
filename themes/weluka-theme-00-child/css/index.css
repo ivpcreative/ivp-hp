@@ -85,7 +85,7 @@ body{
 	height:826px;
 	position:absolute;
 	top:-22px;
-	background:url(../images/slide_left.png) no-repeat;
+	background:url(/wp-content/uploads/images/slide_left.png) no-repeat;
 	background-size:cover;
 	z-index:997;
 }
@@ -337,6 +337,15 @@ li.sfHover > a > .sf-sub-indicator {
 .logo2{
 	display:none;
 }
+
+/*added*/
+.padding-none{
+	padding: 0;
+}
+.margin-none{
+	margin: 0;
+}
+
 @media (max-width: 1200px) {
 	.bx-wrapper{
 		margin:0 auto 100px auto !important;
@@ -497,7 +506,7 @@ li.sfHover > a > .sf-sub-indicator {
     overflow: hidden;
 }
 .bnrs .link1:after , .bnrs .link2:after{
-	background:url(../images/index_bnr01.jpg) 0 0 no-repeat;
+	background:url(/wp-content/uploads/images/index_bnr01.jpg) 0 0 no-repeat;
 	position: absolute;
     content: "";
     display: block;
@@ -520,7 +529,7 @@ li.sfHover > a > .sf-sub-indicator {
     transition: all .4s ease-out;
 }
 .bnrs .link2:after{
-	background:url(../images/index_bnr02.jpg) 0 0 no-repeat;
+	background:url(/wp-content/uploads/images/index_bnr02.jpg) 0 0 no-repeat;
 }
 .bnrs .link1:hover:after , .bnrs .link2:hover:after{
     -moz-transform: scale(1.03);
@@ -569,6 +578,12 @@ li.sfHover > a > .sf-sub-indicator {
 	padding-bottom:45px;
 	line-height:200%;
 }
+.bnrs .link3 p:before{
+	content: url(/wp-content/uploads/images/index_bnr03.png);
+	margin:40px auto 30px auto;
+	display: block;
+	text-align: center;
+}
 .bnrs .link2 p strong{
 	font-size:27px;
 	padding-top:75px;
@@ -583,7 +598,7 @@ li.sfHover > a > .sf-sub-indicator {
 }
 .inh2{
 	width:100%;
-	height:60px;
+	height:72px;
 	padding:20px 0;
 	font-size:22px;
 	font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
@@ -594,24 +609,24 @@ li.sfHover > a > .sf-sub-indicator {
 	margin-top:65px;
 }
 .inTitle01{
-	background:url(../images/index_title_service.png) 0 0 no-repeat;
+	background:url(/wp-content/uploads/images/index_title_service.png) 0 0 no-repeat;
 }
 .inTitle02{
-	background:url(../images/index_title_recruit.png) 0 0 no-repeat;
+	background:url(/wp-content/uploads/images/index_title_recruit.png) 0 0 no-repeat;
 }
 .inTitle03{
-	background:url(../images/index_title_company.png) 0 0 no-repeat;
+	background:url(/wp-content/uploads/images/index_title_company.png) 0 0 no-repeat;
 }
 .lines{
 	float:right;
-	margin:-60px -50px -110px 0;
+	margin:-83px -50px -110px 0;
 }
 .index_service{
-	paddingm:0px;
+	padding:0px;
 	background:#efefef;
 }
 .index_service .ser_base{
-	background:#efefef;
+	/*background:#efefef;*/
 	width:356px;
 	margin-right:1px;
 	float:left;
@@ -707,24 +722,21 @@ li.sfHover > a > .sf-sub-indicator {
 .index_recruit{
 	margin-top:20px;	
 }
-.index_recruit div:first-child{
+/*.index_recruit div:first-child{
 	width:50%;
 	float:left;	
 }
 .index_recruit2 div:first-child{
 	width:50%;
 	float:right;
+}*/
+.index_recruit>div:last-child , .index_recruit2>div:last-child{
+	padding:50px 5%;
 }
-.index_recruit div:last-child , .index_recruit2 div:last-child{
-	width:45%;
-	float:left;
-	padding:50px 0 50px 5%;
+.index_recruit2 div:first-child{
+	float:right;
 }
-.index_recruit2 div:last-child{
-	width:40%;
-	float:left;
-	padding:50px 5% 50px 5%;
-}
+
 .index_recruit h3 , .index_recruit2 h3{
 	font-size:20px;
 	font-style:oblique;
@@ -885,10 +897,14 @@ li.sfHover > a > .sf-sub-indicator {
 	background:#efefef;
 	padding:60px;
 	text-align:center;	
-	margin-top:60px;
+	margin: auto;
+	
+	/*margin:60px 0 0 0;
+	display: flex;*/
 }
 .pertner_bnr img{
 	margin-right:10px;
+	display: inline-block;
 }
 .pertner_bnr img:last-child{
 	margin-right:0px;
@@ -958,7 +974,7 @@ p.copyright{
 
 @media (max-width: 1435px) {
 	.lines{
-		margin:-60px -30px -110px 0;
+		margin:-60px -30px -132px 0;
 	}
 	.container{
 		width:98%;
@@ -1033,7 +1049,7 @@ p.copyright{
 		font-size:12px;
 	}
 	.pertner_bnr img{
-		height:70px;
+		height:70px !important;
 		width:auto;
 	}
 }
@@ -1128,22 +1144,22 @@ p.copyright{
 	}
 	.inh2{
 		width:100%;
-		height:42px;
+		height:60px;
 		padding:7px 0;
 		font-size:22px;
 		letter-spacing:3px;
 		margin-top:65px;
 	}
 	.inTitle01{
-		background:url(../images/index_title_service.png) 0 0 no-repeat;
+		background:url(/wp-content/uploads/images/index_title_service.png) 0 0 no-repeat;
 		background-size:46% auto;
 	}
 	.inTitle02{
-		background:url(../images/index_title_recruit.png) 0 0 no-repeat;
+		background:url(/wp-content/uploads/images/index_title_recruit.png) 0 0 no-repeat;
 		background-size:100% auto;
 	}
 	.inTitle03{
-		background:url(../images/index_title_company.png) 0 0 no-repeat;
+		background:url(/wp-content/uploads/images/index_title_company.png) 0 0 no-repeat;
 		background-size:50% auto;
 	}
 	.index_service .ser_base h2{
@@ -1175,13 +1191,22 @@ p.copyright{
 		margin:0 11% 5px 11%;
 		background:#D7D7D7;
 	}
-	.index_recruit div:last-child , .index_recruit2 div:last-child{
-		width:44%;
-		padding:20px 0 0px 3%;
+
+	.index_recruit{
+		display: inline-flex;
 	}
-	.index_recruit2 div:last-child{
-		width:44%;
-		padding:20px 3% 0px 3%;
+	.index_recruit2>div:first-child{
+		float: right;
+	}
+	.index_recruit2>div:last-child{
+		width: 50%;
+		float: initial;
+	}
+	.index_recruit>div:first-child, .index_recruit2>div:first-child{
+		width: 50%;
+	}
+	.index_recruit>div:last-child , .index_recruit2>div:last-child{
+		padding:20px 0 0px 3%;
 	}
 	.index_recruit h3 , .index_recruit2 h3{
 		font-size:16px;
@@ -1226,7 +1251,7 @@ p.copyright{
 		margin-top:60px;
 	}
 	.pertner_bnr img{
-		height:55px;
+		height:55px !important;
 		width:auto;
 	}
 	.footers{
@@ -1273,10 +1298,10 @@ p.copyright{
 		border-bottom:1px solid #eee;
 	}
 	.bnrs .link1:after , .bnrs .link2:after{
-		background:url(../images/index_bnr01sp.jpg) 0 0 no-repeat;
+		background:url(/wp-content/uploads/images/index_bnr01sp.jpg) 0 0 no-repeat;
 	}
 	.bnrs .link2:after{
-		background:url(../images/index_bnr02sp.jpg) 0 0 no-repeat;
+		background:url(/wp-content/uploads/images/index_bnr02sp.jpg) 0 0 no-repeat;
 	}
 	.bnrs div p strong{
 		padding-top:57px;
@@ -1305,6 +1330,12 @@ p.copyright{
 		padding-bottom:20px;
 		line-height:180%;
 	}
+	.bnrs .link3 p:before{
+		margin:30px 0 20px 0;
+		text-align:left;
+		width:170px;
+		height:auto;
+	}
 	.bnrs .link3 img{
 		margin:30px 0 20px 0;
 		text-align:left;
@@ -1321,11 +1352,11 @@ p.copyright{
 		margin:10px 2% 0 2%;
 	}
 	.inTitle01{
-		background:url(../images/index_title_service.png) 0 0 no-repeat;
+		background:url(/wp-content/uploads/images/index_title_service.png) 0 0 no-repeat;
 		background-size:46% auto;
 	}
 	.inTitle02{
-		background:url(../images/index_title_recruit_sp.png) 0 0 no-repeat;
+		background:url(/wp-content/uploads/images/index_title_recruit_sp.png) 0 0 no-repeat;
 		background-size:contain;
 		height:67px;
 		padding:42px 0 0 0;
@@ -1333,7 +1364,7 @@ p.copyright{
 		margin-top:17px !important;
 	}
 	.inTitle03{
-		background:url(../images/index_title_company.png) 0 0 no-repeat;
+		background:url(/wp-content/uploads/images/index_title_company.png) 0 0 no-repeat;
 		background-size:50% auto;
 		height:48px;
 		padding:8px 0 0 0;
@@ -1407,17 +1438,27 @@ p.copyright{
 		display:block;		
 	}
 	.ser_sp{
-		background:url(../images/index_service_btn_off.png) top right 35% no-repeat;
+		background:url(/wp-content/uploads/images/index_service_btn_off.png) top right 35% no-repeat;
+		padding: 0 27%;
 	}
 	.accordion-on{
-		background:url(../images/index_service_btn_on.png) top right 35% no-repeat !important;
+		background:url(/wp-content/uploads/images/index_service_btn_on.png) top right 35% no-repeat !important;
 	}
 	.ser_non{
 		background:none !important;
 		cursor:default !important;
 	}
-	.index_recruit div , .index_recruit2 div{
-		width:96% !important;
+	.index_recruit{
+		display: block;
+	}
+	.index_recruit2 div:first-child{
+		float: none;
+	}
+	.index_recruit>div:first-child, .index_recruit2>div:first-child,
+	.index_recruit>div:last-child, .index_recruit2>div:last-child{
+		width: 100%;
+	}
+	.index_recruit>div , .index_recruit2>div{
 		padding:20px 2% 0px 2% !important;
 	}
 	.index_recruit a{
@@ -1619,18 +1660,18 @@ p.copyright{
 		width:200px;
 	}
 	.inTitle01{
-		background:url(../images/index_title_service.png) 0 0 no-repeat;
+		background:url(/wp-content/uploads/images/index_title_service.png) 0 0 no-repeat;
 		background-size:80% auto;
 	}
 	.inTitle03{
-		background:url(../images/index_title_company.png) 0 0 no-repeat;
+		background:url(/wp-content/uploads/images/index_title_company.png) 0 0 no-repeat;
 		background-size:90% auto;
 	}
 	.ser_sp{
-		background:url(../images/index_service_btn_off.png) top right 30% no-repeat;
+		background:url(/wp-content/uploads/images/index_service_btn_off.png) top right 30% no-repeat;
 	}
 	.accordion-on{
-		background:url(../images/index_service_btn_on.png) top right 30% no-repeat !important;
+		background:url(/wp-content/uploads/images/index_service_btn_on.png) top right 30% no-repeat !important;
 	}
 	
 }
