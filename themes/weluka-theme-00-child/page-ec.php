@@ -103,12 +103,20 @@ get_header(); ?>
 
 <!-- モーダル専用エリア -->
 <?php
-$res = file_get_contents( home_url()."/modal-ec1/");
-print $res;
+
+// phpQueryをロードする
+		require_once("phpQuery-onefile.php");
+    $page = "modal-ec1";
+
+    echo display_modal($page);
+
+    function display_modal($page){
+  		$html = file_get_contents(home_url( ).'/'. $page.'/');
+      $doc = phpQuery::newDocument($html);
+      return $doc["#modal-include"]->html();
+    }
 ?>
 
-
-</div>
 <div id="modal-options2" data-izimodal-group="group1" data-izimodal-loop="" data-izimodal-title="越境ECサイトを立ち上げたい">
 	<div class="modal-base">
 		<div class="clearfix modal_block1 heightLineParent">

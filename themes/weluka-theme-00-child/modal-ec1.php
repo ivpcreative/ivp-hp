@@ -12,7 +12,7 @@
 <span class="js-edit_modal">
 <?php wp_head(); ?>
 </span>
-
+<div id="modal-include">
 <div id="modal-options1" data-izimodal-group="group1" data-izimodal-loop="" data-izimodal-title="<?php echo get_post_meta($post->ID, _aioseop_title, true); ?>">
 	<div class="modal-base">
 			<?php
@@ -29,6 +29,7 @@
 			?>
 
 	</div>
+</div>
 </div>
 <span class="js-edit_modal">
 <?php wp_footer(); ?>
