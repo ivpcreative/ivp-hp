@@ -11,7 +11,8 @@ get_header();
 global $weluka_themename;
 ?>
 <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri()?>/css/second.css"/>
-
+<div class="top_contents"></div>
+<div class="slide_left_after2"></div>
 <div class="container clearfix">
 		<div class="main_contents second">
 			<?php
@@ -31,7 +32,7 @@ $(document).ready(function(){
     $('.sf-menu h4 a').each(function(){
         var $href = $(this).attr('href');
         if(location.href.match($href)) {
-            $(this).addClass('active');     
+            $(this).addClass('active');
         } else {
             $(this).removeClass('active');
         }
