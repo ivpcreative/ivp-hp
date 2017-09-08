@@ -11,6 +11,10 @@ get_header();
 global $weluka_themename;
 ?>
 <div class="top_contents"></div>
+<div class="slide_left_after"></div>
+<div class="scroll_icon">
+        <img src="/wp-content/uploads/images/scroll_icon.png" width="116" height="60" alt="scroll icon"/>
+    </div>
 <div class="container clearfix">
 		<div class="main_contents indexs">
 			<?php

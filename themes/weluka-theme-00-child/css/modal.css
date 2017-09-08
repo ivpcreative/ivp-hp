@@ -52,20 +52,22 @@
 .iziModal-wrap a.links:hover{
 	letter-spacing:1px;
 }
-.modal_block1 div{
-	width:47.5%;
-	float:left;
-	padding:40px 0;
-	margin-right:5%;
+.modal_block1{
+	padding:40px 0;	
+	margin-left:5%;
 	background:#efefef;
+	/*width:47.5%;
+	margin-right:5%;
+	margin-right:5%;
+	float:left;*/
 }
 .modal_block1 div:last-child{
 	margin-right:0%;	
 }
 .modal_block1 img{
-	margin:0 auto 20px auto;
+	/*margin:0 auto 20px auto;
 	text-align:center;
-	display:block;
+	display:block;*/
 }
 .modal_block1 h3{
 	margin:0px 20px 20px 20px;

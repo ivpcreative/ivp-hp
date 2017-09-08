@@ -55,3 +55,17 @@ function add_wp_footer_custom(){ ?>
 <?php }
 add_action( 'wp_footer', 'add_wp_footer_custom', 1 );
 ?>
+
+<?php
+function register_header_menu() {
+  register_nav_menu('custom-header-menu',__( 'Custom Header Menu' ));
+}
+add_action( 'init', 'register_header_menu' );
+?>
+
+<?php
+function register_footer_menu() {
+  register_nav_menu('custom-footer-menu',__( 'Custom Footer Menu' ));
+}
+add_action( 'init', 'register_footer_menu' );
+?>

@@ -16,6 +16,11 @@ body{
 .bx-controls-direction{
 	display:none;	
 }
+.slider2{
+    padding: 96px;
+}
+
+
 #slider , #slider2{
 	width:100%;
 	z-index:1;
@@ -30,6 +35,11 @@ body{
 	padding:96px 0;
 	text-align:center;
 }
+
+#slider li img{
+	height: 300px !important;
+}
+
 #slider li img , #slider2 li img{
 	margin:0 auto;
 	padding-left:12%;
@@ -108,8 +118,7 @@ body{
 	font-weight:normal;
 }
 .sf-menu ul {
-    position:
-    absolute;
+    position:absolute;
     top:-999em;
     width:200px;
 }
@@ -130,6 +139,14 @@ body{
 	font-size:17px;
 	display:inline;
 	vertical-align:middle;
+}
+.sf-menu li.first a:after {
+	content: url(/wp-content/uploads/images/menu_line.png);
+	width: 112px;
+	margin-left:10px;
+	position: absolute;
+    top: 0;
+
 }
 .sf-menu li.first img{
 	display:inline;
@@ -342,8 +359,15 @@ li.sfHover > a > .sf-sub-indicator {
 .padding-none{
 	padding: 0;
 }
-.margin-none{
+.padding-noside{
+	padding-left: 0;
+	padding-right: 0;
+}
+.margin-none, .margin-none>div{
 	margin: 0;
+}
+.margin-textfooter{
+	margin-top: 30px;
 }
 
 @media (max-width: 1200px) {
@@ -401,6 +425,9 @@ li.sfHover > a > .sf-sub-indicator {
 		left:10px;
 		z-index:9999 !important;	
 	}
+	.first{
+		display: none;
+	}
 }
 
 @media (max-width: 992px) {
@@ -409,7 +436,7 @@ li.sfHover > a > .sf-sub-indicator {
 		text-align:center;
 	}
 	#slider li img{
-		height:190px;
+		height:190px !important;
 	}
 	.scroll_icon{
 		margin-top:-130px;
@@ -431,7 +458,7 @@ li.sfHover > a > .sf-sub-indicator {
 		padding:182px 0 242px 0;
 	}
 	#slider li img{
-		height:150px;
+		height:150px !important;
 	}
 	#slider2 li{
 		padding:60px 0 50px 0;
@@ -445,7 +472,7 @@ li.sfHover > a > .sf-sub-indicator {
 		padding:182px 0 242px 0;
 	}
 	#slider li img{
-		height:120px;
+		height:120px !important;
 	}
 	#slider2 li img{
 		height:100px;
@@ -460,7 +487,7 @@ li.sfHover > a > .sf-sub-indicator {
 }
 @media (max-width: 360px) {
 	#slider li img{
-		height:100px;
+		height:100px !important;
 	}
 	#slider2 li img{
 		height:90px;
@@ -912,23 +939,34 @@ li.sfHover > a > .sf-sub-indicator {
 .footers{
 	background:#272727;
 	color:#fff;
-	padding:60px 100px 10px 100px;
+	padding:50px 10px;
 }
-.footers div{
+.footer-cl{
+	display: inline-block;
+    vertical-align: top;
+}
+/*.footers div{
 	width:32%;
 	float:left;
 	margin-right:2%
-}
+}*/
 .footers div:last-child{
 	margin-right:0%
 }
-.footers dl dt{
+.footers h4{
 	font-size:15px;
 	font-weight:bold;
 	margin-bottom:10px;
 	letter-spacing:1px;
 }
-.footers dl dd a{
+
+.footers span>a:before{
+	content:url('/wp-content/uploads/images/arrow_white.png');
+	width: 16px;
+	height: 7px;
+	margin-right: 10px;
+}
+.footers a{
 	font-size:13px;
 	padding:6px 0;
 	display:block;
@@ -950,13 +988,12 @@ li.sfHover > a > .sf-sub-indicator {
 	display: block;
 	content: '';
 }
-.footers dl dd a,
-.footers dl dd a::before,
-.footers dl dd a::after {
+.footers a,
+.footers a::before {
 	-webkit-transition: all .4s;
 	transition: all .4s;
 }
-.footers dl dd a:hover{
+.footers a:hover{
 	opacity:0.8;	
 	letter-spacing:2px;
 }
@@ -1057,7 +1094,7 @@ p.copyright{
 
 @media (max-width: 1200px) {
 	.lines{
-		margin:-60px -50px -110px 0;
+		margin:-60px -55px -110px 0;
 	}
 	.main_contents{
 		margin-top:60px;
@@ -1257,6 +1294,10 @@ p.copyright{
 	.footers{
 		padding:40px 20px 10px 20px;
 	}
+	.footer-cl{
+		width: 33%;
+	}
+	
 	.footers dl dt{
 		font-size:13px;
 	}
@@ -1344,7 +1385,7 @@ p.copyright{
 	}
 	.inh2{
 		width:96%;
-		height:44px;
+		height:55px;
 		padding:10px 0 0 0;
 		font-size:18px;
 		letter-spacing:3px;
@@ -1507,13 +1548,17 @@ p.copyright{
 		padding:20px 20px;
 		margin-top:20px;
 	}
-	.footers{
+	/*.footers{
 		display:none;	
-	}
+	}*/
 	p.copyright{
 		text-align:left;
 		padding-left:10px;
 		margin-top:-40px;
+	}
+
+	.accordionbox ul li{
+		list-style: none;
 	}
 	.accordionbox{
 		display:block;
@@ -1543,27 +1588,27 @@ p.copyright{
 	.accordionlist dt .title{
 		float: left;
 	}
-	.accordionlist dd{
+	.accordionlist li{
 		display:none;
 		padding:0 0 0px 8px;
 	}
-	.accordionlist dd a{
+	.accordionlist li a{
 		border:none;
 		padding:6px 0;
 	}
-	.accordionlist dd a:first-child{
+	.accordionlist li a:first-child{
 		padding:12px 0 6px 0;
 	}
-	.accordionlist dd a span{
+	.accordionlist li a span{
 		vertical-align:middle;
 	}
-	.accordionlist dd a img{
+	.accordionlist li a img{
 		vertical-align:middle;
 		margin-right:8px;
 	}
 	.accordion_icon,
 	.accordion_icon span {
-		display: inline-block;
+		display: block;
 		transition: all .4s;
 		box-sizing: border-box;
 	}

@@ -10,95 +10,23 @@
 
 get_header(); ?>
 <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri()?>/css/second.css"/>
-
+<!--
 <ul id="slider2">
     <li style="background:url(<?php echo get_stylesheet_directory_uri()?>/images/slide2.jpg) center bottom no-repeat; background-size:cover;"><h2><img src="<?php echo get_stylesheet_directory_uri()?>/images/second_title_ec.png" width="auto" height="200" alt="システム開発/スクラッチ開発 ECシステム開発"/></h2></li>
 </ul>
-<?php get_template_part( 'template-parts/content', 'slider_left' ); ?>
-<div class="slide_left_after2"></div>
-
+-->
 <div class="container clearfix">
     <div class="main_contents second">
 
-    	<h2>アイブイピーのＥＣソリューションとは？</h2>
+    	<?php
+        if ( have_posts() ) :
+          get_template_part( 'content', get_post_format() );
+        else:
+          get_template_part( 'content', 'none' );
+        endif;
 
-        <div class="ec01 heightLineParent clearfix">
-        	<p>創業20年の経験に<br />基づくノウハウ</p>
-        	<p>24/365の<br />安心サポート</p>
-        	<p>導入実績450サイト以上の<br />パッケージシステム</p>
-        </div>
-
-        <h3 class="inh2 title_ec01">このような企業さまのご要望にお応えします。</h3>
-        <div class="clearfix lines"><img src="<?php echo get_stylesheet_directory_uri()?>/images/diagonal_line.png" width="160" height="auto" alt="diagonal line"/></div>
-		<div class="ec02 clearfix heightLineParent">
-        	<div class="open-options1"><h3>1</h3><p>既存ECサイトを<br />リニューアルしたい</p><a href="" class="open-options1 ina">OPEN</a></div>
-        	<div class="open-options2"><h3>2</h3><p>越境ECサイトを<br />立ち上げたい</p><a href="" class="open-options2 ina">OPEN</a></div>
-        	<div class="open-options3"><h3>3</h3><p>マルチブランド対応の<br />ECサイトを立ち上げたい</p><a href="" class="open-options3 ina">OPEN</a></div>
-        	<div class="open-options4"><h3>4</h3><p>BtoB向けECサイトを<br />立ち上げたい</p><a href="" class="open-options4 ina">OPEN</a></div>
-        	<div class="open-options5"><h3>5</h3><p>基幹システムや他のソリューション<br />と連携したい</p><a href="" class="open-options5 ina">OPEN</a></div>
-        </div>
-
-        <h3 class="inh2 title_ec02">当社オリジナルＥＣソリューションシステム「ＥＲＳ」とは？</h3>
-        <div class="clearfix lines"><img src="<?php echo get_stylesheet_directory_uri()?>/images/diagonal_line.png" width="160" height="auto" alt="diagonal line"/></div>
-		<div class="ec03 clearfix">
-        	<img src="<?php echo get_stylesheet_directory_uri()?>/images/ec_icon01.png" width="19%" height="auto" alt="フルカスタマイズ対応可能"/>
-        	<img src="<?php echo get_stylesheet_directory_uri()?>/images/ec_icon02.png" width="19%" height="auto" alt="大規模サイトに対応可能"/>
-        	<img src="<?php echo get_stylesheet_directory_uri()?>/images/ec_icon03.png" width="19%" height="auto" alt="フルフィルメントコールセンター連携可能"/>
-        	<img src="<?php echo get_stylesheet_directory_uri()?>/images/ec_icon04.png" width="19%" height="auto" alt="モール管理システム連携可能"/>
-        	<img src="<?php echo get_stylesheet_directory_uri()?>/images/ec_icon05.png" width="19%" height="auto" alt="24/365インフラ保守運用"/>
-        </div>
-
-        <h3 class="inh2 title_ec03">ＥＲＳの主な機能</h3>
-        <div class="clearfix lines"><img src="<?php echo get_stylesheet_directory_uri()?>/images/diagonal_line.png" width="160" height="auto" alt="diagonal line"/></div>
-		<div class="func01 clearfix">
-            <table>
-                <tr>
-                    <td colspan="3">フロント機能</td>
-                </tr>
-                <tr>
-                    <td>会員登録</td>
-                    <td>商品検索-検索リスト</td>
-                    <td>商品詳細</td>
-                </tr>
-                <tr>
-                    <td>カート投入</td>
-                    <td>配送先記入フロー</td>
-                    <td>伝票生成</td>
-                </tr>
-                <tr>
-                    <td>外部通信決済</td>
-                    <td>定期購入申込</td>
-                    <td>定期購入修正</td>
-                </tr>
-                <tr>
-                    <td>ウイッシュリスト</td>
-                    <td>マイページセッション管理</td>
-                    <td>購入履歴/ポイント履歴</td>
-                </tr>
-            </table>
-        </div>
-        <div class="func02 clearfix">
-            <table>
-                <tr>
-                    <td colspan="3">管理画面機能</td>
-                </tr>
-                <tr>
-                    <td>ログインセッション管理</td>
-                    <td>顧客検索-検索リスト</td>
-                    <td>顧客詳細</td>
-                </tr>
-                <tr>
-                    <td>伝票検索-検索リスト</td>
-                    <td>伝票詳細/伝票修正</td>
-                    <td>商品検索-検索リスト</td>
-                </tr>
-                <tr>
-                    <td>商品詳細</td>
-                    <td>商品登録/商品修正</td>
-                    <td>各種設定関連</td>
-                </tr>
-            </table>
-        </div>
+        get_footer();
+      ?>
 
 
 <!-- モーダル専用エリア -->
@@ -106,9 +34,12 @@ get_header(); ?>
 
 // phpQueryをロードする
 		require_once("phpQuery-onefile.php");
-    $page = "modal-ec1";
-
-    echo display_modal($page);
+    
+    echo display_modal("modal-ec1");
+    echo display_modal("modal-ec2");
+    echo display_modal("modal-ec3");
+    echo display_modal("modal-ec4");
+    echo display_modal("modal-ec5");
 
     function display_modal($page){
   		$html = file_get_contents(home_url( ).'/'. $page.'/');
@@ -117,6 +48,8 @@ get_header(); ?>
     }
 ?>
 
+
+<!--
 <div id="modal-options2" data-izimodal-group="group1" data-izimodal-loop="" data-izimodal-title="越境ECサイトを立ち上げたい">
 	<div class="modal-base">
 		<div class="clearfix modal_block1 heightLineParent">
@@ -248,6 +181,8 @@ get_header(); ?>
         get_template_part( 'template-parts/content', 'btn_quest' );?>
   </div>
 </div>
+
+-->
 <!-- モーダル専用エリア end -->
 
   <?php // get_sidebar(); ?>
@@ -348,13 +283,14 @@ $('#modal-options5').iziModal({
 </script>
 <script type="text/javascript">
 $(document).ready(function(){
-	$('.sf-menu h4 a').each(function(){
-		var $href = $(this).attr('href');
-		if(location.href.match($href)) {
-			$(this).addClass('active');
-		} else {
-			$(this).removeClass('active');
-		}
-	});
+  $('.sf-menu h4 a').each(function(){
+    var $href = $(this).attr('href');
+    if(location.href.match($href)) {
+      $(this).addClass('active');
+    } else {
+      $(this).removeClass('active');
+    }
+  });
 });
 </script>
+

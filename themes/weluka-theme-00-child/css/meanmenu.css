@@ -71,6 +71,7 @@ a.meanmenu-reveal {
 	position: relative;
 	float: left;
 	width: 100%;
+	list-style: none;
 }
 
 .mean-container .mean-nav ul li a {
@@ -94,6 +95,14 @@ a.meanmenu-reveal {
 	visibility: visible;
 	border: none;
 	font-family: 'Poppins','Noto Sans', "Helvetica Neue", Helvetica, "Avenir Next", "游ゴシック体", YuGothic, "游ゴシック Medium", "YuGothic M",  'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', "メイリオ", Meiryo, sans-serif !important;
+}
+
+
+.sub-menu li a:before{
+	content:url(/wp-content/uploads/images/arrow_white.png);
+	width: 16px;
+	height: 7px;
+	margin-right: 10px;
 }
 .mean-container .mean-nav ul li li a span {
 	vertical-align:middle;
@@ -179,7 +188,11 @@ a.meanmenu-reveal {
 	display: none !important;
 }
 .lasts , .lasts2{
-	display:block !important;
+	display: none;
+}
+@media (max-width: 1200px) {
+.lasts , .lasts2{
+	display:block;
 	width:48% !important;
 	float:left !important;
 	border:none !important;
@@ -207,3 +220,4 @@ a.meanmenu-reveal {
 	color:#272727 !important;
 	background:#fff;
  }
+}

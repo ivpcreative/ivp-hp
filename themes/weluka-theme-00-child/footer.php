@@ -9,8 +9,7 @@
  * @since Twenty Sixteen 1.0
  */
 ?>
-
-<div class="footers clearfix">
+<!--<div class="footers clearfix">
 						<div>
 								<dl>
 										<dt>会社情報</dt>
@@ -47,52 +46,20 @@
 										<dt>お問い合わせ</dt>
 										<dd>
 											<?php
-											 set_query_var( 'btnkind', 'footer');
-											 get_template_part( 'template-parts/content', 'btn_quest' );
+											 //set_query_var( 'btnkind', 'footer');
+											 //get_template_part( 'template-parts/content', 'btn_quest' );
 											 ?>
 											</dd>
 								</dl>
 						</div>
 				</div>
-
+-->
 				<!--　smart phone footer start -->
 				<div id="accordion1" class="accordionbox">
 						<a href="" class="first_logo"><img src="/wp-content/uploads/images/logo2.png" width="170" height="auto" alt="IVP Internet Value Provider　IVP Co. Ltd." title="IVP Internet Value Provider　IVP Co. Ltd." /></a>
-						<a href="/company/">会社情報</a>
-						<a href="/access/">アクセスマップ</a>
-						<a href="/privacy/">プライバシーポリシー</a>
-						<dl class="accordionlist">
-								<dt class="clearfix">
-										<div class="title">
-												<p>システム開発/スクラッチ開発</p>
-										</div>
-										<p class="accordion_icon"><span></span><span></span></p>
-								</dt>
-								<dd>
-										<a href="ec/"><img src="/wp-content/uploads/images/arrow_white.png" width="16" height="7" alt="arrow"/><span>ECシステム開発</span></a>
-										<a href="iot/"><img src="/wp-content/uploads/images/arrow_white.png" width="16" height="7" alt="arrow"/><span>loTサービス開発</span></a>
-										<a href="web/"><img src="/wp-content/uploads/images/arrow_white.png" width="16" height="7" alt="arrow"/><span>WEBシステム開発</span></a>
-								</dd>
-						</dl>
-						<dl class="accordionlist">
-								<dt class="clearfix">
-										<div class="title">
-												<p>セキュリティ/運用保守</p>
-										</div>
-										<p class="accordion_icon"><span></span><span></span></p>
-								</dt>
-								<dd>
-										<a href="/maint/"><img src="/wp-content/uploads/images/arrow_white.png" width="16" height="7" alt="arrow"/><span>24×365運用保守</span></a>
-										<a href="/offshore/"><img src="/wp-content/uploads/images/arrow_white.png" width="16" height="7" alt="arrow"/><span>オフショア開発</span></a>
-								</dd>
-						</dl>
-						<a href="https://ww2.ivp.co.jp/recruit/" target="_blank">採用情報</a>
-						<a href="partner/">協力会社募集</a>
 
-						<?php
-              				set_query_var( 'btnkind', 'footer-sp');
-              				get_template_part( 'template-parts/content', 'btn_quest' );?>
-						<a href="https://ww2.ivp.co.jp/english/" target="_blank">English</a>
+						<?php wp_nav_menu( array( 'theme_location' => 'custom-footer-menu') ); ?>
+
 				</div>
 				<p class="copyright">Copyright(C)2017 IVP Co., Ltd. All rights reserved.</p>
 		</div>
@@ -112,7 +79,7 @@
 <script type="text/javascript">$(document).ready(function(){$('#slider').bxSlider({mode: 'fade',auto: true,pause:60000000,speed: 0,pager: false});});</script>
 <script type="text/javascript"> $(document).ready(function(){ $("ul.sf-menu").superfish({  animation: {height:'show'}, delay: 1200 }); });</script>
 <script type="text/javascript">jQuery(document).ready(function () { jQuery('#snavi').meanmenu();    });</script>
-<script type="text/javascript">$(function(){    $(".accordionbox dt").on("click", function() {$(this).next().slideToggle(); if ($(this).children(".accordion_icon").hasClass('active')) {   $(this).children(".accordion_icon").removeClass('active');  }else { $(this).children(".accordion_icon").addClass('active');}});});</script>
+<script type="text/javascript">$(function(){    $(".accordionbox").on("click", function() {$(".sub-menu").next().slideToggle(); if ($(this).children(".accordion_icon").hasClass('active')) {   $(this).children(".accordion_icon").removeClass('active');  }else { $(this).children(".accordion_icon").addClass('active');}});});</script>
 <!-- sitecatlyst start-->
 <script>
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
