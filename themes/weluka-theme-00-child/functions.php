@@ -72,29 +72,29 @@ function shortcode_quest_btn($arg) {
     extract(shortcode_atts(array (
         'type' => 'a', //a:aタグのみ i:アイコン / img:画像
         'ga_flg' => '',//GA tag に入れるカテゴリ
+        'ga_dest' => 'quest',//GA tag 目的地
         'text' => 'お問い合わせ',
         'href' => '/quest/', //リンク先
         'target' => '',//aタグ targer属性
-        'class' => '',
+        'i_class' => '', //iタグのクラス
+        'img_class' => '',//imgタグのクラス
+        'a_class' => '',//aタグのクラス
         'aria_hidden' =>'' //aria-hidden の設定
     ), $arg));
-    /*
-    if($target != '') $target = ' target="'.$target.'"';
-  return '<button class="l-btn type-'.$type.'"><a href="'.$href.'"'.$target.'>'.$text.'</a></button>';
-*/
 
-$gatag = 'ga( \'send\', \'event\', \''.$ga_flg.'\', \'click\', \'quest\', 1, {\'nonInteraction\': 1});';
+//GA TAG
+$gatag = 'ga( \'send\', \'event\', \''.$ga_flg.'\', \'click\', \''.$ga_dest.'\', 1, {\'nonInteraction\': 1});';
 
 
 if( $type=='i'){
-  $qpper = '<i class="'.$class.'" aria-hidden="'.$aria_hidden.'"></i>'.$text;
+  $qpper = '<i class="'.$i_class.'" aria-hidden="'.$aria_hidden.'"></i>'.$text;
 }elseif($type=='img'){
-  $qpper = '<img src="/wp-content/uploads/images/arrow_white.png" width="16" height="7" alt="arrow"/><span>'.$text.'</span>';
+  $qpper = '<img src="/wp-content/uploads/images/arrow_white.png" width="16" height="7" alt="arrow"/ class="'.$img_class.'"><span>'.$text.'</span>';
 }else{
   $qpper = $text;
 }
 
-$var= '<a href="'.$href.'" target="'.$target.'" onclick="'.$gatag.'">';
+$var= '<a href="'.$href.'" target="'.$target.'" onclick="'.$gatag.'" class="'.$a_class.'">';
 $var = $var .$qpper;
 $var = $var .'</a>';
 

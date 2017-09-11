@@ -19,7 +19,7 @@
         //set_query_var( 'btnkind', 'slider_left');
         //get_template_part( 'template-parts/content', 'btn_quest' );
         //問い合わせボタンショートコード
-        echo do_shortcode('[quest_btn type="i" text="お問い合せ" ga_flg="leftnavi" class="fa fa-envelope" aria_hidden="true"]');
+        echo do_shortcode('[quest_btn type="i" text="お問い合せ" ga_flg="leftnavi" i_class="fa fa-envelope" aria_hidden="true"]');
         ?>
 
     <a href="https://ww2.ivp.co.jp/english/" target="_blank"><i class="fa fa-globe" aria-hidden="true"></i>English</a>
