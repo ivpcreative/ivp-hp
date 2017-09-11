@@ -11,9 +11,8 @@ get_header();
 global $weluka_themename;
 ?>
 <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri()?>/css/second.css"/>
-
+<div class="top_contents"></div>
 <div class="slide_left_after2"></div>
-
 <div class="container clearfix">
 		<div class="main_contents second">
 			<?php
@@ -25,8 +24,38 @@ global $weluka_themename;
 
 				get_footer();
 			?>
+
+ <?php
+
+    // phpQueryをロードする
+        require_once("phpQuery-onefile.php");
+
+        echo display_modal("modal-iot1");
+        echo display_modal("modal-iot2");
+        echo display_modal("modal-iot3");
+
+
+        //display_modal(Basic認証版<Testサイト表示対策>)
+            function display_modal($page){
+            $url = home_url( ).'/' . $page .'/';
+            $basic = array(
+            'User-Agent: My User Agent 1.0',    //ユーザエージェントの指定
+            'Authorization: Basic '.base64_encode('ivpc:Fvakh-z4'),//ベーシック認証
+            );
+
+            $options = array('http' => array(
+            'header' => implode("\r\n", $basic )
+            ));
+            $options = stream_context_create($options);
+
+              $html = file_get_contents(home_url( ).'/'. $page.'/', false, $options);
+              $doc = phpQuery::newDocument($html);
+              return $doc["#modal-include"]->html();
+            }
+    ?>
 	</div>
 </div>
+
 <!-- page script-->
 <script>
 //01

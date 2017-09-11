@@ -98,12 +98,6 @@ a.meanmenu-reveal {
 }
 
 
-.sub-menu li a:before{
-	content:url(/wp-content/uploads/images/arrow_white.png);
-	width: 16px;
-	height: 7px;
-	margin-right: 10px;
-}
 .mean-container .mean-nav ul li li a span {
 	vertical-align:middle;
 }
@@ -191,6 +185,14 @@ a.meanmenu-reveal {
 	display: none;
 }
 @media (max-width: 1200px) {
+
+.sub-menu li a:before{
+	content:url(/wp-content/uploads/images/arrow_white.png);
+	width: 16px;
+	height: 7px;
+	margin-right: 10px;
+}
+
 .lasts , .lasts2{
 	display:block;
 	width:48% !important;

@@ -1,7 +1,7 @@
 <?php
 /**
  * The template for displaying pages
-  *Template Name:page-partner
+  *Template Name:page-privacy
  * @package WordPress
  * @subpackage ivp-hp
  * @since ivp-hp 1.0
@@ -27,16 +27,3 @@ global $weluka_themename;
 			?>
 	</div>
 </div>
-<!-- page script-->
-<script type="text/javascript">
-$(document).ready(function(){
-    $('.sf-menu h4 a').each(function(){
-        var $href = $(this).attr('href');
-        if(location.href.match($href)) {
-            $(this).addClass('active');
-        } else {
-            $(this).removeClass('active');
-        }
-    });
-});
-</script>

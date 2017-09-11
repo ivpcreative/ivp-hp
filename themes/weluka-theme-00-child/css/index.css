@@ -30,6 +30,7 @@ body{
 #slider li , #slider2 li{
 	padding:252px 0;
 	text-align:center;
+	list-style: none;
 }
 #slider2 li{
 	padding:96px 0;
@@ -100,7 +101,7 @@ body{
 	z-index:997;
 }
 .slide_left_after2{
-	height:426px;
+	height:391px;
 }
 .slide_left h1{
 	margin-top:38px;
@@ -1588,8 +1589,11 @@ p.copyright{
 	.accordionlist dt .title{
 		float: left;
 	}
-	.accordionlist li{
+
+	.accordionlist ul{
 		display:none;
+	}
+	.accordionlist li{
 		padding:0 0 0px 8px;
 	}
 	.accordionlist li a{
