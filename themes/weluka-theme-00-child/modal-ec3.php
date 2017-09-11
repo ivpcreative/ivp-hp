@@ -6,12 +6,8 @@
  * @subpackage ivp-hp
  * @since ivp-hp 1.0
  */
+ get_header('modal')
 ?>
-<!--管理画面用front.js-->
-<script type="text/javascript"  src="<?php echo get_stylesheet_directory_uri()?>/js/front.js"></script>
-<span class="js-edit_modal">
-<?php wp_head(); ?>
-</span>
 <div id="modal-include">
 <div id="modal-options3" data-izimodal-group="group1" data-izimodal-loop="" data-izimodal-title="<?php echo get_post_meta($post->ID, _aioseop_title, true); ?>">
 	<div class="modal-base">
