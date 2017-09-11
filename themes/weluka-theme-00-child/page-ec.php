@@ -46,7 +46,7 @@ get_header(); ?>
             echo display_modal($page);
 
             function display_modal($page){
-        		$url = 'home_url( ).'/'. $page.'/'';
+        		$url = home_url( ).'/' . $page .'/';
         		$basic = array(
         		'User-Agent: My User Agent 1.0',    //ユーザエージェントの指定
         		'Authorization: Basic '.base64_encode('ivpc:Fvakh-z4'),//ベーシック認証

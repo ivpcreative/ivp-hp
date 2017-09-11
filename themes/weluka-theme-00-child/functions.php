@@ -43,29 +43,63 @@ add_filter( 'attachment_link', 'delete_hostname_from_attachment_url' );
 /*-------------------------------------------*/
 /*  <head>タグ内に自分の追加したいタグを追加する
 /*-------------------------------------------*/
-function add_wp_head_custom(){ ?>
-
-<?php //get_template_part('header-sns');?>
-
-<?php }
+function add_wp_head_custom(){
+}
 add_action( 'wp_head', 'add_wp_head_custom',1);
 
-function add_wp_footer_custom(){ ?>
-<!-- footerに書きたいコード -->
-<?php }
+function add_wp_footer_custom(){
+//footerに書きたいコード
+}
 add_action( 'wp_footer', 'add_wp_footer_custom', 1 );
-?>
 
-<?php
+/*-------------------------------------------*/
+/*  カスタムヘッダー
+/*-------------------------------------------*/
 function register_header_menu() {
   register_nav_menu('custom-header-menu',__( 'Custom Header Menu' ));
 }
 add_action( 'init', 'register_header_menu' );
-?>
 
-<?php
 function register_footer_menu() {
   register_nav_menu('custom-footer-menu',__( 'Custom Footer Menu' ));
 }
 add_action( 'init', 'register_footer_menu' );
+
+/*-------------------------------------------*/
+/*  ショートコード(問い合わせボタン)
+/*-------------------------------------------*/
+function shortcode_quest_btn($arg) {
+    extract(shortcode_atts(array (
+        'type' => 'a', //a:aタグのみ i:アイコン / img:画像
+        'ga_flg' => '',//GA tag に入れるカテゴリ
+        'text' => 'お問い合わせ',
+        'href' => '/quest/', //リンク先
+        'target' => '',//aタグ targer属性
+        'class' => '',
+        'aria_hidden' =>'' //aria-hidden の設定
+    ), $arg));
+    /*
+    if($target != '') $target = ' target="'.$target.'"';
+  return '<button class="l-btn type-'.$type.'"><a href="'.$href.'"'.$target.'>'.$text.'</a></button>';
+*/
+
+$gatag = 'ga( \'send\', \'event\', \''.$ga_flg.'\', \'click\', \'quest\', 1, {\'nonInteraction\': 1});';
+
+
+if( $type=='i'){
+  $qpper = '<i class="'.$class.'" aria-hidden="'.$aria_hidden.'"></i>'.$text;
+}elseif($type=='img'){
+  $qpper = '<img src="/wp-content/uploads/images/arrow_white.png" width="16" height="7" alt="arrow"/><span>'.$text.'</span>';
+}else{
+  $qpper = $text;
+}
+
+$var= '<a href="'.$href.'" target="'.$target.'" onclick="'.$gatag.'">';
+$var = $var .$qpper;
+$var = $var .'</a>';
+
+return $var;
+}
+add_shortcode('quest_btn', 'shortcode_quest_btn');
+
 ?>
