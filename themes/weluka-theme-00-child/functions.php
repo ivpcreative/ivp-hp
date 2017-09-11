@@ -89,7 +89,7 @@ $gatag = 'ga( \'send\', \'event\', \''.$ga_flg.'\', \'click\', \''.$ga_dest.'\',
 if( $type=='i'){
   $qpper = '<i class="'.$i_class.'" aria-hidden="'.$aria_hidden.'"></i>'.$text;
 }elseif($type=='img'){
-  $qpper = '<img src="/wp-content/uploads/images/arrow_white.png" width="16" height="7" alt="arrow"/ class="'.$img_class.'"><span>'.$text.'</span>';
+  $qpper = '<span>'.$text.'</span><img src="/wp-content/uploads/images/arrow_white.png" width="16" height="7" alt="arrow"/ class="'.$img_class.'">';
 }else{
   $qpper = $text;
 }

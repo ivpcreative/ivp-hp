@@ -18,11 +18,7 @@
 					get_template_part( 'content', 'none' );
 				endif;
 			?>
-			<?php
-			set_query_var( 'btnkind', 'modal');
-			set_query_var( 'page', 'ec');
-			get_template_part( 'template-parts/content', 'btn_quest' );
-			?>
+
 
 	</div>
 </div>
