@@ -89,7 +89,7 @@
 
            $html = file_get_contents(home_url( ).'/'. $page.'/', false, $options);
            $doc = phpQuery::newDocument($html);
-           return $doc[""]->html();
+           return $doc["#include"]->html();
          }
 
      /* display_modal(通常版)
@@ -128,6 +128,7 @@
 </head>
 
 <body <?php body_class(); ?>>
+
 	<div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];

@@ -9,7 +9,7 @@
 
  get_header('modal')
 ?>
-
+  <div id="include">
   <div class="sf-bottom">
     <?php
       if ( have_posts() ) :
@@ -19,6 +19,7 @@
       endif;
     ?>
   </div>
+</div>
 <span class="js-edit_modal">
 <?php wp_footer(); ?>
 </span>

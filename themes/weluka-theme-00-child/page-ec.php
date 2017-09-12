@@ -23,6 +23,7 @@ get_header(); ?>
         endif;
       ?>
     <!-- モーダル専用エリア -->
+    <div class="modal_area">
     <?php
     // display_modal>header.php
         echo display_modal("modal-ec1");
@@ -31,6 +32,7 @@ get_header(); ?>
         echo display_modal("modal-ec4");
         echo display_modal("modal-ec5");
     ?>
+  </div>
 <!-- モーダル専用エリア end -->
 
   <?php get_footer(); ?>

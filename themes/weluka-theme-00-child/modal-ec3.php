@@ -8,7 +8,7 @@
  */
  get_header('modal')
 ?>
-<div id="modal-include">
+<div id="include">
 <div id="modal-options3" data-izimodal-group="group1" data-izimodal-loop="" data-izimodal-title="<?php echo get_post_meta($post->ID, _aioseop_title, true); ?>">
 	<div class="modal-base">
 			<?php
