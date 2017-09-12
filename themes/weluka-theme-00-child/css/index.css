@@ -113,7 +113,7 @@ body{
 }
 .sf-menu {
 	width:200px !important;
-	margin-top:40px;
+	margin-top:47px;
 }
 .sf-menu h4{
 	font-weight:normal;
@@ -146,7 +146,7 @@ body{
 	width: 112px;
 	margin-left:10px;
 	position: absolute;
-    top: 0;
+    top: 5px;
 
 }
 .sf-menu li.first img{
@@ -185,7 +185,7 @@ ul.sf-menu li li li.sfHover ul {
 .sf-menu a { /* visited pseudo selector so IE6 applies text colour*/
     color:#272727;
 	font-size:14px;
-	padding:5px 0;
+	padding:8px 0;
 	text-decoration:none;
     display:block;
     position:relative;
@@ -257,12 +257,11 @@ li.sfHover > a > .sf-sub-indicator {
 .sf-menu li ul li{
 	padding:0;
 }
-.sf-menu li ul h4 li a{
+.sf-menu .sub-menu li a{
 	border-bottom:1px solid #ababab !important;
 	padding-bottom:8px;
-	display:block;
 }
-.sf-menu li ul h4:last-child li a{
+.sf-menu .sub-menu li:last-child a{
 	border-bottom:none !important;
 	padding-bottom:0px;
 }
@@ -607,10 +606,15 @@ li.sfHover > a > .sf-sub-indicator {
 	line-height:200%;
 }
 .bnrs .link3 p:before{
-	content: url(/wp-content/uploads/images/index_bnr03.png);
-	margin:40px auto 30px auto;
+	background-image: url('/wp-content/uploads/images/index_bnr03.png');
+	content:"";
+	background-size: contain;
+	width: 240px;
+	height: 40px;
+	margin:40px auto 10px auto;
 	display: block;
 	text-align: center;
+	background-repeat: no-repeat;
 }
 .bnrs .link2 p strong{
 	font-size:27px;
@@ -626,7 +630,7 @@ li.sfHover > a > .sf-sub-indicator {
 }
 .inh2{
 	width:100%;
-	height:72px;
+	height:85px;
 	padding:20px 0;
 	font-size:22px;
 	font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
@@ -940,17 +944,13 @@ li.sfHover > a > .sf-sub-indicator {
 .footers{
 	background:#272727;
 	color:#fff;
-	padding:50px 10px;
+	padding:60px 100px 10px 100px;
 }
 .footer-cl{
 	display: inline-block;
     vertical-align: top;
 }
-/*.footers div{
-	width:32%;
-	float:left;
-	margin-right:2%
-}*/
+
 .footers div:last-child{
 	margin-right:0%
 }
@@ -961,11 +961,20 @@ li.sfHover > a > .sf-sub-indicator {
 	letter-spacing:1px;
 }
 
-.footers span>a:before{
-	content:url('/wp-content/uploads/images/arrow_white.png');
-	width: 16px;
-	height: 7px;
-	margin-right: 10px;
+.footers>div{
+	width: 33%;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.footers>div>ul>li>a{
+	font-weight: bold;
+	font-size: 15px;
+	margin-bottom: 8px;
+}
+
+.footers ul li{
+	list-style: none;
 }
 .footers a{
 	font-size:13px;
@@ -974,6 +983,9 @@ li.sfHover > a > .sf-sub-indicator {
 	color:#fff;
 	text-decoration:none;
 	letter-spacing:1px;
+}
+.footer-pc-menu1 .sub-menu li a:before{
+	content: none;
 }
 .footers dl dd a img{
 	margin-right:10px;
@@ -994,7 +1006,7 @@ li.sfHover > a > .sf-sub-indicator {
 	-webkit-transition: all .4s;
 	transition: all .4s;
 }
-.footers a:hover{
+.footers .sub-menu a:hover{
 	opacity:0.8;	
 	letter-spacing:2px;
 }
@@ -1288,9 +1300,10 @@ p.copyright{
 		padding:50px 20px;
 		margin-top:60px;
 	}
-	.pertner_bnr img{
-		height:55px !important;
-		width:auto;
+	.pertner_bnr>div{
+		width: 15%;
+		display: inline-block;
+		margin: auto;
 	}
 	.footers{
 		padding:40px 20px 10px 20px;
@@ -1308,6 +1321,11 @@ p.copyright{
 	}
 	p.copyright{
 		font-size:10px;
+	}
+	.bnrs .link3 p:before{
+		margin: 30px auto 10px auto;
+   		width: 170px;
+    	height: 30px;
 	}
 }
 
@@ -1373,10 +1391,10 @@ p.copyright{
 		line-height:180%;
 	}
 	.bnrs .link3 p:before{
-		margin:30px 0 20px 0;
 		text-align:left;
-		width:170px;
-		height:auto;
+		margin: 15px 0 8px 0;
+   		width: 130px;
+    	height: 20px;
 	}
 	.bnrs .link3 img{
 		margin:30px 0 20px 0;
@@ -1400,7 +1418,7 @@ p.copyright{
 	.inTitle02{
 		background:url(/wp-content/uploads/images/index_title_recruit_sp.png) 0 0 no-repeat;
 		background-size:contain;
-		height:67px;
+		height:100px;
 		padding:42px 0 0 0;
 		margin-bottom:-18px;
 		margin-top:17px !important;
@@ -1481,7 +1499,7 @@ p.copyright{
 	}
 	.ser_sp{
 		background:url(/wp-content/uploads/images/index_service_btn_off.png) top right 35% no-repeat;
-		padding: 0 27%;
+		/*padding: 0 27%;*/
 	}
 	.accordion-on{
 		background:url(/wp-content/uploads/images/index_service_btn_on.png) top right 35% no-repeat !important;
@@ -1501,7 +1519,7 @@ p.copyright{
 		width: 100%;
 	}
 	.index_recruit>div , .index_recruit2>div{
-		padding:20px 2% 0px 2% !important;
+		padding:20px 4% 0px 4% !important;
 	}
 	.index_recruit a{
 		margin:6px auto 20px auto;
@@ -1549,9 +1567,13 @@ p.copyright{
 		padding:20px 20px;
 		margin-top:20px;
 	}
-	/*.footers{
+	.pertner_bnr>div{
+		width: 20%;
+		display: inline-block;
+	}
+	.footers{
 		display:none;	
-	}*/
+	}
 	p.copyright{
 		text-align:left;
 		padding-left:10px;
@@ -1678,6 +1700,9 @@ p.copyright{
 	#slider li{
 		background-size:cover !important;
 	}
+
+
+
 }
 
 
@@ -1717,11 +1742,24 @@ p.copyright{
 		background-size:90% auto;
 	}
 	.ser_sp{
-		background:url(/wp-content/uploads/images/index_service_btn_off.png) top right 30% no-repeat;
+		background:url(/wp-content/uploads/images/index_service_btn_off.png) top right 35% no-repeat;
 	}
 	.accordion-on{
-		background:url(/wp-content/uploads/images/index_service_btn_on.png) top right 30% no-repeat !important;
+		background:url(/wp-content/uploads/images/index_service_btn_on.png) top right 35% no-repeat !important;
 	}
+	.pertner_bnr>div{
+		width: 33%;
+	}
+	.pertner_bnr>div:nth-child(1), .pertner_bnr>div:nth-child(3){
+		width: 30%;
+	}
+	.pertner_bnr>div:nth-child(2){
+		width: 40%;
+	}
+	.pertner_bnr>div:nth-child(4), .pertner_bnr>div:nth-child(5){
+		width: 50%;
+	}
+
 	
 }
 
@@ -1736,10 +1774,10 @@ p.copyright{
 		padding-top:23px;
 	}
 	.bnrs .link2{
-		height:110px;
+		height:140px;
 	}
 	.bnrs .link3{
-		height:110px;
+		height:140px;
 	}
 	.bnrs .link2 p , .bnrs .link3 p{
 		margin-top:0px;
@@ -1760,6 +1798,12 @@ p.copyright{
 }
 
 @media (max-width: 360px) {
+	.ser_sp{
+		background:url(/wp-content/uploads/images/index_service_btn_off.png) top right 32% no-repeat;
+	}
+	.accordion-on{
+		background:url(/wp-content/uploads/images/index_service_btn_on.png) top right 32% no-repeat !important;
+	}
 	
 }
 
@@ -1767,3 +1811,4 @@ p.copyright{
 	margin: 60px 0 0 0;
 	text-align: center;
 }
+

@@ -140,7 +140,7 @@
 	<div id="wrap">
         <h1 class="h1sp"><a href="/"><img src="/wp-content/uploads/images/logo.png" width="170" height="auto" alt="IVP Internet Value Provider　IVP Co. Ltd." title="IVP Internet Value Provider　IVP Co. Ltd." class="logo1" /><img src="/wp-content/uploads/images/logo2.png" width="170" height="auto" alt="IVP Internet Value Provider　IVP Co. Ltd." title="IVP Internet Value Provider　IVP Co. Ltd." class="logo2" /></a></h1>
              <div id="snavi">
-                <?php wp_nav_menu( array( 'theme_location' => 'custom-header-menu','depth' => 0) ); ?>
+                <?php wp_nav_menu( array( 'theme_location' => 'custom-header-menu') ); ?>
     </div>
 <!--side_left-->
 <div class="slide_left">

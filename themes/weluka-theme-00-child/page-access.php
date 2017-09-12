@@ -28,14 +28,14 @@ global $weluka_themename;
 </div>
 <!-- page script-->
 <script type="text/javascript">
-$(document).ready(function(){
-    $('.sf-menu h4 a').each(function(){
-        var $href = $(this).attr('href');
-        if(location.href.match($href)) {
-            $(this).addClass('active');
-        } else {
-            $(this).removeClass('active');
-        }
-    });
+$(function(){
+$('.main-menu a').each(function(){
+var $href = $(this).attr('href');
+if(location.href.match($href)) {
+$(this).addClass('active');
+} else {
+$(this).removeClass('active');
+}
+});
 });
 </script>

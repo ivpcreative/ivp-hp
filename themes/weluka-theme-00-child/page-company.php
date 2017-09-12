@@ -29,18 +29,20 @@ global $weluka_themename;
 </div>
  <!-- page script-->
 <script type="text/javascript">$(function(){	$(".accordionbox2 dt").on("click", function() {$(this).next().slideToggle();if ($(this).children(".accordion_icon2").hasClass('active')) {	$(this).children(".accordion_icon2").removeClass('active');}else {$(this).children(".accordion_icon2").addClass('active');	}});});</script>
+
 <script type="text/javascript">
-$(document).ready(function(){
-	$('.sf-menu h4 a').each(function(){
-		var $href = $(this).attr('href');
-		if(location.href.match($href)) {
-			$(this).addClass('active');
-		} else {
-			$(this).removeClass('active');
-		}
-	});
+$(function(){
+$('.main-menu a').each(function(){
+var $href = $(this).attr('href');
+if(location.href.match($href)) {
+$(this).addClass('active');
+} else {
+$(this).removeClass('active');
+}
+});
 });
 </script>
+
 
 <script type="text/javascript">
 $(document).ready(function() {

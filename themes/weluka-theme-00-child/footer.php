@@ -9,62 +9,20 @@
  * @since Twenty Sixteen 1.0
  */
 ?>
-<!--<div class="footers clearfix">
-						<div>
-								<dl>
-										<dt>会社情報</dt>
-										<dd><a href="/company/">会社概要</a></dd>
-										<dd><a href="/access/">アクセスマップ</a></dd>
-										<dd><a href="/privacy/">プライバシーポリシー</a></dd>
-										<dd><a href="https://ww2.ivp.co.jp/english/">ENGLISH</a></dd>
-								</dl>
-						</div>
-						<div>
-								<dl>
-										<dt>システム開発/スクラッチ開発</dt>
-										<dd><a href="/ec/"><img src="/wp-content/uploads/images/arrow_white.png" width="16" height="7" alt="arrow"/><span>ECシステム開発</span></a></dd>
-										<dd><a href="/iot/"><img src="/wp-content/uploads/images/arrow_white.png" width="16" height="7" alt="arrow"/><span>IoTサービス開発</span></a></dd>
-										<dd><a href="/web/"><img src="/wp-content/uploads/images/arrow_white.png" width="16" height="7" alt="arrow"/><span>WEBシステム開発</span></a></dd>
-								</dl>
-								<dl class="mt30">
-										<dt>セキュリティ/運用保守</dt>
-										<dd><a href="/maint/"><img src="/wp-content/uploads/images/arrow_white.png" width="16" height="7" alt="arrow"/><span>24×365運用保守</span></a></dd>
-										<dd><a href="/offshore/"><img src="/wp-content/uploads/images/arrow_white.png" width="16" height="7" alt="arrow"/><span>オフショア開発</span></a></dd>
-								</dl>
-						</div>
-						<div>
-								<dl>
-										<dt>採用情報</dt>
-										<dd><a href="https://ww2.ivp.co.jp/recruit/" target="_blank"><img src="/wp-content/uploads/images/arrow_white.png" width="16" height="7" alt="arrow"/><span>募集要項・応募フォーム</span></a></dd>
-								</dl>
-								<dl class="mt30">
-										<dt>外注協力会社募集</dt>
-										<dd><a href="/partner/"><img src="/wp-content/uploads/images/arrow_white.png" width="16" height="7" alt="arrow"/><span>ビジネスパートナー企業募集</span></a></dd>
-										<dd><a href="/partner/#partner1"><img src="/wp-content/uploads/images/arrow_white.png" width="16" height="7" alt="arrow"/><span>フリーランスエンジニア募集</span></a></dd>
-								</dl>
-								<dl class="mt30">
-										<dt>お問い合わせ</dt>
-										<dd>
-											<?php
-											 //set_query_var( 'btnkind', 'footer');
-											 //get_template_part( 'template-parts/content', 'btn_quest' );
-											 ?>
-											</dd>
-								</dl>
-						</div>
-				</div>
--->
-				<!--　smart phone footer start -->
-				<div id="accordion1" class="accordionbox">
-						<a href="" class="first_logo"><img src="/wp-content/uploads/images/logo2.png" width="170" height="auto" alt="IVP Internet Value Provider　IVP Co. Ltd." title="IVP Internet Value Provider　IVP Co. Ltd." /></a>
-
-						<?php wp_nav_menu( array( 'theme_location' => 'custom-footer-menu') ); ?>
-
-				</div>
-				<p class="copyright">Copyright(C)2017 IVP Co., Ltd. All rights reserved.</p>
-		</div>
+<div class="footers clearfix">
+  	<?php wp_nav_menu( array( 'theme_location' => 'custom-pc-footer-menu1', 'menu_class' => 'footer-pc-menu1') ); ?>
+	<?php wp_nav_menu( array( 'theme_location' => 'custom-pc-footer-menu2') ); ?>
+	<?php wp_nav_menu( array( 'theme_location' => 'custom-pc-footer-menu3') ); ?>
 </div>
+
+<!--　smart phone footer start -->
+<div id="accordion1" class="accordionbox">
+	<a href="" class="first_logo">
+	<img src="/wp-content/uploads/images/logo2.png" width="170" height="auto" alt="IVP Internet Value Provider　IVP Co. Ltd." title="IVP Internet Value Provider　IVP Co. Ltd." /></a>
+	<?php wp_nav_menu( array( 'theme_location' => 'custom-sp-footer-menu') ); ?>
 </div>
+	<p class="copyright">Copyright(C)2017 IVP Co., Ltd. All rights reserved.</p>
+
 
 <script type="text/javascript"  src="<?php echo get_stylesheet_directory_uri()?>/js/jquery.js"></script>
 <script type="text/javascript"  src="<?php echo get_stylesheet_directory_uri()?>/js/smoothScroll.js"></script>
