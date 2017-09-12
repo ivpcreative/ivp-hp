@@ -1107,7 +1107,7 @@ p.copyright{
 
 @media (max-width: 1200px) {
 	.lines{
-		margin:-60px -55px -110px 0;
+		margin:-60px -55px -132px 0;
 	}
 	.main_contents{
 		margin-top:60px;
@@ -1409,7 +1409,7 @@ p.copyright{
 		font-size:18px;
 		letter-spacing:3px;
 		line-height:150%;
-		margin:10px 2% 0 2%;
+		margin:10px 2% 0 2% !important;
 	}
 	.inTitle01{
 		background:url(/wp-content/uploads/images/index_title_service.png) 0 0 no-repeat;

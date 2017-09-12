@@ -54,8 +54,11 @@
 }
 .modal_block1{
 	padding:40px 0;	
-	margin-left:5%;
+	margin-left:3%;
 	background:#efefef;
+	width: 45%;
+	display: inline-block;
+
 	/*width:47.5%;
 	margin-right:5%;
 	margin-right:5%;
@@ -74,6 +77,7 @@
 	color:#272727;
 	font-size:16px;
 	text-align:center;
+	font-weight: bold;
 }
 .modal_block1 p{
 	margin:0 20px;
@@ -92,6 +96,9 @@
 	color:#272727;
 	margin:0px auto 16px auto;
 	text-align:center;
+}
+.modalh3b h3, .modalh3 h3{
+	font-weight: bold;
 }
 table.modal_block2{
 	border-collapse: collapse;
@@ -144,6 +151,11 @@ table.modal_block5 td:first-child{
 table.modal_block3 .bgt {
 	background: #f4f4f4;
 }
+
+.modal_block2_img>div{
+	width: 19%;
+	display: inline-block;
+}
 .modal_block2_img{
 	text-align:center;
 }
@@ -168,7 +180,10 @@ table.modal_block3 .bgt {
 	margin-top:-40px;
 }
 .imgs{
-	margin-top:30px;	
+	margin-top:30px;
+}
+.imgs h4{
+	font-weight: bold;	
 }
 .imgs>div{
 	width:47.5%;
@@ -246,8 +261,8 @@ table.modal_block3 .bgt {
 		font-size:12px;
 		padding:8px 0;
 	}
-	.modal_block1 div{
-		width:100%;
+	.modal_block1{
+		width:95%;
 		float:none;
 		padding:40px 0;
 		margin-right:0%;
@@ -262,15 +277,17 @@ table.modal_block3 .bgt {
 	.modal_block1 p{
 		font-size:12px;
 	}
+
 	.modalh3 , .modalh3b{
 		font-size:15px;
 	}
 	.modalh3 br , .modalh3b br{
 		display:none;
 	}
-	.modal_block2_img img{
-		margin-right:10px;
-	}
+
+	.modal_block2_img>div{
+		width: 32%;
+	}	
 	table.modal_block2 td {
 		width: 18%;
 		padding: 10px 1%;

@@ -159,6 +159,7 @@
 @media (max-width: 1416px) {
 	.second h2{
 		margin:0px auto 40px auto;
+		font-weight: bold;
 	}
 	.ec02 div{
 	}
@@ -181,10 +182,6 @@
 	}	
 }
 @media (max-width: 992px) {
-	.ec01>div{
-		width: 33%;
-		display: inline-block;
-	}
 	.ec01 p:last-child br{
 		display:none;
 	}
@@ -194,6 +191,12 @@
 	.title_ec02 , .title_ec03{
 		background-size:46% auto;
 	}
+
+	.ec01>div{
+		width: 33%;
+		display: inline-block;
+	}
+
 	.title_ec03{
 		background-size:46% auto;
 	}
@@ -230,7 +233,8 @@
 		padding:0 10px;
 	}	
 	.ec01>div{
-    	width: 100%;
+		width: 92%;
+    	margin: 0px 5%;
 	}
 	.ec01 p{
 		float:none;	
@@ -355,6 +359,10 @@
 	text-align:center;
 	color:#272727;
 	cursor:pointer;
+}
+.iot02>div>div:nth-child(1) {
+	width: 80%;
+	margin: auto;
 }
 .iot02 div .iot02_img{
 	margin:0 10% 10px 10%;
@@ -830,6 +838,7 @@
 	margin:30px 0 10px 0;
 	color:#00718e;
 	font-size:16px;
+	font-weight: bold;
 }
 .detail24365{
 	position:relative;
