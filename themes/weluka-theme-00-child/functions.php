@@ -60,10 +60,25 @@ function register_header_menu() {
 }
 add_action( 'init', 'register_header_menu' );
 
-function register_footer_menu() {
-  register_nav_menu('custom-footer-menu',__( 'Custom Footer Menu' ));
+function register_sp_footer_menu() {
+  register_nav_menu('custom-sp-footer-menu',__( 'Custom SP Footer Menu' ));
 }
-add_action( 'init', 'register_footer_menu' );
+add_action( 'init', 'register_sp_footer_menu' );
+
+function register_pc_footer_menu1() {
+  register_nav_menu('custom-pc-footer-menu1',__( 'Custom PC Footer Menu 1' ));
+}
+add_action( 'init', 'register_pc_footer_menu1' );
+
+function register_pc_footer_menu2() {
+  register_nav_menu('custom-pc-footer-menu2',__( 'Custom PC Footer Menu 2' ));
+}
+add_action( 'init', 'register_pc_footer_menu2' );
+
+function register_pc_footer_menu3() {
+  register_nav_menu('custom-pc-footer-menu3',__( 'Custom PC Footer Menu 3' ));
+}
+add_action( 'init', 'register_pc_footer_menu3' );
 
 /*-------------------------------------------*/
 /*  ショートコード(問い合わせボタン)
