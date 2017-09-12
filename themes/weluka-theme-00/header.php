@@ -12,6 +12,9 @@
  * ver1.0.5
  * ver1.0.6
  * ver1.1
+ * ver1.1.2
+ * ver1.1.3
+ * ver1.1.4
  */
 
 //if( check_weluka_plugin() !== "" ) return;
@@ -25,7 +28,7 @@
 	<?php wp_head(); ?>
 </head>
 <?php
-global $post, $welukaContainerClass, $welukaPageSetting, $welukaLayout, $welukaOnepageMode, $welukaRightSidebarNo, $welukaOutContainerType;
+global $post, $welukaContainerClass, $welukaPageSetting, $welukaLayout, $welukaOnepageMode, $welukaRightSidebarNo, $welukaOutContainerType, $welukaThemeOptions;
 
 if( isset( $_GET['mode'] ) && $_GET['mode'] === 'cp' ) {
 	$welukaLayout = WelukaThemeOptions::LAYOUT_TWO_COL_RIGHT;
@@ -86,12 +89,20 @@ if( ! $_hideHeader ) :
 	$hdClass = "";
 	if( $welukaOnepageMode ) { $hdClass = "weluka-parallax"; }
 	if( ! empty( $cptHd ) ) { $hdClass .= " weluka-custom-header"; }
+	
+	//v1.1.2 add
+/* v1.1.3 comment out functions.php move
+	$_const = 'WelukaThemeOptions::HEAD_FIXED_NO_SCROLL_DISPLAY';
+	if ( defined ( $_const ) ) {
+		if( $welukaThemeOptions[WelukaThemeOptions::HEAD_FIXED_NO_SCROLL_DISPLAY] ) { $hdClass .= " weluka-hdfixed-noscroll"; }
+	}
+*/
 ?>
 <header id="weluka-main-header" <?php if( $hdClass ) { echo 'class="' . $hdClass . '"'; } ?>>
 <?php
 	if( ! empty( $cptHd ) ) :
 		//custom header
-		echo $cptHd;	
+		echo $cptHd;
 	else :
 		//theme default header 
 ?>
@@ -227,10 +238,12 @@ if( ! $welukaOnepageMode ) { //not onepage
 
 if( is_home() || is_front_page() ) :
 else:
+	$hide_breadcrumb = !empty( $welukaPageSetting['hide_breadcrumb'] ) ? $welukaPageSetting['hide_breadcrumb'] : 0; //v1.1.4 move
+
 	// yoaest seo ver1.0.1 modify
 	$yoast_option = get_option( 'wpseo_internallinks' );
 	if ( function_exists('yoast_breadcrumb') && $yoast_option['breadcrumbs-enable'] ) {
-		$hide_breadcrumb = !empty( $welukaPageSetting['hide_breadcrumb'] ) ? $welukaPageSetting['hide_breadcrumb'] : 0;
+		//$hide_breadcrumb = !empty( $welukaPageSetting['hide_breadcrumb'] ) ? $welukaPageSetting['hide_breadcrumb'] : 0;
 		if( ! $hide_breadcrumb ) {
 	    	//if( $welukaOnepageMode ) {
 			if( $welukaOutContainerType !== '' ) {
@@ -243,5 +256,20 @@ else:
 			if( $welukaOutContainerType !== '' ) {  echo '</div></div></div>'; }
 		}
 	}
+	//v1.1.4 Breadcrumb NavXT
+	if( function_exists( 'bcn_display' ) ) {
+		if( ! $hide_breadcrumb ) {
+			if( $welukaOutContainerType !== '' ) {
+				echo '<div class="' . $welukaOutContainerType . '"><div class="weluka-row clearfix"><div class="weluka-col weluka-col-md-12">';
+			}
+			
+			echo '<p class="breadcrumbs_navxt sp-pad">';
+        	bcn_display();
+			echo '</p>';
+			
+			if( $welukaOutContainerType !== '' ) {  echo '</div></div></div>'; }
+		}
+    }
+	//v1.1.4 addend
 endif;
 ?>

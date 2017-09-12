@@ -32,11 +32,17 @@ body { 	background: #F3F6F7; color:#767778; }
 }
 .logo { color:#256377; }
 
+/* v1.2.3 modify
 #weluka-main-footer {
 	background: #202020;
 	border-top:2px solid #101010;
-}
+}*/
 
+#weluka-main-footer > .wrapper {
+	background: #202020;
+	border-top:2px solid #101010;
+}
+/* v1.2.3 modify end */
 #weluka-main-header > .wrapper,
 #weluka-main-footer > .wrapper {
 	padding:3em 0;

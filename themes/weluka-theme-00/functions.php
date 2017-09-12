@@ -138,6 +138,7 @@ function check_weluka_plugin() {
  * @since 1.0.4
  * @update
  * v1.0.6
+ * v1.1.2
  */
 //function weluka_get_the_date( $echo = false ) {
 function weluka_get_the_date( $echo = false, $format = '', $modify = '' ) {
@@ -165,7 +166,8 @@ function weluka_get_the_date( $echo = false, $format = '', $modify = '' ) {
 		//v1.0.6 end
 		$ret = Weluka::get_instance()->get_the_postdate( $_modifyDate, $_format, false );
 	else :
-		$ret = get_the_date();
+		//$ret = get_the_date();
+		$ret = get_post_time();
 	endif;
 	
 	if( $echo ) { echo $ret; } else { return $ret; }
@@ -240,6 +242,8 @@ function weluka_theme_load_scripts_styles(){
 
 /** 
  * @since 1.0
+ * @update
+ * ver1.2.3
  */
 function weluka_theme_add_head() {
 	global $weluka, $weluka_theme_short, $welukaThemeOptions;
@@ -308,10 +312,12 @@ function weluka_theme_add_head() {
 		
 		//link
 		if( $colorData['link_color'] !== '' ) {
-			$style .= 'a { color:' . $colorData['link_color'] . '; }';
+			//v1.2.3 add #weluka-main-header #weluka-main-footer
+			$style .= 'a, #weluka-main-header a, #weluka-main-footer a { color:' . $colorData['link_color'] . '; }';
 		}
 		if( $colorData['link_hover_color'] !== '' ) {
-			$style .= 'a:hover, a:focus { color:' . $colorData['link_hover_color'] . '; }';
+			//v1.2.3 #weluka-main-header #weluka-main-footer add
+			$style .= 'a:hover, #weluka-main-header a:hover, #weluka-main-footer a:hover, a:focus, #weluka-main-header a:focus, #weluka-main-footer a:focus { color:' . $colorData['link_hover_color'] . '; }';
 		}
 
 		//header
@@ -796,13 +802,14 @@ function weluka_theme_add_head() {
 //ver1.0.1 add
 		//tagcloud
 		if( !empty($colorData['tagcloud_color']) ) {
-			$style .= '.tagcloud a { background-color:' . $colorData['tagcloud_color'] . '; }';
+			$style .= '.tagcloud a  { background-color:' . $colorData['tagcloud_color'] . '; }';
 		}
 		if( !empty($colorData['tagcloud_hoverbg_color']) ) {
 			$style .= '.tagcloud a:hover { background-color:' . $colorData['tagcloud_hoverbg_color'] . '; }';
 		}
 		if( !empty($colorData['tagcloud_text_color']) ) {
-			$style .= '.tagcloud a, .tagcloud a:hover { color:' . $colorData['tagcloud_text_color'] . '; }';			
+			//v1.2.3 #weluka-main-header #weluka-main-footer add
+			$style .= '.tagcloud a, #weluka-main-header .tagcloud a, #weluka-main-footer .tagcloud a, .tagcloud a:hover, #weluka-main-header .tagcloud a:hover, #weluka-main-footer .tagcloud a:hover { color:' . $colorData['tagcloud_text_color'] . '; }';			
 		}
 //ver1.0.1 addend
 		$style .= '</style>';		
@@ -831,6 +838,7 @@ function weluka_page_templates_metabox(){
  * ver1.0.6
  * ver1.1
  * ver1.1.1
+ * ver1.2
  */
 function weluka_ptemp_meta( $param ) {
 		global $post, $weluka_themename, $weluka;
@@ -871,6 +879,18 @@ function weluka_ptemp_meta( $param ) {
 		$blog_excerpt		= isset( $temp_array['weluka_ptemp_blog_excerpt'] ) ? (int) $temp_array['weluka_ptemp_blog_excerpt'] : 9;
 		$blog_readmore		= isset( $temp_array['weluka_ptemp_blog_readmore'] ) ? (int) $temp_array['weluka_ptemp_blog_readmore'] : 9;
 		//v1.1.1 modify
+		
+		//v1.2 add
+		$blog_thumb_height_use	= isset( $temp_array['weluka_ptemp_blog_thumb_height_use'] ) ? (int) $temp_array['weluka_ptemp_blog_thumb_height_use'] : 0;
+		$blog_thumb_height		= isset( $temp_array['weluka_ptemp_blog_thumb_height'] ) ? $temp_array['weluka_ptemp_blog_thumb_height'] : '';
+		$blog_thumb_height_sm	= isset( $temp_array['weluka_ptemp_blog_thumb_height_sm'] ) ? $temp_array['weluka_ptemp_blog_thumb_height_sm'] : '';
+		$blog_thumb_height_xs	= isset( $temp_array['weluka_ptemp_blog_thumb_height_xs'] ) ? $temp_array['weluka_ptemp_blog_thumb_height_xs'] : '';
+		$blog_height_eqh		= isset( $temp_array['weluka_ptemp_blog_height_eqh'] ) ? (int) $temp_array['weluka_ptemp_blog_height_eqh'] : 0;
+		$blog_boxstyle			= isset( $temp_array['weluka_ptemp_blog_boxstyle'] ) ? $temp_array['weluka_ptemp_blog_boxstyle'] : 0;
+		$blog_boxshape			= isset( $temp_array['weluka_ptemp_blog_boxshape'] ) ? $temp_array['weluka_ptemp_blog_boxshape'] : 0;
+		$blog_boxshadow			= isset( $temp_array['weluka_ptemp_blog_boxshadow'] ) ? $temp_array['weluka_ptemp_blog_boxshadow'] : 0;
+		$blog_color_use			= isset( $temp_array['weluka_ptemp_blog_color_use'] ) ? (int)$temp_array['weluka_ptemp_blog_color_use'] : 0;
+		//v1.2 addend
 		
 		wp_nonce_field( 'weluka_ptemp_nonce', '_wpnonce_weluka_ptemp_save' ); ?>
 		
@@ -1069,6 +1089,77 @@ function weluka_ptemp_meta( $param ) {
 	       	<p style="font-weight:bold;"><?php _e( 'List Button Text', $weluka_themename ); ?></p>
             <input type="text" id="weluka_ptemp_blog_button_text" name="weluka_ptemp_blog_button_text" value="<?php echo esc_attr( $blog_button_text ); ?>" />
 		</div>
+
+        <?php //v1.2 add ?>
+		<div style="margin: 13px 0 11px 4px; display: none;" class="weluka_pt_blog">
+	       	<p style="font-weight:bold;"><?php _e( 'Thumbnail height(px)', $weluka_themename ); ?></p>
+            <label class="selectit" style="margin-right:8px;">
+				<input type="radio" name="weluka_ptemp_blog_thumb_height_use" id="weluka_ptemp_blog_thumb_height_use_0" value="0" <?php if( $blog_thumb_height_use === 0 ) { echo 'checked="checked"'; } ?> />&nbsp;&nbsp;<?php _e('Theme settings enabled', $weluka_themename); ?>
+			</label>
+            <label class="selectit" style="margin-right:8px;">
+				<input type="radio" name="weluka_ptemp_blog_thumb_height_use" id="weluka_ptemp_blog_thumb_height_use_1" value="1" <?php if( $blog_thumb_height_use === 1 ) { echo 'checked="checked"'; } ?> />&nbsp;&nbsp;<?php _e('Enable this setting', $weluka_themename); ?>
+			</label>
+
+            <div style="margin-top:8px;">
+            	<input type="text" class="small-text" id="weluka_ptemp_blog_thumb_height" name="weluka_ptemp_blog_thumb_height" value="<?php echo esc_attr( $blog_thumb_height ); ?>" />&nbsp;&nbsp;px
+        	</div>
+			<div style="margin-top:10px;border:1px solid #ccc; padding:10px;">
+             	<p style="font-weight:bold;margin-top:0;"><?php _e( 'Responsive', $weluka_themename ); ?></p>
+				<label><span style="margin-right:8px;"><?php _e('Small View(768px - 991px)', $weluka_themename ); ?></span></label>
+            	<div style="margin-bottom:6px;">
+            		<input type="text" class="small-text" id="weluka_ptemp_blog_thumb_height_sm" name="weluka_ptemp_blog_thumb_height_sm" value="<?php echo esc_attr( $blog_thumb_height_sm ); ?>" />&nbsp;&nbsp;px
+        		</div>
+
+				<label><span style="margin-right:8px;"><?php _e('XSmall View(Less than 768px)', $weluka_themename ); ?></span></label>
+            	<div>
+            		<input type="text" class="small-text" id="weluka_ptemp_blog_thumb_height_xs" name="weluka_ptemp_blog_thumb_height_xs" value="<?php echo esc_attr( $blog_thumb_height_xs ); ?>" />&nbsp;&nbsp;px
+        		</div>
+			</div>
+            <div style="margin-top:13px;" class="weluka_pt_blog"><?php _e('Please enter a height (px) If you want to align the height of the thumbnail. Set the height of responsive (or clear the height) If you want to set List Format is responsive.', $weluka_themename ); ?></div>
+		</div>
+		<div style="margin: 13px 0 11px 4px; display: none;" class="weluka_pt_blog">
+	       	<p style="font-weight:bold;"><?php _e('Align the same line block height', $weluka_themename ); ?></p>
+            <select id="weluka_ptemp_blog_height_eqh" name="weluka_ptemp_blog_height_eqh">
+            	<option value="0" <?php if( $blog_height_eqh === 0 ) { echo 'selected="selected"'; } ?>><?php _e('Theme settings enabled', $weluka_themename); ?></option>
+                <option value="1" <?php if( $blog_height_eqh === 1 ) { echo 'selected="selected"'; } ?>><?php _e('Make same height', $weluka_themename); ?></option>
+                <option value="2" <?php if( $blog_height_eqh === 2 ) { echo 'selected="selected"'; } ?>><?php _e('Unjustified high', $weluka_themename); ?></option>
+            </select>
+            <div style="margin-top:13px;" class="weluka_pt_blog"><?php _e('If you align the height of the list articles block, set the List Format of responsive, customized List Row.', $weluka_themename); ?></div>
+        </div>
+		<div style="margin: 13px 0 11px 4px; display: none;" class="weluka_pt_blog">
+	       	<p style="font-weight:bold;"><?php _e( 'Box Style', $weluka_themename ); ?></p>
+            <select id="weluka_ptemp_blog_boxstyle" name="weluka_ptemp_blog_boxstyle">
+            	<option value="0" <?php if( $blog_boxstyle == 0 ) { echo 'selected="selected"'; } ?>><?php _e('Theme settings enabled', $weluka_themename); ?></option>
+                <option value="1" <?php if( $blog_boxstyle == 1 ) { echo 'selected="selected"'; } ?>><?php _e('Default', $weluka_themename); ?></option>
+				<option value="weluka-listblock-allp" <?php if( $blog_boxstyle === 'weluka-listblock-allp' ) { echo 'selected="selected"'; } ?>><?php _e('All padding', $weluka_themename); ?></option>
+                <option value="weluka-listblock-notthumbp" <?php if( $blog_boxstyle === 'weluka-listblock-notthumbp' ) { echo 'selected="selected"'; } ?>><?php _e('Thumbnail not padding', $weluka_themename); ?></option>
+            </select>
+        </div>
+		<div style="margin: 13px 0 11px 4px; display: none;" class="weluka_pt_blog">
+	       	<p style="font-weight:bold;"><?php _e( 'Box Shape', $weluka_themename ); ?></p>
+	      	<select id="weluka_ptemp_blog_boxshape" name="weluka_ptemp_blog_boxshape">
+            	<option value="0" <?php if( $blog_boxshape == 0 ) { echo 'selected="selected"'; } ?>><?php _e('Theme settings enabled', $weluka_themename); ?></option>
+        		<option value="1" <?php if( $blog_boxshape == 1 ){ echo 'selected="selected"'; } ?>><?php _e('Square', $weluka_themename); ?></option>
+        		<option value="img-rounded" <?php if( $blog_boxshape === 'img-rounded' ){ echo 'selected="selected"'; } ?>><?php _e('Round', $weluka_themename); ?></option>
+           	</select>
+        </div>
+		<div style="margin: 13px 0 11px 4px; display: none;" class="weluka_pt_blog">
+	       	<p style="font-weight:bold;"><?php _e( 'Box Shadow', $weluka_themename ); ?></p>
+	      	<select id="weluka_ptemp_blog_boxshadow" name="weluka_ptemp_blog_boxshadow">
+            	<option value="0" <?php if( $blog_boxshadow == 0 ) { echo 'selected="selected"'; } ?>><?php _e('Theme settings enabled', $weluka_themename); ?></option>
+        		<option value="1" <?php if( $blog_boxshadow == 1 ){ echo 'selected="selected"'; } ?>><?php _e('No shadow box.', $weluka_themename); ?></option>
+        		<option value="2" <?php if( $blog_boxshadow == 2 ){ echo 'selected="selected"'; } ?>><?php _e('Box shadow and', $weluka_themename); ?></option>
+           	</select>
+        </div>
+		<div style="margin: 13px 0 11px 4px; display: none;" class="weluka_pt_blog">
+	       	<p style="font-weight:bold;"><?php _e( 'Box Color', $weluka_themename ); ?></p>
+	      	<select id="weluka_ptemp_blog_color_use" name="weluka_ptemp_blog_color_use">
+            	<option value="0" <?php if( $blog_color_use === 0 ) { echo 'selected="selected"'; } ?>><?php _e('Theme color settings enabled', $weluka_themename); ?></option>
+        		<option value="1" <?php if( $blog_color_use === 1 ){ echo 'selected="selected"'; } ?>><?php _e('Default', $weluka_themename); ?></option>
+           	</select>
+        </div>
+        <?php //v1.2 addend ?>
+
         <div style="margin-top:13px;" class="weluka_pt_blog"><?php _e('Archive if you do not set the list style is set in weluka theme settings list style is applied.', $weluka_themename ); ?></div>
         <?php //v1.0.6 addend ?>
 <?php
@@ -1080,6 +1171,7 @@ function weluka_ptemp_meta( $param ) {
  * ver1.0.6
  * ver1.1
  * ver1.1.1
+ * ver1.2
  */
 function weluka_page_template_save_meta( $post_id, $post ){
 	global $pagenow, $weluka;
@@ -1137,7 +1229,19 @@ function weluka_page_template_save_meta( $post_id, $post ){
 		if (isset($_POST["weluka_ptemp_blog_thumb"])) $temp_array['weluka_ptemp_blog_thumb'] = (int) $_POST["weluka_ptemp_blog_thumb"];
 		if (isset($_POST["weluka_ptemp_blog_excerpt"])) $temp_array['weluka_ptemp_blog_excerpt'] = (int) $_POST["weluka_ptemp_blog_excerpt"];
 		if (isset($_POST["weluka_ptemp_blog_readmore"])) $temp_array['weluka_ptemp_blog_readmore'] = (int) $_POST["weluka_ptemp_blog_readmore"];
-		//v1.1.1 addend		
+		//v1.1.1 addend
+		
+		//v1.2 add
+		if (isset($_POST["weluka_ptemp_blog_thumb_height_use"])) $temp_array['weluka_ptemp_blog_thumb_height_use'] = $_POST["weluka_ptemp_blog_thumb_height_use"];
+		if (isset($_POST["weluka_ptemp_blog_thumb_height"])) $temp_array['weluka_ptemp_blog_thumb_height'] = trim( $_POST["weluka_ptemp_blog_thumb_height"] );
+		if (isset($_POST["weluka_ptemp_blog_thumb_height_sm"])) $temp_array['weluka_ptemp_blog_thumb_height_sm'] = trim( $_POST["weluka_ptemp_blog_thumb_height_sm"] );
+		if (isset($_POST["weluka_ptemp_blog_thumb_height_xs"])) $temp_array['weluka_ptemp_blog_thumb_height_xs'] = trim( $_POST["weluka_ptemp_blog_thumb_height_xs"] );
+		if (isset($_POST["weluka_ptemp_blog_height_eqh"])) $temp_array['weluka_ptemp_blog_height_eqh'] = $_POST["weluka_ptemp_blog_height_eqh"];
+		if (isset($_POST["weluka_ptemp_blog_boxstyle"])) $temp_array['weluka_ptemp_blog_boxstyle'] = $_POST["weluka_ptemp_blog_boxstyle"];
+		if (isset($_POST["weluka_ptemp_blog_boxshape"])) $temp_array['weluka_ptemp_blog_boxshape'] = $_POST["weluka_ptemp_blog_boxshape"];
+		if (isset($_POST["weluka_ptemp_blog_boxshadow"])) $temp_array['weluka_ptemp_blog_boxshadow'] = $_POST["weluka_ptemp_blog_boxshadow"];
+		if (isset($_POST["weluka_ptemp_blog_color_use"])) $temp_array['weluka_ptemp_blog_color_use'] = $_POST["weluka_ptemp_blog_color_use"];
+		//v1.2 addend
 	}
 	
 	$weluka->save_postmeta($post_id, WELUKA_PTMP_POST_META_NAME, $temp_array);
@@ -1232,13 +1336,13 @@ function get_weluka_custom_header( $setting ) {
 	if( $cptId === '' ) {
 		$cptId = ! empty( $welukaThemeOptions[WelukaThemeOptions::COMMON_PAGE_HEADER] ) ? $welukaThemeOptions[WelukaThemeOptions::COMMON_PAGE_HEADER] : '';
 	}
-		
+
 	$cptHd = '';
 	if( $cptId !== '' ) {
 		//get publish header content
 		$cptHd = do_shortcode( $welukaBuilder->get_builder_data( $cptId, WelukaBuilder::CONTENT_POSTMETA_KEY_PUBLISH, 'content' ) );
 	}
-	
+
 	return $cptHd;
 }
 
@@ -1499,16 +1603,32 @@ function get_weluka_theme_hdfixed_options(){
 /**
  * wp_footer hook
  * @since 1.0.1
+ * @update
+ * ver1.1.3
+ * ver1.2.2
  */
 function weluka_theme_add_footer() {
+	global $welukaThemeOptions; //v1.1.3
+
 	$opts = get_weluka_theme_hdfixed_options();
 	if( !empty( $opts[WelukaThemeOptions::HEAD_FIXED] ) ) {
+		//v1.1.3 add
+		$_const = 'WelukaThemeOptions::HEAD_FIXED_NO_SCROLL_DISPLAY';
+		$_addHdClass = '';
+		if ( defined ( $_const ) ) {
+			//v1.2.2 modify if( $welukaThemeOptions[WelukaThemeOptions::HEAD_FIXED_NO_SCROLL_DISPLAY] ) { $_addHdClass = "weluka-hdfixed-noscroll"; }
+			if( !empty( $welukaThemeOptions[WelukaThemeOptions::HEAD_FIXED_NO_SCROLL_DISPLAY] ) ) { $_addHdClass = "weluka-hdfixed-noscroll"; }
+		}
 ?>
 <script type="text/javascript">
 	var _target = "<?php if( $opts[WelukaThemeOptions::HEAD_FIXED] == 2 && !empty( $opts[WelukaThemeOptions::HEAD_FIXED_CLASS] ) ){ echo '.' . $opts[WelukaThemeOptions::HEAD_FIXED_CLASS]; }else{ echo '#weluka-main-header'; } ?>";
 	jQuery(document).ready(function($) {
 		if($(_target).length) {
 			$(_target).addClass('weluka-headroom');
+			//v1.1.3 add
+			<?php if( $_addHdClass ) { ?>
+				$(_target).addClass('<?php echo $_addHdClass; ?>');
+			<?php } ?>
 			$('.weluka-headroom').addClass('navbar-fixed-top');
 			$(".weluka-headroom").headroom({
    				"offset": 50, /*205,*/ /* ここで設定した数値だけスクロールしたらアクション */
@@ -1533,7 +1653,7 @@ function weluka_theme_add_footer() {
 		}
 		jQuery(_insertDom).insertAfter(_target);
 	}
-	<?php } ?>
+	<?php } ?>	
 </script>
 <?php
 	}
@@ -1544,26 +1664,55 @@ function weluka_theme_add_footer() {
  * @since 1.0.6
  * @update
  * ver1.1.1
+ * ver1.2
+ * ver1.2
  */
 function weluka_archivelist_block( $format, $data, $colMode = 'md' ) {
 	$ret = '';
+	//v1.2 add	
+	$_eqh =  !empty( $data['eqh'] ) ? $data['eqh'] : '';
+	$_media = !empty( $data['media'][$colMode] ) ? $data['media'][$colMode] : $data['media']['default'];
+	$_boxStyle = '';
+	if( !empty( $data['box_style'] ) ) { $_boxStyle = ' ' . $data['box_style']; }
+	$_wrapStyle = '';
+	if( !empty( $data['box_bgcolor'] ) ) { $_wrapStyle = ' style="background-color:' . $data['box_bgcolor'] . ';"'; }
+	$_boxShape = '';
+	if( !empty( $data['box_shape'] ) ) { $_boxShape = ' ' . $data['box_shape']; }
+	$_boxShadow = '';
+	if( !empty( $data['box_shadow'] ) ) { $_boxShadow = ' ' . $data['box_shadow']; }
+	//v1.2 addend
+
 	if($format === 'mediatop') {
-		$ret = $data['media'];
+		//v1.2 modify $ret = $data['media'];
+		$ret = $_media;
 		$ret .= $data['title'];
 		$ret .= $data['meta'];
 		$ret .= $data['tag_metabottom'];
 		$ret .= $data['excerpt'];
 		$ret .= $data['tag_bottom'];
-		$ret .= $data['more'];
+		
+		//v1.2 add modify
+		if( !empty( $_eqh ) && !empty( $data['more'] ) ) {
+			$ret .= '<div class="weluka-list-row-eqh-btmwrap">' . $data['more'] . '</div>';
+		} else {
+			$ret .= $data['more'];
+		}
 
 	} elseif ($format === 'mediamiddle') {
 		$ret = $data['title'];
 		$ret .= $data['meta'];
 		$ret .= $data['tag_metabottom'];
-		$ret .= $data['media'];
+		//v1.2 modify$ret .= $data['media'];
+		$ret .= $_media;
 		$ret .= $data['excerpt'];
 		$ret .= $data['tag_bottom'];
-		$ret .= $data['more'];
+
+		//v1.2 add modify
+		if( !empty( $_eqh ) && !empty( $data['more'] ) ) {
+			$ret .= '<div class="weluka-list-row-eqh-btmwrap">' . $data['more'] . '</div>';
+		} else {
+			$ret .= $data['more'];
+		}
 
 	} elseif ($format === 'mediabottom') {
 		$ret = $data['title'];
@@ -1571,15 +1720,25 @@ function weluka_archivelist_block( $format, $data, $colMode = 'md' ) {
 		$ret .= $data['tag_metabottom'];
 		$ret .= $data['excerpt'];
 		$ret .= $data['tag_bottom'];
-		$ret .= $data['more'];
-		$ret .= $data['media'];
+		//v1.2 modify $ret .= $data['more'];
+		//v1.2 modify $ret .= $data['media'];
+		//v1.2 add modify
+		if( !empty( $_eqh ) && ( !empty( $_media ) || !empty( $data['more'] ) ) ) {
+			$ret .= '<div class="weluka-list-row-eqh-btmwrap">' . $data['more'] . $_media . '</div>';
+		} else {
+			$ret .= $data['more'] . $_media;
+		}
 
 	} elseif ($format === 'mediaright') {
+		//v1.2 wrapper add
+		$ret = '<div class="weluka-col weluka-col-xs-12"><div class="wrap' . $_boxStyle . $_boxShape . $_boxShadow . '"' . $_wrapStyle . '><div class="weluka-row clearfix ' . $_eqh . '">';
+
 		//v1.1.1 modify
-		if( $data['media'] ) {
-			$ret = '<div class="weluka-col weluka-col-' . $colMode . '-8 lt">';
+		//v1.2 modify if( $data['media'] ) {
+		if( $_media ) {
+			$ret .= '<div class="weluka-col weluka-col-' . $colMode . '-8 lt">';
 		} else {
-			$ret = '<div class="weluka-col weluka-col-' . $colMode . '-12 lt">';
+			$ret .= '<div class="weluka-col weluka-col-' . $colMode . '-12 lt">';
 		}
 		//v1.1.1 modify end
 		$ret .= $data['title'];
@@ -1587,20 +1746,34 @@ function weluka_archivelist_block( $format, $data, $colMode = 'md' ) {
 		$ret .= $data['tag_metabottom'];
 		$ret .= $data['excerpt'];
 		$ret .= $data['tag_bottom'];
-		$ret .= $data['more'];
+		//v1.2 add modify
+		//$ret .= $data['more'];
+		if( !empty( $_eqh ) && !empty( $data['more'] ) ) {
+			$ret .= '<div class="weluka-list-row-eqh-btmwrap">' . $data['more'] . '</div>';
+		} else {
+			$ret .= $data['more'];
+		}
 		$ret .= '</div>';
 		//v1.1.1 modify
-		if( $data['media'] ) {
-			$ret .= '<div class="weluka-col weluka-col-' . $colMode .'-4 rt">' . $data['media'] . '</div>';
+		//v1.2 modify if( $data['media'] ) {
+		if( $_media ) {
+			//v1.2 modify $ret .= '<div class="weluka-col weluka-col-' . $colMode .'-4 rt">' . $data['media'] . '</div>';
+			$ret .= '<div class="weluka-col weluka-col-' . $colMode .'-4 rt">' . $_media . '</div>';
 		}
+		$ret .= '</div></div></div>'; //v1.2 wrapper
 
 	} elseif ($format === 'medialeft') {
+		//v1.2 wrapper add
+		$ret = '<div class="weluka-col weluka-col-xs-12"><div class="wrap' . $_boxStyle . $_boxShape . $_boxShadow . '"' . $_wrapStyle . '><div class="weluka-row clearfix ' . $_eqh . '">';
+		
 		//v1.1.1 modify
-		if( $data['media'] ) {
-			$ret = '<div class="weluka-col weluka-col-' . $colMode . '-4 lt">' . $data['media'] . '</div>';
-			$ret .= '<div class="weluka-col-' . $colMode . '-8 rt">';
+		//v1.2 modify if( $data['media'] ) {
+		if( $_media ) {
+			//v1.2 modify $ret = '<div class="weluka-col weluka-col-' . $colMode . '-4 lt">' . $data['media'] . '</div>';
+			$ret .= '<div class="weluka-col weluka-col-' . $colMode . '-4 lt">' . $_media . '</div>';
+			$ret .= '<div class="weluka-col weluka-col-' . $colMode . '-8 rt">';
 		} else {
-			$ret = '<div class="weluka-col-' . $colMode . '-12 rt">';
+			$ret .= '<div class="weluka-col weluka-col-' . $colMode . '-12 rt">';
 		}
 		//v1.1.1 modify end
 		$ret .= $data['title'];
@@ -1608,8 +1781,18 @@ function weluka_archivelist_block( $format, $data, $colMode = 'md' ) {
 		$ret .= $data['tag_metabottom'];
 		$ret .= $data['excerpt'];
 		$ret .= $data['tag_bottom'];
-		$ret .= $data['more'];
+
+		//v1.2 add modify
+		//$ret .= $data['more'];
+		if( !empty( $_eqh ) && !empty( $data['more'] ) ) {
+			$ret .= '<div class="weluka-list-row-eqh-btmwrap">' . $data['more'] . '</div>';
+		} else {
+			$ret .= $data['more'];
+		}
+
 		$ret .= '</div>';
+
+		$ret .= '</div></div></div>'; //v1.2 wrapper
 	}
 	return $ret;
 }
@@ -1617,17 +1800,37 @@ function weluka_archivelist_block( $format, $data, $colMode = 'md' ) {
 /**
  * archivelist cerate
  * @since 1.0.6
+ * @update
+ * ver1.2
+ * $eqh ... add
  */
-function weluka_archivelist( $format, $ct, $rowColumn, $rowCnt, $colNum, &$colCnt, $colMode = 'md' ) {
+function weluka_archivelist( $format, $ct, $rowColumn, $rowCnt, $colNum, &$colCnt, $colMode = 'md', $eqh = '', $boxStyle = '', $boxBgColor = '', $boxShape = '', $boxShadow = '' ) {
 	$ret = '';
 	$topNoMargin = (int)$rowCnt === 0 ? ' top-nomargin' : '';
+
+	//v1.2 add
+	$_eqh = '';
+	if( !empty( $eqh ) ) { $_eqh = ' ' . $eqh; }
+		
+	$_boxStyle = '';
+	if( $boxStyle ) { $_boxStyle = ' ' . $boxStyle; }
+
+	$_wrapStyle = '';
+	if( $boxBgColor ) { $_wrapStyle = ' style="background-color:' . $boxBgColor . ';"'; }
+
+	$_boxShape = '';
+	if( $boxShape ) { $_boxShape = ' ' . $boxShape; }
+
+	$_boxShadow = '';
+	if( $boxShadow ) { $_boxShadow = ' ' . $boxShadow; }
+	//v1.2 addend
 
  	if( $format === 'mediatop' ) {
 		$colCnt++;
 		if((int)$colCnt === 1) {
-			$ret .= '<div class="weluka-list-row weluka-row clearfix' . $topNoMargin . ' ' . $format . '">';
+			$ret .= '<div class="weluka-list-row weluka-row clearfix' . $topNoMargin . ' ' . $format . ' ' . $_eqh . '">';
 		}
-		$ret .= '<div class="weluka-col weluka-col-' . $colMode . '-' . $colNum . '"><div class="wrap">' . $ct . '</div></div>';
+		$ret .= '<div class="weluka-col weluka-col-' . $colMode . '-' . $colNum . '"><div class="wrap' . $_boxStyle . $_boxShape . $_boxShadow . '"' . $_wrapStyle . '>' . $ct . '</div></div>';
 		
 		if((int)$colCnt === (int)$rowColumn) {
 			$ret .= '</div>';	//row end div
@@ -1637,9 +1840,9 @@ function weluka_archivelist( $format, $ct, $rowColumn, $rowCnt, $colNum, &$colCn
 	}elseif( $format === 'mediamiddle' ) {
 		$colCnt++;
 		if((int)$colCnt === 1) {
-			$ret .= '<div class="weluka-list-row weluka-row clearfix' . $topNoMargin . ' ' . $format . '">';
+			$ret .= '<div class="weluka-list-row weluka-row clearfix' . $topNoMargin . ' ' . $format . ' ' . $_eqh . '">';
 		}
-		$ret .= '<div class="weluka-col weluka-col-' . $colMode . '-' . $colNum . '"><div class="wrap">' . $ct . '</div></div>';
+		$ret .= '<div class="weluka-col weluka-col-' . $colMode . '-' . $colNum . '"><div class="wrap' . $_boxStyle . $_boxShape . $_boxShadow . '"' . $_wrapStyle . '>' . $ct . '</div></div>';
 
 		if((int)$colCnt === (int)$rowColumn) {
 			$ret .= '</div>';	//row end div
@@ -1649,10 +1852,10 @@ function weluka_archivelist( $format, $ct, $rowColumn, $rowCnt, $colNum, &$colCn
 	}elseif( $format === 'mediabottom' ) {
 		$colCnt++;
 		if((int)$colCnt === 1) {
-			$ret .= '<div class="weluka-list-row weluka-row clearfix' . $topNoMargin . ' ' . $format . '">';
+			$ret .= '<div class="weluka-list-row weluka-row clearfix' . $topNoMargin . ' ' . $format . ' ' . $_eqh . '">';
 		}
 					
-		$ret .= '<div class="weluka-col weluka-col-' . $colMode . '-' . $colNum . '"><div class="wrap">' . $ct . '</div></div>';
+		$ret .= '<div class="weluka-col weluka-col-' . $colMode . '-' . $colNum . '"><div class="wrap' . $_boxStyle . $_boxShape . $_boxShadow . '"' . $_wrapStyle . '>' . $ct . '</div></div>';
 
 		if((int)$colCnt === (int)$rowColumn) {
 			$ret .= '</div>';	//row end div
@@ -1668,15 +1871,28 @@ function weluka_archivelist( $format, $ct, $rowColumn, $rowCnt, $colNum, &$colCn
 	return $ret;
 }
 
-function weluka_archivelist_end( $format, $rowColumn, $colCnt ) {
+/**
+ * @update
+ * ver1.2
+ * eqh, colMode, colNum add
+ */
+function weluka_archivelist_end( $format, $rowColumn, $colCnt,  $eqh = '', $colMode = 'md', $colNum = 12) {
 	$ret = '';
 	if( $format !== 'medialeft' && $format !== 'mediaright' ) :
-		if((int)$colCnt !== 0 && (int)$colCnt !== (int)$rowColumn) { $ret = '</div>'; }
+		if((int)$colCnt !== 0 && (int)$colCnt !== (int)$rowColumn) {
+			//v1.2
+			if( !empty( $eqh ) ) {
+				//equal heightの際に最後の行でカラム数が足りないとカラムがフル幅になるのでダミーカラムを追加する。
+				$addCnt = (int)$rowColumn - (int)$colCnt;
+				for( $i = 0 ; $i < $addCnt; $i++ ) {
+					$ret .= '<div class="weluka-col-' . $colMode . '-' . $colNum . ' weluka-list-blank-col"></div>';
+				}
+			}
+			//$ret = '</div>';
+			$ret .= '</div>';
+		}
 	endif;
 	return $ret;
 }
 
 endif; //Weluka Plugin check endif;
-
-
-

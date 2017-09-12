@@ -11,6 +11,7 @@
  * eye-catch image
  * ver1.0.4
  * ver1.0.6
+ * ver1.1.4
  */
 global $weluka_themename, $welukaThemeOptions, $welukaPageSetting, $welukaBuilder, $welukaOnepageMode, $welukaOutContainerType, $post;
 
@@ -110,12 +111,25 @@ while ( have_posts() ) : the_post();
 			}
 
 			if( empty( $dispItem[WelukaThemeOptions::POST_META_CATEGORY] ) ) {
+				/* v1.1.4 modify
 				$cats = get_the_category();
 				if ( !empty( $cats ) ) {
 					foreach ( $cats as $index => $cat ) {
 						$catHtml .= '&nbsp;&nbsp;<span class="weluka-post-category-name"><a href="' . get_category_link( $cat ) . '">' . esc_html($cat->name) . '</a></span>';
 					}
+				}*/
+				$_tpl = '<span class="weluka-post-category-name"><a href="%1$s">%2$s</a></span>';
+				$taxs = get_the_taxonomies( get_the_ID(), array( 'template' => '% %l', 'term_template' => $_tpl ) );
+				if( !empty( $taxs ) ){
+					$n = 0;
+					foreach ($taxs as $_key => $_val) {
+						if( $_key == 'post_tag' ){ continue; } //tag not display
+						$p = $n === 0 ? '&nbsp;|&nbsp;' : ',&nbsp;'; 
+						$catHtml .= $p . $_val;
+						$n++;
+					}
 				}
+
 			}
 
 			if( empty( $dispItem[WelukaThemeOptions::POST_META_AUTHOR] ) ) {

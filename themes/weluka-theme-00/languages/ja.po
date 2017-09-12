@@ -5,15 +5,15 @@ msgstr ""
 "Project-Id-Version: Weluka 1.0.0\n"
 "Report-Msgid-Bugs-To: https://github.com/ReduxFramework/ReduxFramework/"
 "issues\n"
-"POT-Creation-Date: 2016-09-30 19:49+0900\n"
-"PO-Revision-Date: 2016-09-30 19:51+0900\n"
+"POT-Creation-Date: 2017-03-22 11:51+0900\n"
+"PO-Revision-Date: 2017-08-21 12:49+0900\n"
 "Last-Translator: \n"
 "Language-Team: backoffice@over-d.com\n"
 "Language: ja_JP\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.7\n"
+"X-Generator: Poedit 1.8.12\n"
 "X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;"
 "_nx_noop:1,2,3c;esc_attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;"
 "esc_html_x:1,2c\n"
@@ -32,11 +32,11 @@ msgstr "%2$sへ%1$s件のフィードバックがあります。"
 msgid "Comments are closed."
 msgstr "コメントは受け付けていません。"
 
-#: content-archive.php:126 content.php:103 page-blog.php:226
+#: content-archive.php:192 content.php:104 page-blog.php:368
 msgid "Featured"
 msgstr ""
 
-#: content-archive.php:246 page-blog.php:57
+#: content-archive.php:339 page-blog.php:58
 msgid "Read more"
 msgstr "続きを見る"
 
@@ -59,11 +59,11 @@ msgstr ""
 msgid "Nothing Found."
 msgstr "お探しのページは見つかりません。"
 
-#: content.php:200
+#: content.php:214
 msgid "&laquo; Prev"
 msgstr ""
 
-#: content.php:201
+#: content.php:215
 msgid "Next &raquo;"
 msgstr ""
 
@@ -86,11 +86,11 @@ msgstr ""
 "入して有効化してください。<a href=\"%s\" target=\"_blank\">Weluka プラグイン"
 "についてはこちらをクリック</a>してください。"
 
-#: functions.php:824
+#: functions.php:826
 msgid "Weluka Page Template Settings"
 msgstr "Weluka ページテンプレート設定"
 
-#: functions.php:878
+#: functions.php:893
 msgid ""
 "If the page attribute \"template\" is selected, additional settings are "
 "displayed here."
@@ -98,109 +98,109 @@ msgstr ""
 "ページ属性「テンプレート」が選択されている場合、追加の設定がここに表示されま"
 "す。"
 
-#: functions.php:882
+#: functions.php:897
 msgid "Number of posts"
 msgstr "投稿数"
 
-#: functions.php:884
+#: functions.php:899
 msgid "Please enter the maximum number to be displayed on one page."
 msgstr "1ページに表示する投稿数を入力してください。"
 
-#: functions.php:889
+#: functions.php:904
 msgid "Paging type"
 msgstr "ページングタイプ"
 
-#: functions.php:895
+#: functions.php:910
 msgid "Select blog categories"
 msgstr "カテゴリー選択"
 
-#: functions.php:913
+#: functions.php:928
 msgid "List Style"
 msgstr "リストスタイル"
 
-#: functions.php:915
+#: functions.php:930
 msgid "Meta"
 msgstr "メタ情報"
 
-#: functions.php:917
+#: functions.php:932
 msgid "Title"
 msgstr "タイトル"
 
-#: functions.php:919 functions.php:930 functions.php:941 functions.php:952
-#: functions.php:963 functions.php:974 functions.php:984 functions.php:994
-#: functions.php:1006 functions.php:1026
+#: functions.php:934 functions.php:945 functions.php:956 functions.php:967
+#: functions.php:978 functions.php:989 functions.php:999 functions.php:1009
+#: functions.php:1021 functions.php:1041
 msgid "Non-select"
 msgstr "選択なし"
 
-#: functions.php:922 functions.php:933 functions.php:944 functions.php:955
-#: functions.php:966 functions.php:977 functions.php:987 functions.php:997
-#: functions.php:1009
+#: functions.php:937 functions.php:948 functions.php:959 functions.php:970
+#: functions.php:981 functions.php:992 functions.php:1002 functions.php:1012
+#: functions.php:1024
 msgid "Show"
 msgstr "表示"
 
-#: functions.php:925 functions.php:936 functions.php:947 functions.php:958
-#: functions.php:969 functions.php:980 functions.php:990 functions.php:1000
-#: functions.php:1012
+#: functions.php:940 functions.php:951 functions.php:962 functions.php:973
+#: functions.php:984 functions.php:995 functions.php:1005 functions.php:1015
+#: functions.php:1027
 msgid "Hide"
 msgstr "非表示"
 
-#: functions.php:928
+#: functions.php:943
 msgid "Date"
 msgstr "日時"
 
-#: functions.php:939
+#: functions.php:954
 msgid "Author"
 msgstr "投稿者"
 
-#: functions.php:950
+#: functions.php:965
 msgid "Category"
 msgstr "カテゴリー"
 
-#: functions.php:961
+#: functions.php:976
 msgid "Comment Count"
 msgstr "コメント数"
 
-#: functions.php:972
+#: functions.php:987
 msgid "Thumbnail"
 msgstr "サムネイル"
 
-#: functions.php:982
+#: functions.php:997
 msgid "Excerpt"
 msgstr "抜粋"
 
-#: functions.php:992
+#: functions.php:1007
 msgid "Readmore button"
 msgstr "Readmore ボタン"
 
-#: functions.php:1004
+#: functions.php:1019
 msgid "Tagcloud"
 msgstr "タグクラウド"
 
-#: functions.php:1016
+#: functions.php:1031
 msgid "Tagcloud position to post list"
 msgstr " 関連タグクラウド表示位置"
 
-#: functions.php:1020
+#: functions.php:1035
 msgid "Post Date Format"
 msgstr "日時フォーマット"
 
-#: functions.php:1024
+#: functions.php:1039
 msgid "View the updated date and time rather than posting date and time."
 msgstr "投稿日時ではなく更新日時を表示する"
 
-#: functions.php:1029
+#: functions.php:1044
 msgid "Registered"
 msgstr "登録日時"
 
-#: functions.php:1032
+#: functions.php:1047
 msgid "Updated"
 msgstr "更新日時"
 
-#: functions.php:1037
+#: functions.php:1052
 msgid "Title String Number"
 msgstr "投稿タイトル文字数"
 
-#: functions.php:1039
+#: functions.php:1054
 msgid ""
 "ignore the post title character number set in weluka theme settings by "
 "typing and <strong>all</strong>, all characters will be shown."
@@ -208,35 +208,126 @@ msgstr ""
 "<strong>all</strong>と入力することで「welukaテーマ設定」で設定した「投稿タイ"
 "トル文字数」を無視して全文字が表示されます。"
 
-#: functions.php:1043
+#: functions.php:1058
 msgid "Excerpt String Number"
 msgstr "抜粋文字数"
 
-#: functions.php:1047
+#: functions.php:1062
 msgid "List Format"
 msgstr "リスト表示形式"
 
-#: functions.php:1050 functions.php:1061
+#: functions.php:1065 functions.php:1076 functions.php:1102
 msgid "Responsive"
 msgstr ""
 
-#: functions.php:1051 functions.php:1062
+#: functions.php:1066 functions.php:1077 functions.php:1103
 msgid "Small View(768px - 991px)"
 msgstr ""
 
-#: functions.php:1053 functions.php:1064
+#: functions.php:1068 functions.php:1079 functions.php:1108
 msgid "XSmall View(Less than 768px)"
 msgstr ""
 
-#: functions.php:1058
+#: functions.php:1073
 msgid "List Row Column"
 msgstr "リストカラム数／行"
 
-#: functions.php:1069
+#: functions.php:1084
 msgid "List Button Text"
 msgstr "ボタンテキスト"
 
-#: functions.php:1072
+#: functions.php:1090
+msgid "Thumbnail height(px)"
+msgstr "サムネイル高さ(px)"
+
+#: functions.php:1092 functions.php:1118 functions.php:1127 functions.php:1136
+#: functions.php:1144
+msgid "Theme settings enabled"
+msgstr "テーマ設定を有効"
+
+#: functions.php:1095
+msgid "Enable this setting"
+msgstr "本設定を有効"
+
+#: functions.php:1113
+msgid ""
+"Please enter a height (px) If you want to align the height of the thumbnail. "
+"Set the height of responsive (or clear the height) If you want to set List "
+"Format is responsive."
+msgstr ""
+"サムネイルの高さを揃えたい場合は高さ(px）を入力してください。レスポンシブ時の"
+"高さを設定（または高さをクリア）する場合は「リスト表示形式」もレスポンシブ設"
+"定してください。"
+
+#: functions.php:1116
+msgid "Align the same line block height"
+msgstr "同一行内ブロック高さを揃える"
+
+#: functions.php:1119
+msgid "Make same height"
+msgstr "高さを揃える"
+
+#: functions.php:1120
+msgid "Unjustified high"
+msgstr "高さを揃えない"
+
+#: functions.php:1122
+msgid ""
+"If you align the height of the list articles block, set the List Format of "
+"responsive, customized List Row."
+msgstr ""
+"リスト記事ブロックの高さを揃える場合、「リスト表示形式」「リストカラム数／"
+"行」もレスポンシブ設定してください。"
+
+#: functions.php:1125
+msgid "Box Style"
+msgstr ""
+
+#: functions.php:1128 functions.php:1153 includes/class-theme-options.php:53
+msgid "Default"
+msgstr "デフォルト"
+
+#: functions.php:1129
+msgid "All padding"
+msgstr ""
+
+#: functions.php:1130
+msgid "Thumbnail not padding"
+msgstr ""
+
+#: functions.php:1134
+msgid "Box Shape"
+msgstr ""
+
+#: functions.php:1137
+msgid "Square"
+msgstr ""
+
+#: functions.php:1138
+msgid "Round"
+msgstr ""
+
+#: functions.php:1142
+msgid "Box Shadow"
+msgstr ""
+
+#: functions.php:1145
+msgid "No shadow box."
+msgstr "なし"
+
+#: functions.php:1146
+msgid "Box shadow and"
+msgstr "あり"
+
+#: functions.php:1150
+msgid "Box Color"
+msgstr ""
+
+#: functions.php:1152
+msgid "Theme color settings enabled"
+msgstr "テーマカラー設定を有効"
+
+#: functions.php:1158
 msgid ""
 "Archive if you do not set the list style is set in weluka theme settings "
 "list style is applied."
@@ -244,41 +335,37 @@ msgstr ""
 "リストスタイルは何も設定しない場合、「welukaテーマ設定」で設定したアーカイブ"
 "のリストスタイルが適用されます。"
 
-#: functions.php:1379
+#: functions.php:1485
 msgid "&laquo; Older Comments"
 msgstr "&laquo; 前のコメント"
 
-#: functions.php:1383
+#: functions.php:1489
 msgid "Newer Comments &raquo;"
 msgstr "次のコメント &raquo;"
 
-#: functions.php:1414
+#: functions.php:1520
 msgid "Header Right"
 msgstr "ヘッダー 右"
 
-#: functions.php:1422
+#: functions.php:1528
 msgid "Footer Sidebar Left"
 msgstr "フッター 左"
 
-#: functions.php:1430
+#: functions.php:1536
 msgid "Footer Sidebar Center"
 msgstr "フッター 中央"
 
-#: functions.php:1438
+#: functions.php:1544
 msgid "Footer Sidebar Right"
 msgstr "フッター 右"
 
-#: functions.php:1446
+#: functions.php:1552
 msgid "One Sidebar (left or right)"
 msgstr "メインサイドバー（左 or 右）"
 
-#: functions.php:1454
+#: functions.php:1560
 msgid "3 Colum Second Sidebar"
 msgstr "3カラム（サイドバー 右）"
-
-#: includes/class-theme-options.php:53
-msgid "Default"
-msgstr "デフォルト"
 
 #: includes/class-theme-options.php:54
 msgid "Blackboard"
@@ -327,7 +414,7 @@ msgstr ""
 #: index.php:33
 #, php-format
 msgid "Search Results for: %s"
-msgstr ""
+msgstr "検索結果: %s"
 
 #: index.php:42
 #, php-format

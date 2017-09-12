@@ -1743,4 +1743,73 @@ global $weluka_themename;
 	</div>
 </div>
 
+<?php //v1.2 add
+
+$_noimgsrc = esc_url( get_weluka_noimage() );
+$_colorData = $_POST;
+
+$_boxBgColor	= '';
+if( !empty( $_colorData['list_block_bgcolor'] ) ){ $_boxBgColor = 'background-color:' . $_colorData['list_block_bgcolor'] . ';'; }	
+$_titleColor = '';
+if( !empty( $_colorData['list_title_color'] ) ){ $_titleColor = 'color:' . $_colorData['list_title_color'] . ';'; }
+$_dateColor = '';
+if( !empty( $_colorData['list_date_color'] ) ){ $_dateColor = 'color:' . $_colorData['list_date_color'] . ';'; }
+$_catColor = '';
+if( !empty( $_colorData['list_cat_color'] ) ){ $_catColor = 'color:' . $_colorData['list_cat_color'] . ';'; }
+$_authorColor = '';
+if( !empty( $_colorData['list_author_color'] ) ){ $_authorColor = 'color:' . $_colorData['list_author_color'] . ';'; }
+$_excerptColor = '';
+if( !empty( $_colorData['list_excerpt_color'] ) ){ $_excerptColor = 'color:' . $_colorData['list_excerpt_color'] . ';'; }
+$_morebtnColor = 'weluka-btn-primary';
+if( !empty( $_colorData['list_morebtn_color'] ) ){ $_morebtnColor = $_colorData['list_morebtn_color']; }
+?>
+
+<h2 class="weluka-mgtop-xl">Archive List Block</h2>
+<div class="weluka-list-row weluka-row clearfix top-nomargin mediatop">
+	<div class="weluka-col weluka-col-md-6">
+    	<div class="wrap" style="<?php echo $_boxBgColor; ?>">
+        	<div class="weluka-list-media">
+            	<div class="weluka-img weluka-content weluka-text-center">
+                	<a href="#" title="">
+                  		<img class="img-responsive weluka-img-fullwidth" src="<?php echo $_noimgsrc; ?>" alt="">
+                  	</a>
+                </div>
+                <span class="weluka-post-commentnum"><i class="fa fa-commenting"></i>0</span>
+           	</div>
+           	<h3 class="weluka-list-title" style="<?php echo $_titleColor; ?>"><a href="#" title="">Title Text</a></h3>
+            <div class="weluka-list-meta">
+            	<span class="weluka-post-date" style="<?php echo $_dateColor; ?>">2017.01.01</span>&nbsp;|&nbsp;
+                <span class="weluka-post-category-name"><a href="#" style="<?php echo $_catColor; ?>">Category</a></span>&nbsp;|&nbsp;
+                <span class="weluka-post-author"><a href="#" style="<?php echo $_authorColor; ?>">Author</a></span>
+            </div>
+            <div class="weluka-list-content" style="<?php echo $_excerptColor; ?>">Lorem ipsum dolor sit amet, zril detracto vim an, mei cu clita sanctus appetere, et etiam oblique liberavisse pri. Nostrum percipit interpretaris et vim, nec eu brute torquatos...</div>
+            <div class="weluka-button weluka-content weluka-text-right ">
+            	<a href="#" class="weluka-btn <?php echo $_morebtnColor; ?>">Read More</a>
+            </div>
+        </div>
+    </div>
+	<div class="weluka-col weluka-col-md-6">
+    	<div class="wrap weluka-listblock-allp weluka-listblock-boxshadow" style="<?php echo $_boxBgColor; ?>">
+        	<div class="weluka-list-media">
+            	<div class="weluka-img weluka-content weluka-text-center">
+                	<a href="#" title="">
+                  		<img class="img-responsive weluka-img-fullwidth" src="<?php echo $_noimgsrc; ?>" alt="">
+                  	</a>
+                </div>
+                <span class="weluka-post-commentnum"><i class="fa fa-commenting"></i>0</span>
+           	</div>
+           	<h3 class="weluka-list-title" style="<?php echo $_titleColor; ?>"><a href="#" title="">Title Text</a></h3>
+            <div class="weluka-list-meta">
+            	<span class="weluka-post-date" style="<?php echo $_dateColor; ?>">2017.01.01</span>&nbsp;|&nbsp;
+                <span class="weluka-post-category-name"><a href="#" style="<?php echo $_catColor; ?>">Category</a></span>&nbsp;|&nbsp;
+                <span class="weluka-post-author"><a href="#" style="<?php echo $_authorColor; ?>">Author</a></span>
+            </div>
+            <div class="weluka-list-content" style="<?php echo $_excerptColor; ?>">Lorem ipsum dolor sit amet, zril detracto vim an, mei cu clita sanctus appetere, et etiam oblique liberavisse pri. Nostrum percipit interpretaris et vim, nec eu brute torquatos...</div>
+            <div class="weluka-button weluka-content weluka-text-right ">
+            	<a href="#" class="weluka-btn <?php echo $_morebtnColor; ?>">Read More</a>
+            </div>
+        </div>
+    </div>
+</div>
+<?php //v1.2 addend ?>
 </article>

@@ -7,6 +7,7 @@
  * @since Weluka Theme 00 1.0
  * @update
  * ver1.1
+ * ver1.2
  * 　
  */
 
@@ -70,8 +71,9 @@ if( isset( $_GET['mode'] ) && $_GET['mode'] === 'cp' ) {
 		}
 		if( $_pagingType === 2 ) {
 			$_url = Weluka::get_instance()->get_current_url();
-?> 
-			<div class="weluka-jscroll" data-url="<?php echo $_url; ?>">
+			/* v1.2 modify <div class="weluka-jscroll" data-url="<?php echo $_url; ?>">*/
+?>
+			<div class="weluka-jscroll"><div class="weluka-jscroll-selector" data-url="<?php echo $_url; ?>">
 <?php  }
 		//v1.1 addend
 ?>
@@ -81,8 +83,9 @@ if( isset( $_GET['mode'] ) && $_GET['mode'] === 'cp' ) {
 <?php
 		weluka_pagination();
 	   	//v1.1 add
-		if( $_pagingType === 2 ) : ?> 
-			</div><!-- /.weluka-jscroll -->
+		//v1.2 modify weluka-jscroll-selector div close
+		if( $_pagingType === 2 ) : ?>
+			</div></div><!-- /.weluka-jscroll -->
 		<?php endif;
 		//v1.1 addend
 	else:

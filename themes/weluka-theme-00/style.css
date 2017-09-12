@@ -5,12 +5,11 @@ Theme URI: http://www.weluka.me/
 Author: Weluka Team
 Author URI: https://www.weluka.me/
 Description: weluka plugins theme 00.
-Version: 1.1.1
+Version: 1.2.4
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: white, weluka, responsive-layout, featured-images, custom-menu, bootstrap, custom-header, custom-footer, editor-style, webfont, threaded-comments
 */
-
 body , html {
     height: 100%;
 }
@@ -157,7 +156,7 @@ input[type="button"], input[type="submit"], input[type="reset"] { padding:7px 10
 .weluka-custom-footer {
 	border:none !important;
 	-webkit-box-shadow: none !important;
-    -moz-box-shadow: none !important;;
+    -moz-box-shadow: none !important;
     box-shadow: none !important;
 }
 
@@ -312,7 +311,13 @@ div[id*="rss-"] li:before, .widget_rss li:before { content:"" !important; paddin
 /* end contact form 7 */
 
 /* yoast seo breadcrumbs */
-#yoaset_breadcrumbs { margin-bottom:1em; color:#b1b1b1; }
+/* v1.1.4 Breadcrumb NavXT add */
+#yoaset_breadcrumbs, .breadcrumbs_navxt { margin-bottom:1em; color:#b1b1b1; }
+.weluka-parallax #yoaset_breadcrumbs, .weluka-parallax .breadcrumbs_navxt { margin-top:1em; }
+
+/* v1.1.4 */
+/*.weluka-parallax #yoaset_breadcrumbs, .weluka-parallax .breadcrumbs_navxt { padding-top:30px; }
+.weluka-parallax .page-title { padding-top:20px; }*/
 
 /* responsive  */
 @media (max-width: 991px) {
@@ -320,8 +325,8 @@ div[id*="rss-"] li:before, .widget_rss li:before { content:"" !important; paddin
 	.weluka-builder-content > .weluka-section > .weluka-container,
 	.weluka-builder-content > .weluka-section > .weluka-container-fluid,
 	.sp-pad {
-		padding-left:10px !important;
-		padding-right:10px !important;
+		/*padding-left:10px !important;
+		padding-right:10px !important;*/
 	}
 	.weluka-nav-bar-h {
 		margin-left: -10px !important;
@@ -355,7 +360,7 @@ div[id*="rss-"] li:before, .widget_rss li:before { content:"" !important; paddin
 /*********************************** 
  ***** [ default color style ] *****
  ***********************************/
-body { 	background: #fff; color:#555; }
+body { 	background: #fff; }
 .logo { color:#555; line-height:50px;}
 
 a { color:#777; }
@@ -636,3 +641,14 @@ a.weluka-bg-primary:hover { background-color: #303030; color:#fff; }
 /* ver 1.0.3 add */
 .weluka-eyecatch { margin:2em 0; }
 .weluka-eyecatch-page { margin: 2.5em 0 2em 0; }
+
+/* v1.2.2 ie11 */
+.weluka-eq-colh .weluka-col *,
+.weluka-list-row-eqh .wrap * {
+	min-height:0% !important;
+}
+.weluka-eq-colh img,
+.weluka-list-row-eqh img {
+	height:auto !important;
+}
+/* end v1.2.2 ie11 */
