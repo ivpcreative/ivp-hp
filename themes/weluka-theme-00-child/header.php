@@ -62,7 +62,7 @@
  //ver1.0.1 addend
 
  $_hideHeader = !empty( $welukaPageSetting['hide_hd'] ) ? $welukaPageSetting['hide_hd'] : 0;
- 
+
  	//v1.1.2 add
  /* v1.1.3 comment out functions.php move
  	$_const = 'WelukaThemeOptions::HEAD_FIXED_NO_SCROLL_DISPLAY';
@@ -70,7 +70,35 @@
  		if( $welukaThemeOptions[WelukaThemeOptions::HEAD_FIXED_NO_SCROLL_DISPLAY] ) { $hdClass .= " weluka-hdfixed-noscroll"; }
  	}
  */
+ // phpQueryをロードする
+     require_once("phpQuery-onefile.php");
 
+
+     //display_modal(Basic認証版<Testサイト表示対策>)
+         function display_modal($page){
+         $url = home_url( ).'/' . $page .'/';
+         $basic = array(
+         'User-Agent: My User Agent 1.0',    //ユーザエージェントの指定
+         'Authorization: Basic '.base64_encode('ivpc:Fvakh-z4'),//ベーシック認証
+         );
+
+         $options = array('http' => array(
+         'header' => implode("\r\n", $basic )
+         ));
+         $options = stream_context_create($options);
+
+           $html = file_get_contents(home_url( ).'/'. $page.'/', false, $options);
+           $doc = phpQuery::newDocument($html);
+           return $doc[""]->html();
+         }
+
+     /* display_modal(通常版)
+         function display_modal($page){
+           $html = file_get_contents(home_url( ).'/'. $page.'/');
+           $doc = phpQuery::newDocument($html);
+           return $doc["#modal-include"]->html();
+         }
+         */
 
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?> class="no-js">
@@ -112,10 +140,18 @@
 	<div id="wrap">
         <h1 class="h1sp"><a href="/"><img src="/wp-content/uploads/images/logo.png" width="170" height="auto" alt="IVP Internet Value Provider　IVP Co. Ltd." title="IVP Internet Value Provider　IVP Co. Ltd." class="logo1" /><img src="/wp-content/uploads/images/logo2.png" width="170" height="auto" alt="IVP Internet Value Provider　IVP Co. Ltd." title="IVP Internet Value Provider　IVP Co. Ltd." class="logo2" /></a></h1>
              <div id="snavi">
-
-        <?php wp_nav_menu( array( 'theme_location' => 'custom-header-menu','depth' => 0) ); ?>
-
-
+                <?php wp_nav_menu( array( 'theme_location' => 'custom-header-menu','depth' => 0) ); ?>
     </div>
+<!--side_left-->
+<div class="slide_left">
+  <h1><a href="/"><img src="/wp-content/uploads/images/logo.png" width="181" height="43" alt="IVP Internet Value Provider　IVP Co. Ltd." title="IVP Internet Value Provider　IVP Co. Ltd." /></a></h1>
 
-<?php get_template_part( 'template-parts/content', 'slider_left' ); ?>
+  <?php
+    wp_nav_menu( array( 'theme_location' => 'custom-header-menu', 'menu_class' => 'sf-menu') );
+   ?>
+
+  <?php
+    echo display_modal("side-info");
+  ?>
+</div>
+<!--end.side_left-->

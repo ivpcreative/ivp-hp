@@ -64,6 +64,18 @@
 ?>
 <!--管理画面用front.js-->
 <script type="text/javascript"  src="<?php echo get_stylesheet_directory_uri()?>/js/front.js"></script>
-<span class="js-edit_modal">
+<span class="js-edit_modal"><!--管理画面のみ表示-->
+
 <?php wp_head(); ?>
+<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri()?>/css/index.css"/>
+<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri()?>/css/font-awesome.min.css"/>
+<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri()?>/css/jquery.bxslider.css"/>
+<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri()?>/css/meanmenu.css"/>
+<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri()?>/css/modal.css"/>
+<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri()?>/css/iziModal.css"/>
+<link rel="icon" href="<?php echo get_stylesheet_directory_uri()?>images/favicon.ico" type="image/x-icon" />
+<link rel="Shortcut Icon" type="image/x-icon" href="<?php echo get_stylesheet_directory_uri()?>/images/favicon.ico" />
+<link rel="canonical" href="http://www.ivp.co.jp/" />
+<!--end.管理画面のみ表示-->
 </span>

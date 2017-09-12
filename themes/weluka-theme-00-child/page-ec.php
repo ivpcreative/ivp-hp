@@ -22,51 +22,17 @@ get_header(); ?>
           get_template_part( 'content', 'none' );
         endif;
       ?>
-
-
     <!-- モーダル専用エリア -->
     <?php
-
-    // phpQueryをロードする
-    		require_once("phpQuery-onefile.php");
-
+    // display_modal>header.php
         echo display_modal("modal-ec1");
         echo display_modal("modal-ec2");
         echo display_modal("modal-ec3");
         echo display_modal("modal-ec4");
         echo display_modal("modal-ec5");
-
-
-        //display_modal(Basic認証版<Testサイト表示対策>)
-            function display_modal($page){
-        		$url = home_url( ).'/' . $page .'/';
-        		$basic = array(
-        		'User-Agent: My User Agent 1.0',    //ユーザエージェントの指定
-        		'Authorization: Basic '.base64_encode('ivpc:Fvakh-z4'),//ベーシック認証
-        		);
-
-        		$options = array('http' => array(
-        		'header' => implode("\r\n", $basic )
-        		));
-        		$options = stream_context_create($options);
-
-          		$html = file_get_contents(home_url( ).'/'. $page.'/', false, $options);
-              $doc = phpQuery::newDocument($html);
-              return $doc["#modal-include"]->html();
-            }
-
-        /* display_modal(通常版)
-            function display_modal($page){
-              $html = file_get_contents(home_url( ).'/'. $page.'/');
-              $doc = phpQuery::newDocument($html);
-              return $doc["#modal-include"]->html();
-            }
-            */
-
     ?>
 <!-- モーダル専用エリア end -->
 
-  <?php // get_sidebar(); ?>
   <?php get_footer(); ?>
 
 </div>
