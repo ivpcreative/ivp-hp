@@ -43,8 +43,7 @@
 	margin-top:10px;
 }
 .ec02 div>div{
-	padding-top: 40px;
-	padding-bottom: 35px;
+	padding: 40px 0 35px 0;
 }
 .ec02>div{
 	background:#efefef;
@@ -82,7 +81,7 @@
 	background:#363636;
 	color:#fff;
 }
-.ec02 div:hover > .ina{
+.ec02 div:hover .ina{
 	background:#fff;
 	color:#434343;
 }
@@ -182,7 +181,7 @@
 	}	
 }
 @media (max-width: 992px) {
-	.ec01 {
+	.ec01>div{
 		width: 33%;
 		display: inline-block;
 	}
@@ -205,6 +204,11 @@
 		width: 33%;
 		display: inline-block;
 	}
+
+	.ec03>div{
+		width: 19%;
+		display: inline-block;
+	}
 }
 @media (max-width: 768px) {
 	.title_ec01 , .title_ec02 , .title_ec03 {
@@ -225,10 +229,12 @@
 		margin:-20px auto 30px auto;
 		padding:0 10px;
 	}	
+	.ec01>div{
+    	width: 100%;
+	}
 	.ec01 p{
-		width:96%;
 		float:none;	
-		margin-right:0%;
+		margin-right:0;
 		padding:26px 2%;
 		margin-bottom:10px;
 	}
@@ -240,9 +246,9 @@
 	}
 	.ec02 div{
 		width:100%;
-		margin-right:0px;
-		margin-bottom:1px;
-		float:none;
+	}
+
+	.ec02 div>div{
 		padding:20px 0 20px 0;
 	}
 	.ec02 div:nth-child(4){
@@ -251,9 +257,9 @@
 	.ec03{
 		text-align:center;		
 	}
-	.ec03 img{
-		width:27%;
-		height:auto;
+	.ec03>div{
+		width: 33%;
+		display: inline-block;
 	}
 	.func01{
 		padding:0 12px;
@@ -340,15 +346,14 @@
 	background:#fff;
 	padding:40px 0 35px 0;
 	border:1px solid #e9e9e9;
+	height: 465px;
+	width: 46%;
+    margin-right: 6%;
+    display: inline-block;
 }
 .iot02 div{
-	width:47.5%;
-	margin-right:0%;
-	float:left;
-	padding:40px 0 35px 0;
 	text-align:center;
 	color:#272727;
-	border:1px solid #e9e9e9;
 	cursor:pointer;
 }
 .iot02 div .iot02_img{
@@ -358,7 +363,6 @@
 }
 .iot02 div:last-child{
 	margin-right:0px;
-	float:right;
 	margin-bottom:20px;
 }
 .iot02 div::before,
@@ -374,11 +378,14 @@
 	-webkit-transition: all .4s;
 	transition: all .4s;
 }
-.iot02 div:hover{
+.iot02>div:hover{
 	background:#363636;
 	color:#fff;
 }
-.iot02 div:hover > .ina{
+.iot02>div:hover p{
+	color:#fff;
+}
+.iot02>div:hover .ina{
 	background:#fff;
 	color:#434343;
 }
@@ -398,7 +405,7 @@
 	letter-spacing:2px;
 	text-decoration:none;
 }
-.iot02 div a:hover{
+.iot02>div a:hover{
 	background:#434343;
 	color:#fff;
 }
@@ -523,9 +530,10 @@
 .iot04 .sp{
 	display:none;
 }
-.iot05 img{
-	margin-right:20px;
+.iot05 {
+	width: 75%;
 }
+
 .second_contact{
 	text-align:center;
 	margin:80px 0 80px 0;
@@ -594,6 +602,10 @@
 		font-size:16px;
 		margin:47px auto 0 auto;
 	}
+	.iot05>div{
+	 width: 30%;
+     display: inline-block;
+	}
 }
 
 @media (max-width: 768px) {
@@ -603,7 +615,7 @@
 	.iot01{
 		margin:20px 14px 20px 14px;
 	}
-	.iot02 div{
+	.iot02>div{
 		width:100%;
 		float:none;
 		padding:40px 0 35px 0;
@@ -635,7 +647,7 @@
 		margin:20px auto 40px auto;		
 	}
 	.iot05{
-		margin:20px auto 40px auto;		
+		/*margin:20px auto 40px auto;	*/	
 	}
 	.iot05 img{
 		width:140px;
@@ -667,14 +679,9 @@
 		display:block;
 	}
 	.iot05 {
-		margin-left:10px;
-		margin-right:10px;		
+		width: 100%;		
 	}
-	.iot05 img{
-		width:30%;
-		margin-right:3%;
-		height:auto;
-	}
+
 	.iot05 img:last-child{
 		margin-right:0%;
 	}
@@ -875,19 +882,22 @@
 	margin-top:-1px;
 	padding-top:1px;
 }
-.off01 div{
-	width:24.2%;
-	margin-right:1%;
-	float:left;
+
+
+.off01>div{
+	width: 24.2%;
+	margin-right: 1%;
 	margin-bottom:5px;
 	background:#efefef;
 	padding:30px 0;
 	text-align:center;
+	display: inline-block;
 }
 .off01 div:last-child{
 	margin-right:0%;
 }
 .off01 div img{
+	height: 200px !important;
 	margin:0 auto;
 	display:block;
 }
@@ -908,6 +918,9 @@
 	.offfeat br{
 		display:block !important;	
 	}
+	.off01 div img{
+		height: 180px !important;
+	}
 }
 @media (max-width: 768px) {
 	.title_off02{
@@ -923,6 +936,11 @@
 	.offfeat br{
 		display:none !important;	
 	}
+	.off01 div img{
+		height: 110px !important;
+		margin: 0 auto;
+	}
+
 }
 
 @media (max-width: 480px) {
@@ -932,11 +950,11 @@
 	.off_bg{
 		background:none;
 	}
-	.off01 div{
+	.off01>div{
 		width:48%;
-		margin-right:1%;
-		margin-left:1%;
+		margin: 1% 1% 1% 1%;
 	}
+
 }
 
 
@@ -1031,18 +1049,86 @@
 	-ms-transform: rotate(180deg);
 	-o-transform: rotate(180deg);
 }
+
+
+.com-panel h4{
+	background: #272727;
+	cursor: pointer;
+    color: #fff !important;
+    font-weight: bold;
+    border-bottom: 1px solid #696969;
+}
+
+.com-panel h4 a{
+    padding: 20px !important;
+}
+
+.com-panel i{
+	position: relative;
+	top: 10px;
+	width: 30px;
+	height: 30px;
+	float: right !important;
+	background-color: #fff;
+	margin-right: 5px;
+	border-radius: 36px;
+	padding: 0 !important;
+}
+
+.com-panel div{
+	border: none;
+	padding: 0;
+}
+
+.com01 tr{
+	border-bottom:1px solid #EBEBEB;
+}
+.com01 th{
+	width: 30%;
+	font-size:14px;
+	background:#f7f7f7;
+}
+.com01 td, .com01 p{
+	width: 70%;
+	font-size:14px;
+	line-height:200%;	
+}
+
+.com01 th, .com01 td{
+	padding:15px 2% 15px 6%;
+	color:#272727;
+	font-weight:normal;
+}
+
+.com01 td a{
+	padding:2px 6px;
+	background:#878787;
+	color:#fff;
+	font-size:11px;
+	margin-left:8px;
+	letter-spacing:1px;
+	text-decoration:none;
+}
+.com01 td a:hover{
+	opacity:0.7;
+}
+.com01 p strong{
+	color:#00718e;
+	font-weight:normal;
+}
+/*
 .com01{
 	border-bottom:1px solid #EBEBEB;
 	background:#f7f7f7;
 }
 .com01 div:first-child{
-	width:24%;
+	width:30%;
 	float:left;
 	background:#f7f7f7;
 	padding:15px 2% 15px 6%;
 }
 .com01 div:last-child{
-	width:60%;
+	width:70%;
 	float:left;
 	padding:15px 2% 15px 6%;
 	background:#fff;
@@ -1070,7 +1156,7 @@
 	font-weight:normal;
 }
 
-
+*/
 
 @media (max-width: 992px) {
 	.company_h2 br{
@@ -1104,6 +1190,15 @@
 	.accordionbox2{
 		margin:0 12px;		
 	}
+	.com01 th, .com01 td{
+		width: 100%;
+		display: block;
+	}
+
+	.com01 tr{
+		border-bottom:none;
+	}
+	/*
 	.com01 div:first-child{
 		width:96%;
 		float:none;
@@ -1120,7 +1215,7 @@
 	}
 	.com01{
 		border-bottom:none;
-	}
+	}*/
 }
 
 

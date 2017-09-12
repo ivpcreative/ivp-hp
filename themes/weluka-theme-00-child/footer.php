@@ -79,7 +79,8 @@
 <script type="text/javascript">$(document).ready(function(){$('#slider').bxSlider({mode: 'fade',auto: true,pause:60000000,speed: 0,pager: false});});</script>
 <script type="text/javascript"> $(document).ready(function(){ $("ul.sf-menu").superfish({  animation: {height:'show'}, delay: 1200 }); });</script>
 <script type="text/javascript">jQuery(document).ready(function () { jQuery('#snavi').meanmenu();    });</script>
-<script type="text/javascript">$(function(){    $(".accordionbox").on("click", function() {$(".sub-menu").next().slideToggle(); if ($(this).children(".accordion_icon").hasClass('active')) {   $(this).children(".accordion_icon").removeClass('active');  }else { $(this).children(".accordion_icon").addClass('active');}});});</script>
+<script type = "text/javascript" > $(function() {  $("li.accordionlist").on("click", function() { $(this).children('.sub-menu').slideToggle();if ($(this).find(".accordion_icon").hasClass('active')) {$(this).find(".accordion_icon").removeClass('active');} else {$(this).find(".accordion_icon").addClass('active');}});}); </script>
+
 <!-- sitecatlyst start-->
 <script>
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

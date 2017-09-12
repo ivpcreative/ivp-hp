@@ -170,22 +170,22 @@ table.modal_block3 .bgt {
 .imgs{
 	margin-top:30px;	
 }
-.imgs div{
+.imgs>div{
 	width:47.5%;
 	float:left;
 	margin-right:5%;	
 	margin-bottom:32px;
-	text-align:center;
 }
-.imgs div:nth-child(2) , .imgs div:nth-child(4), .imgs div:nth-child(6){
+.imgs>div:nth-child(2) , .imgs>div:nth-child(4), .imgs>div:nth-child(6){
 	margin-right:0%;	
 }
-.imgs div:last-child{
+.imgs>div:last-child{
 	margin-bottom:0px;
 }
 .imgs div h4{
 	margin-top:10px;
 	font-size:13px;
+	text-align:center;
 }
 .agile img{
 	width:45%;
