@@ -70,7 +70,7 @@ add_action( 'init', 'register_footer_menu' );
 /*-------------------------------------------*/
 function shortcode_quest_btn($arg) {
     extract(shortcode_atts(array (
-        'type' => 'a', //a:aタグのみ i:アイコン / img:画像
+        'type' => '', //a:aタグのみ i:アイコン / img:画像
         'ga_flg' => '',//GA tag に入れるカテゴリ
         'ga_dest' => 'quest',//GA tag 目的地
         'text' => 'お問い合わせ',
@@ -78,6 +78,7 @@ function shortcode_quest_btn($arg) {
         'target' => '',//aタグ targer属性
         'i_class' => '', //iタグのクラス
         'img_class' => '',//imgタグのクラス
+        'strong_class' => '',//storongタグのクラス(type=storongのみ)
         'a_class' => '',//aタグのクラス
         'aria_hidden' =>'' //aria-hidden の設定
     ), $arg));
@@ -90,6 +91,9 @@ if( $type=='i'){
   $qpper = '<i class="'.$i_class.'" aria-hidden="'.$aria_hidden.'"></i>'.$text;
 }elseif($type=='img'){
   $qpper = '<span>'.$text.'</span><img src="/wp-content/uploads/images/arrow_white.png" width="16" height="7" alt="arrow"/ class="'.$img_class.'">';
+}elseif($type=='strong'){
+  $qpper = '<strong class="'.$strong_class.'" ><span>'.$text.'</span><img src="/wp-content/uploads/images/arrow_white.png" width="16" height="7" alt="arrow"/ class="'.$img_class.'"><storong>';
+
 }else{
   $qpper = $text;
 }
