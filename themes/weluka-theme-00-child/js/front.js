@@ -29,8 +29,9 @@ var frontJs = function() {
           }
 
         $('.top_contents').append(elmHtml);
+        $('.js-edit_top').remove();
         }
       }
 
   }
-  ｝
+  
