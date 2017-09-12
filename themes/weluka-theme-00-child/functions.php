@@ -107,7 +107,7 @@ if( $type=='i'){
 }elseif($type=='img'){
   $qpper = '<span>'.$text.'</span><img src="/wp-content/uploads/images/arrow_white.png" width="16" height="7" alt="arrow"/ class="'.$img_class.'">';
 }elseif($type=='strong'){
-  $qpper = '<strong class="'.$strong_class.'" ><span>'.$text.'</span><img src="/wp-content/uploads/images/arrow_white.png" width="16" height="7" alt="arrow"/ class="'.$img_class.'"><storong>';
+  $qpper = '<strong class="'.$strong_class.'" ><span>'.$text.'</span><img src="/wp-content/uploads/images/arrow_white.png" width="16" height="7" alt="arrow"/ class="'.$img_class.'"></strong>';
 
 }else{
   $qpper = $text;
