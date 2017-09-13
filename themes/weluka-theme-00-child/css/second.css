@@ -1072,16 +1072,17 @@
     padding: 20px !important;
 }
 
-.com-panel i{
+.com-panel .panel>.panel-heading>h4>i{
 	position: relative;
 	top: 10px;
 	width: 30px;
 	height: 30px;
 	float: right !important;
-	background-color: #fff;
-	margin-right: 5px;
+	color: #fff !important;
+	margin-right: 10px;
 	border-radius: 36px;
 	padding: 0 !important;
+	font-size: 30px;
 }
 
 .com-panel div{
@@ -1190,6 +1191,10 @@
 	.com01 h3 , .com01 p{
 		font-size:13px;
 		line-height:190%;
+	}
+
+	.panel-title{
+		padding: 0 !important;
 	}
 }
 @media (max-width: 480px) {
@@ -1473,7 +1478,6 @@
 	}
 	.partner01 strong , .partner02 strong{
 		float:none;
-		margin:0px 0 0px 30px;
 		font-size:13px;
 		padding:12px 20px;
 		width:214px;

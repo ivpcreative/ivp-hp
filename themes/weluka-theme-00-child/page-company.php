@@ -42,17 +42,3 @@ $(this).removeClass('active');
 });
 });
 </script>
-
-
-<script type="text/javascript">
-$(document).ready(function() {
-  $('i').removeClass('fa-chevron-down').addClass('fa-plus-circle fa-2x');
-});
-$(function(){	
-	$('.panel-title').click(function() {
-		$(this).find('i').removeClass('fa-chevron-down');
-		$(this).find('i').removeClass('fa-chevron-up');
-		$(this).find('i').toggleClass('fa-minus-circle fa-plus-circle');		
-		});
-});
-</script>
