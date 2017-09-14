@@ -8,7 +8,7 @@ jQuery(function() {
         //front
           frontJsObj = new frontJs();
           frontJsObj.slider_edit();
-          $('.js-edit_modal').remove(); //管理画面のモーダル用CSSの削除
+          //$('.js-edit_modal').remove(); //管理画面のモーダル用CSSの削除→スクレーピングで class="include"内を抜くので不要
       }else{
         //管理多面
           $('.js-edit_top').css('display', 'block'); //まず透明化
