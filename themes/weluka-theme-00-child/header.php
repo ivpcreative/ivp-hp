@@ -60,16 +60,8 @@
  //ver1.0.1
  $welukaOutContainerType = !empty( $welukaPageSetting['out_container_type'] ) ? $welukaPageSetting['out_container_type'] : '';
  //ver1.0.1 addend
-
  $_hideHeader = !empty( $welukaPageSetting['hide_hd'] ) ? $welukaPageSetting['hide_hd'] : 0;
 
- 	//v1.1.2 add
- /* v1.1.3 comment out functions.php move
- 	$_const = 'WelukaThemeOptions::HEAD_FIXED_NO_SCROLL_DISPLAY';
- 	if ( defined ( $_const ) ) {
- 		if( $welukaThemeOptions[WelukaThemeOptions::HEAD_FIXED_NO_SCROLL_DISPLAY] ) { $hdClass .= " weluka-hdfixed-noscroll"; }
- 	}
- */
  // phpQueryをロードする
      require_once("phpQuery-onefile.php");
 
@@ -105,6 +97,7 @@
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <title><?php wp_title(); ?></title>
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<?php if ( is_singular() && pings_open( get_queried_object() ) ) : ?>
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
