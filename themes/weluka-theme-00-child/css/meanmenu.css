@@ -197,8 +197,6 @@ a.meanmenu-reveal {
 	display: none;
 }
 @media (max-width: 1200px) {
-
-
 .lasts , .lasts2{
 	display:block;
 	width:48% !important;
@@ -227,5 +225,8 @@ a.meanmenu-reveal {
  .lasts2 a{
 	color:#272727 !important;
 	background:#fff;
+ }
+ .mean-container a.meanmenu-reveal{
+ 	display: block;
  }
 }

@@ -7,8 +7,10 @@
 	font-size:24px;
 	letter-spacing:3px;
 	text-align:center;
-	margin:20px auto 40px auto;
 	color:#00718e;	
+	font-weight: bold;
+	line-height: 150%;
+	margin-bottom: 15px;
 }
 .ec01{
 	
@@ -154,6 +156,10 @@
 	text-align:center;
 	font-size:15px;
 	color:#27272;
+}
+
+.access01{
+	font-size: 16px;
 }
 
 @media (max-width: 1416px) {
@@ -1069,7 +1075,8 @@
 }
 
 .com-panel h4 a{
-    padding: 20px !important;
+    padding: 15px !important;
+    font-size: 17px;
 }
 
 .com-panel .panel>.panel-heading>h4>i{
@@ -1253,7 +1260,7 @@
 	padding-bottom: 300px;
 	height: 0;
 	overflow: hidden;
-	margin-top:30px;
+	margin-top:10px;
 }
 .ggmap iframe,
 .ggmap object,
@@ -1270,7 +1277,7 @@
 }
 .link_map a{
 	width:240px;
-	padding:10px 2px;
+	padding:14px 2px;
 	display:block;
 	margin:0 auto;
 	color:#fff;

@@ -50,7 +50,13 @@ ga('create', 'UA-37194684-1', 'auto');
 ga('require', 'displayfeatures');
 ga('send', 'pageview');
 
-</script><!-- sitecatlyst end -->
+</script>
+<script>
+  $(document).ready(function(){
+  $('li.new-tab a').attr('target', '_blank');
+});
+</script>
+<!-- sitecatlyst end -->
 
 <?php wp_footer(); ?>
 </body>
