@@ -5,10 +5,13 @@ jQuery(function() {
 
   var url = window.location;
       if(url.href.indexOf('weluka') == -1){ //front表示のみ(Welukaビルダーでは動作しない)
-
-        $('.js-edit_modal').remove(); //管理画面のモーダル用CSSの削除
+        //front
           frontJsObj = new frontJs();
           frontJsObj.slider_edit();
+          //$('.js-edit_modal').remove(); //管理画面のモーダル用CSSの削除→スクレーピングで class="include"内を抜くので不要
+      }else{
+        //管理多面
+          $('.js-edit_top').css('display', 'block'); //まず透明化
       }
 
 });
@@ -20,6 +23,7 @@ var frontJs = function() {
   //sleiderの移動
   this.slider_edit = function() {
     if($('.js-edit_top').length ){
+        $('.js-edit_top').css('opacity', '0.0'); //まず透明化
         //var elmHtml = $(".js-edit_top").html();
         if($('#slider').length){
             var elmHtml = $("#slider").prop('outerHTML');
@@ -34,4 +38,3 @@ var frontJs = function() {
       }
 
   }
-  
