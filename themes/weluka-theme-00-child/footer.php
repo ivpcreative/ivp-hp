@@ -51,11 +51,7 @@ ga('require', 'displayfeatures');
 ga('send', 'pageview');
 
 </script>
-<script>
-  $(document).ready(function(){
-  $('li.new-tab a').attr('target', '_blank');
-});
-</script>
+
 <!-- sitecatlyst end -->
 
 <?php wp_footer(); ?>
