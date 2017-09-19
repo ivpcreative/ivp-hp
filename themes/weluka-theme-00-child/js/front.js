@@ -4,7 +4,7 @@ jQuery(function() {
 
 frontJsObj = new frontJs();
 frontJsObj.footer_append();
-frontJsObj.sub_anchor();
+
 
   var url = window.location;
       if(url.href.indexOf('weluka') == -1){ //front表示のみ(Welukaビルダーでは動作しない)
@@ -16,7 +16,7 @@ frontJsObj.sub_anchor();
         //管理多面
           $('.js-edit_top').css('display', 'block'); //まず透明化
       }
-
+frontJsObj.sub_anchor();
 });
 /*end.load時にkick*/
 
