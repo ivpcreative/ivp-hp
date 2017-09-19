@@ -101,4 +101,51 @@ return $var;
 }
 add_shortcode('quest_btn', 'shortcode_quest_btn');
 
+
+//Contact Form7 フリガナチェック(http://like-cloud.com/archives/64)
+      add_filter('wpcf7_validate_text',  'wpcf7_validate_kana', 11, 2);
+    add_filter('wpcf7_validate_text*', 'wpcf7_validate_kana', 11, 2);
+    function wpcf7_validate_kana($result,$tag){
+
+      $tag = new WPCF7_Shortcode($tag);
+      $name = $tag->name;
+
+      $value = isset($_POST[$name]) ? trim(wp_unslash(strtr((string) $_POST[$name], "\n", " "))) : "";
+
+      // furiganaはフォーム側のnameです
+      if ($name === "furigana" || $name === "your-kana") {
+
+        // カタカナの場合
+        //if(!preg_match("/^[ァ-ヾ]+$/u", $value)) {
+//          $result->invalidate($tag, "全角カタカナで入力してください。");
+        if(!preg_match("/^[ァ-ヾ\s]+$/u", $value)) {
+          $result->invalidate($tag, "全角カタカナかスペースで入力してください。");
+
+        }
+      }
+      return $result;
+    }
+    // end.Contact Form7 フリガナチェック
+
+//Contact Form7 確認用メールアドレス(http://takayakondo.com/contactform7-mail-confirmation/)
+    add_filter( 'wpcf7_validate_email', 'wpcf7_text_validation_filter_extend', 11, 2 );
+add_filter( 'wpcf7_validate_email*', 'wpcf7_text_validation_filter_extend', 11, 2 );
+
+function wpcf7_text_validation_filter_extend( $result, $tag ) {
+global $my_email_confirm;
+$tag = new WPCF7_Shortcode( $tag );
+$name = $tag->name;
+$value = isset( $_POST[$name] )
+? trim( wp_unslash( strtr( (string) $_POST[$name], "\n", " " ) ) )
+: '';
+if ($name == "your-email"){
+$my_email_confirm=$value;
+}
+if ($name == "your-email_confirm" && $my_email_confirm != $value){
+$result->invalidate( $tag,"確認用のメールアドレスが一致していません");
+}
+
+return $result;
+}
+//end .Contact Form7 確認用メールアドレス
 ?>
