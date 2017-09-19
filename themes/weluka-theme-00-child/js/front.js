@@ -4,10 +4,11 @@ jQuery(function() {
 
 frontJsObj = new frontJs();
 frontJsObj.footer_append();
+frontJsObj.sub_anchor();
 
   var url = window.location;
       if(url.href.indexOf('weluka') == -1){ //front表示のみ(Welukaビルダーでは動作しない)
-        //front          
+        //front
           frontJsObj.slider_edit();
 
           //$('.js-edit_modal').remove(); //管理画面のモーダル用CSSの削除→スクレーピングで class="include"内を抜くので不要
@@ -21,6 +22,18 @@ frontJsObj.footer_append();
 
 /* subJsオブジェクト生成コンストラクタ */
 var frontJs = function() {
+
+  //アンカーを#から？でも使用可能。例）http://url.com/partner/?partner1
+this.sub_anchor = function() {
+  var query = document.location.search.substring(1);
+  if(query){
+    var obj = document.getElementById(query);
+    if(obj){
+   y = obj.offsetTop;
+   scrollTo(0,y);
+   }
+  }
+}
 
 this.footer_append = function() {
   $('li.accordionlist>a').append('<p class="accordion_icon"><span></span><span></span></p>');

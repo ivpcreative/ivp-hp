@@ -28,13 +28,13 @@
 <script type="text/javascript"  src="<?php echo get_stylesheet_directory_uri()?>/js/smoothScroll.js"></script>
 <script type="text/javascript"  src="<?php echo get_stylesheet_directory_uri()?>/js/css_browser_selector.js"></script>
 <script type="text/javascript"  src="<?php echo get_stylesheet_directory_uri()?>/js/jquery.easing.1.3.js"></script>
-<script type="text/javascript"  src="<?php echo get_stylesheet_directory_uri()?>/js/jquery.bxslider.min.js"></script>
+
 <script type="text/javascript"  src="<?php echo get_stylesheet_directory_uri()?>/js/superfish.js"></script>
 <script type="text/javascript"  src="<?php echo get_stylesheet_directory_uri()?>/js/heightLine.js"></script>
 <script type="text/javascript"  src="<?php echo get_stylesheet_directory_uri()?>/js/jquery.meanmenu.js"></script>
 <script type="text/javascript"  src="<?php echo get_stylesheet_directory_uri()?>/js/iziModal.js"></script>
 <script type="text/javascript"  src="<?php echo get_stylesheet_directory_uri()?>/js/front.js"></script>
-<script type="text/javascript">$(document).ready(function(){$('#slider').bxSlider({mode: 'fade',auto: true,pause:60000000,speed: 0,pager: false});});</script>
+
 <script type="text/javascript"> $(document).ready(function(){ $("ul.sf-menu").superfish({  animation: {height:'show'}, delay: 1200 }); });</script>
 <script type="text/javascript">jQuery(document).ready(function () { jQuery('#snavi').meanmenu();    });</script>
 <script type = "text/javascript" > $(function() {  $("li.accordionlist").on("click", function() { $(this).children('.sub-menu').slideToggle();if ($(this).find(".accordion_icon").hasClass('active')) {$(this).find(".accordion_icon").removeClass('active');} else {$(this).find(".accordion_icon").addClass('active');}});}); </script>
