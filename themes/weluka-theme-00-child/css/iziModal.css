@@ -326,11 +326,11 @@
     }
     .iziModal-navigate-prev{
         left: 50%;
-        background:url(../images/modal_left.png) no-repeat 50% 50%;
+        background:url(/wp-content/uploads/images/modal_left.png) no-repeat 50% 50%;
     }
     .iziModal-navigate-next{
         right: 50%;
-        background:url(../images/modal_right.png) no-repeat 50% 50%;
+        background:url(/wp-content/uploads/images/modal_right.png) no-repeat 50% 50%;
     }
 
 .iziModal.isAttachedTop .iziModal-header{
