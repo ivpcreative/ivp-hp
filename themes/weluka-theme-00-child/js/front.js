@@ -4,7 +4,7 @@ jQuery(function() {
 
 frontJsObj = new frontJs();
 frontJsObj.footer_append();
-
+frontJsObj.spheader_append();
 
   var url = window.location;
       if(url.href.indexOf('weluka') == -1){ //front表示のみ(Welukaビルダーでは動作しない)
@@ -33,6 +33,11 @@ this.sub_anchor = function() {
    scrollTo(0,y);
    }
   }
+}
+
+this.spheader_append = function(){
+  $('.lasts a').prepend('<i class="fa fa-envelope" aria-hidden="true"></i>');
+  $('.lasts2 a').prepend('<i class="fa fa-globe" aria-hidden="true"></i>');
 }
 
 this.footer_append = function() {
