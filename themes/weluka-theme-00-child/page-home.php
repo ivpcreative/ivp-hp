@@ -29,6 +29,8 @@ global $weluka_themename;
 	</div>
 </div>
 <!-- page script-->
+<script type="text/javascript"  src="<?php echo get_stylesheet_directory_uri()?>/js/jquery.bxslider.min.js"></script>
+<script type="text/javascript"  src="<?php echo get_stylesheet_directory_uri()?>/js/heightLine.js"></script>
 <script type="text/javascript">$(document).ready(function(){$('#slider').bxSlider({mode: 'fade',auto: true,pause:6000,speed: 2000,pager: true});});</script>
 <script type="text/javascript">
 $(function(){
@@ -88,6 +90,6 @@ header.removeClass('scroll');
 });
 });
 </script>
-<script type="text/javascript"  src="<?php echo get_stylesheet_directory_uri()?>/js/heightLine.js"></script>
+
 <!-- page script-->
 ?>
