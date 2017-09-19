@@ -236,8 +236,8 @@
 		padding:0 10px;
 	}	
 	.ec01>div{
-		width: 92%;
-    	margin: 0px 5%;
+		width: 90%;
+    	margin: 0px 2%;
 	}
 	.ec01 p{
 		float:none;	
@@ -245,16 +245,18 @@
 		padding:26px 2%;
 		margin-bottom:10px;
 	}
-	.ec01 p:last-child br{
-		display:none;
-	}
+
 	.ec01 p:last-child{
 		margin-bottom:0px;
 	}
 	.ec02 div{
-		width:100%;
+		width:93%;
 	}
-
+	.ec02>div{
+		border-right: none;
+		margin-right: 0;
+		padding: 0;
+	}
 	.ec02 div>div{
 		padding:20px 0 20px 0;
 	}
@@ -618,7 +620,7 @@
 		margin:47px auto 0 auto;
 	}
 	.iot05>div{
-	 width: 30%;
+	 width: 33%;
      display: inline-block;
 	}
 }
@@ -635,6 +637,7 @@
 		float:none;
 		padding:40px 0 35px 0;
 		border:none;
+		height: auto;
 		background:#f6f6f6;
 		margin-right: 0;
 	}
