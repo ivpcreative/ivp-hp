@@ -21,6 +21,7 @@ a.meanmenu-reveal {
 	background: #fff;
 	padding: 12px 0 0 0;
 	z-index: 9998;
+	top: 0;
 }
 .dark{
 	background:#272727 !important;	
