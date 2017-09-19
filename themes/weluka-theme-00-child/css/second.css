@@ -245,7 +245,7 @@
 		padding:26px 2%;
 		margin-bottom:10px;
 	}
-	.ec01 p br{
+	.ec01 p:last-child br{
 		display:none;
 	}
 	.ec01 p:last-child{
@@ -357,6 +357,9 @@
 	width: 46%;
     margin-right: 6%;
     display: inline-block;
+}
+.iot02>div:last-child{
+	margin-right: 0;
 }
 .iot02 div{
 	text-align:center;
@@ -633,6 +636,7 @@
 		padding:40px 0 35px 0;
 		border:none;
 		background:#f6f6f6;
+		margin-right: 0;
 	}
 	.iot02 div .iot02_img{
 		margin:0 10% 10px 10%;
@@ -1737,6 +1741,9 @@
 	}
 	.hissu{
 		font-size:13px;
+	}
+	.cf{
+		margin-bottom: 5px;
 	}
 	.cf dt{
 		width:100%;
