@@ -20,6 +20,9 @@
 	.iziModal {
 		width:80% !important;
 	}
+    .iziModal-navigate > button{
+        display: none !important;
+    }
 }
 @media (max-width: 480px) {
 	.iziModal {
