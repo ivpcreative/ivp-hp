@@ -237,7 +237,7 @@
 	}	
 	.ec01>div{
 		width: 90%;
-    	margin: 0px 2%;
+    	margin: 0px 5%;
 	}
 	.ec01 p{
 		float:none;	
@@ -245,12 +245,15 @@
 		padding:26px 2%;
 		margin-bottom:10px;
 	}
-
 	.ec01 p:last-child{
 		margin-bottom:0px;
 	}
+	.ec02{
+		margin-left: 0;
+		margin-right: 0;
+	}
 	.ec02 div{
-		width:93%;
+		width:100%;
 	}
 	.ec02>div{
 		border-right: none;
@@ -297,6 +300,9 @@
 	.inTitle01{
 		background:url(/wp-content/uploads/images/index_title_service.png) 0 0 no-repeat;
 		background-size:46% auto;
+	}
+	.ec01>div div{
+		margin-bottom: 15px;
 	}	
 	.ec01 p{
 		font-size:14px;
@@ -704,6 +710,9 @@
 	.iot05 img:last-child{
 		margin-right:0%;
 	}
+	.second_contact{
+		margin:30px 0 30px 0;
+	}
 	.second_contact a{
 		padding:14px 20px;
 		font-size:13px;
@@ -1110,7 +1119,7 @@
 	font-size:14px;
 	background:#f7f7f7;
 }
-.com01 td, .com01 p{
+.com01 td{
 	width: 70%;
 	font-size:14px;
 	line-height:200%;	
@@ -1784,7 +1793,7 @@
 		color:#272727;
 		border:none;
 		background:#fff;
-		font-size:13px;
+		font-size:16px;
 	}
 	.quest .msg{
 		font-size:12px;

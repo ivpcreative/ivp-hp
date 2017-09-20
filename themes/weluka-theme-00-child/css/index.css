@@ -1344,6 +1344,7 @@ p.copyright{
 	}
 	.main_contents{
 		width:100%;
+		margin-top: 40px;
 	}
 	.bnrs .link1{
 		display:block;
